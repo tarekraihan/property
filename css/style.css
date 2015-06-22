@@ -1,0 +1,797 @@
+.no-margin{margin:0;}
+
+.no-padding{padding: 0;}
+
+.white{color: #fff;}
+
+.error
+{
+	color:#C00;
+    text-align: center;
+}
+.navbar-right
+{margin:0;}
+.success
+{
+    color: #2acc57;
+    text-align: center;
+}
+
+.opensans_thin{ font-family: 'open sans',sans-serif;
+           font-weight: 100;
+        }
+
+.custom_nav{background-image:none;
+			background-color:#fff;
+			border-radius: 0;
+			border:0px;
+			box-shadow:none;
+			margin-bottom:0px !important;}
+			
+.custom_nav .navbar-nav > li > a {
+    color: #232323;
+    padding: 20px 12px;
+}
+
+.custom_nav .navbar-brand {
+    color: #EEE;
+    padding: 5px 0px 0px;
+}
+
+.navbar-nav > li:hover{background-color: #EDECED;}
+
+/*login modal style*/
+        .omb_login .omb_authTitle {
+            text-align: center;
+            line-height: 300%;
+        }
+        
+        .omb_login .omb_loginOr {
+            position: relative;
+            font-size: 1.5em;
+            color: #AAA;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+        
+        .omb_login .omb_loginOr .omb_hrOr {
+            background-color: #CDCDCD;
+            height: 1px;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        
+        .omb_login .omb_loginOr .omb_spanOr {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: -0.6em;
+            margin-left: -1.5em;
+            background-color: #FFF;
+            width: 3em;
+            text-align: center;
+        }
+        
+        .omb_row-sm-offset-3 div[class*="col-"]:first-child {
+            margin-left: 25%;
+        }
+
+/*login modal style end*/
+
+.socialLoginThumbnail {
+    width: 35px;
+    border-radius: 50px;
+    margin-top: 12px;
+}
+
+.quicksearchbox {
+	height:40px;
+    background-color: #EDECED;
+    color: #8E8E8E;
+    border: 1px solid #EDECED;
+    box-shadow: none;
+	width: 354px !important;
+}
+
+.pg-button {
+    -moz-user-select: none;
+    background-color: #4B93CD;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0px 4px 4px 0px;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.btn-default-over {
+    background-image: none;
+    box-shadow: none;
+    height: 40px;
+    width: 45px;
+}
+
+.contact_btn{margin-bottom: 50px;
+	margin-top: 20px;}
+
+.input_custom_group{margin-left: 10px;
+					margin-top: 5px;}
+					
+.front_page_search_section{height:600px;
+							background-image:url(../images/homepage_bg.png);
+							background-size: cover;
+							background-position: center center;
+							}
+.tagline {
+    padding-top: 160px;
+    text-align: center;
+    color: #FFF;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.subtagline {
+    color: #FFF;
+    font-size: 20px;
+    font-style: italic;
+    font-family: "Merriweather",serif;
+    padding: 15px 0px 25px;
+}
+							
+#searchbox {
+    height: 99px;
+    margin: 1% auto 0px;
+    width: 800px;
+    padding: 15px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.4) none repeat scroll 0px 0px;
+}
+
+.pg-btn {
+    border-radius: 4px 0px 0px 4px;
+    background: #FFF none repeat scroll 0px 0px;
+    color: #3E3D3B;
+    height: 68px;
+    width: 175px;
+    text-align: left;
+    float: left;
+    line-height: 2.429;
+    font-size: 18px;
+}
+
+.search-textbox {
+    background-color: #FFF;
+    border-color: #CCC;
+    border-radius: 0px;
+    border-style: solid;
+    border-width: 0px 0px 0px 2px;
+    box-shadow: none;
+    color: #232426;
+    float: left;
+    font-size: 18px;
+    height: 68px;
+    padding: 12px 0.5em 0.5em;
+    width: 500px;
+}
+
+.btn-holder {
+    float: left;
+}
+
+.pgbutton-30 {
+    font-size: 30px;
+}
+
+.pg-button {
+    -moz-user-select: none;
+    background-color: #4B93CD;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0px 4px 4px 0px;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.pgbutton-30 {
+    font-size: 30px;
+}
+
+.btn-search {
+    height: 69px;
+    width: 90px;
+}
+
+.home_page_listing_carousel{position: relative;
+							min-height: 210px;
+							background-color: #2F2F2F;
+							}
+
+.section_01_title{
+                  padding: 50px 0px 35px;
+                }
+
+p.big_title{text-align: center;
+            padding: 5px 5px;
+            font-size: 40px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 100;}
+
+.section_01_bg{background-color: rgb(83,181,172);
+               padding-top: 30px;
+               padding-bottom: 40px;
+                }
+
+.section_01_content{
+                    width: 960px;
+                    margin: 0px auto; 
+                    }
+
+.thumbline_subtitle{
+                    line-height: 1.3;
+                    font-family: "Open Sans",Helvetica,"Helvetica Neue",Calibri,Arial,sans-serif;
+                    font-size: 17px;
+                    font-weight: 600;
+                    font-style: normal;
+                    text-align: center;
+                    color: #fff;
+
+                    }
+
+.featured_iten_icon{position: relative;
+                    display: inline-block;
+                    height: 35px;
+                    width: 35px;
+                    font-size: 18px;
+                    background-color: #D4575E;
+                    color: #FFF;
+                    margin-bottom: -18px;
+                    z-index: 1;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    text-align: center;
+                    margin-left: 45%;
+                    padding: 7px;}
+
+.cusrom_thumbnail{border:0px; padding: 0;}
+
+.testimonial-bg-full {
+    background: transparent url("../images/testimonial-tile-full.jpg") no-repeat scroll center top;
+    min-height: 600px;
+    color: #FFF;
+}
+
+.quote {
+    padding: 50px;
+    font-size: 35px;
+    text-align: center;
+    color: #FFF;
+}
+
+.quote-image {
+    border: 3px solid #008000;
+    border-radius: 500px;
+    width: 75px;
+}
+
+.quote-name {
+    font-size: 18px;
+    text-align: center;
+    color: #FFF;
+}
+
+.section_02_title{ padding: 50px 0px 35px;}
+
+.thumbnail_section_02{ box-shadow: none;
+                       border: medium none;}
+
+.caption-title {
+    color: #6F6F6F;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "Open Sans",sans-serif;
+}
+
+.caption-text {
+    color: #6F6F6F;
+    font-size: 14px;
+    font-weight: 100;
+    padding-top: 20px;
+}
+
+.contact-bg{ background-color: rgb(1,136,201);
+             min-height: 200px;
+             text-align: center;
+            }
+
+.btn-green {
+    border-radius: 50px;
+    color: #FFF;
+    background-color: #7ABA60;
+    border-color: #7ABA60;
+    padding: 12px 30px;
+    text-shadow: none;
+    font-family: "roboto" sans-serif;
+    font-size: 14px;
+}
+
+.contact_text{
+              padding-top: 30px !important;
+              padding-bottom: 20px !important;
+              color: #fff;}
+
+
+/* Footer starts */
+
+.footer-bg {
+    min-height: 400px;
+    background-color: #FA9638;
+    color: #FFF;
+    padding: 60px 0px;
+}
+
+#footer a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.padding-top-25 {
+    padding-top: 25px;
+}
+
+/* Footer end */
+
+/* seller page starts*/
+
+.seller_header_img_section{ background-image:url('../images/sell-bg.jpg');
+                            background-size: cover;
+                            min-height: 560px;
+                            width:100%;}
+.seller_section_02{ background-color: #EFEFEF;}
+
+.custom_carousel_inner{ height: 500px;}
+
+.custom_carousel_left_right{ background-image: none !important;}
+
+.slider_tagline{ color: #292929;
+                    font-size: 40px;
+                    font-weight: 100;
+                    font-family: "Open Sans",sans-serif;
+                    line-height: 1.5;}
+
+.slider_subtagline{ color: #6f6f6f;
+                    font-size: 14px;
+                    font-weight: 100;
+                    padding-top: 20px;
+                    color: inherit;
+                    font-family: "Open Sans",sans-serif;
+                    line-height: 1.5;}
+
+.custom_carousel_inner .item{ float: left;
+    margin-left: 6%;
+    padding: 30px 45px;
+    text-align: left;
+    width: 50%;}
+
+.center-arrow {
+  top: 50%;
+}
+
+.seller_section_03_title_text{ margin-bottom: 10px;
+                                margin-top: 20px;}
+
+.selleer_page_section_04{ background-color: #7ABA60;
+                          min-height: 450px;}
+
+.dollars {
+  color: #fff;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.btn-white {
+  background-color: #fff;
+  border-color: #7aba60;
+  border-radius: 50px;
+  color: #7aba60;
+  padding: 12px 50px;
+  text-shadow: none;
+}
+
+.seller_page_section_04_padding50{ padding-top: 50px;
+                                    padding-bottom: 20px;
+                                  }
+
+.seller_page_section_05_faq{background-color: #EFEFEF;
+                            min-height: 450px;
+                            }
+
+.faq-title {
+    font-family: "Merriweather",serif;
+    font-style: italic;
+    color: #292929;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.faq-text {
+    color: #6F6F6F;
+    font-size: 14px;
+    font-weight: 100;
+    padding-top: 20px;
+    margin: 0px auto;
+    width: 70%;
+}
+
+.padding-top-50 {
+    padding-top: 50px;
+}
+
+.center-arrow_02 {
+    top: 20px;
+}
+
+
+.seller_page_section_06_pro{background-color: #0188C9;}
+
+.proservices-maintitle {
+    color: #FFF;
+    font-weight: 100;
+    padding-bottom: 30px;
+}
+
+.proservices {
+    background-color: #0188C9;
+}
+
+.proservices-text {
+    color: #FFF;
+    font-weight: 100;
+    line-height: 1.9;
+}
+
+.padding-top-25 {
+    padding-top: 25px;
+}
+
+.sellpro {
+    min-height: 430px;
+}
+
+.custom_thumbnail {
+    box-shadow: none;
+    border: medium none;
+}
+
+.proservices-title {
+    color: #5CDEFE;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.greenback {
+    background-color: #7ABA60;
+    min-height: 350px;
+    color: #FFF;
+}
+
+.mortgage-title {
+    font-size: 55px;
+    font-weight: 100;
+    color: #FFF;
+    font-family: "open sans",sans-serif;
+    margin-bottom: 30px;
+}
+
+.mortgage-text {
+    padding: 0px 25px;
+    font-size: 20px;
+    font-weight: 100;
+    color: #FFF;
+}
+
+.greenback-title {
+    font-weight: 100;
+    color: #FFF;
+}
+
+.mortgage-rate {
+    font-size: 120px;
+    color: #FFF;
+    font-weight: 700;
+}
+.padding-top-25 {
+    padding-top: 25px;
+}
+.padding-bottom-50 {
+    padding-bottom: 50px;
+}
+
+.panel-padding-50 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.pg-better-panel {
+    text-align: center;
+    padding: 50px 0px 35px;
+}
+
+.better-tag {
+    color: #292929;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.thumbnail .caption {
+    padding: 9px;
+    color: #333;
+}
+
+#buyer-toolbox {
+    background-color: #4B93CD;
+}
+
+#buyer-toolbox .media-title {
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.pg-text-blue {
+    color: #88D8F7;
+}
+
+.media-heading {
+    margin: 0px 0px 5px;
+}
+
+.padding-bottom-100 {
+    padding-bottom: 100px;
+}
+
+#buyerguide {
+    background-color: #EFEFEF;
+}
+
+#buyerguide .buyerguide-title {
+    color: #6F6F6F;
+    font-weight: 100;
+}
+
+.btn-green {
+    border-radius: 50px;
+    color: #FFF;
+    background-color: #7ABA60;
+    border-color: #7ABA60;
+    padding: 12px 30px;
+    text-shadow: none;
+}
+
+/* mortgage page starts */
+
+.mortgage_header_bg_img{ 
+                        background: transparent url("../images/mortgage-page-bg.jpg") no-repeat scroll center top;
+                        height: 560px;
+                        }
+.custom_panel-padding-50{ padding-top: 50px;
+                          padding-bottom: 50px;}
+.panel-artical {
+    background-color: #F9F9F9;
+    border-top: 2px solid #E5E5E5;
+    border-bottom: 2px solid #E5E5E5;
+    min-height: 150px;
+}
+
+
+#monthly {
+    font-size: 75px;
+    color: #0AAC15;
+}
+
+/* pakages page starts */
+
+#cart-intro {
+    background-color: #EFEFEF;
+}
+
+#cart-intro h1 {
+    font-weight: 100;
+    color: #292929;
+    font-size: 55px;
+}
+
+.list-group {
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 10px;
+}
+
+.list-group-height {
+    min-height: 160px;
+}
+
+#cart-intro h4 {
+    font-weight: 100;
+    color: #6F6F6F;
+}
+.list-group-item {
+    border: medium none;
+    background-color: transparent;
+    font-weight: 100;
+    color: #6F6F6F;
+    font-size: 14px;
+}
+
+#cart-intro h3 {
+    font-weight: 700;
+    color: #292929;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.link-textsize {
+    font-size: 19px;
+}
+.btn-green:hover {
+    background-color: #79C17C;
+    color: #FFF;
+    border-color: #79C17C;
+    padding: 12px 30px;
+}
+
+/* List page starts here */
+
+#search-panel {
+    background-color: #4B93CD;
+}
+
+.searchpage-textbox {
+    background-color: #FFF;
+    border-color: #4B93CD -moz-use-text-color #4B93CD #4B93CD;
+    border-radius: 0px;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    box-shadow: none;
+    color: #232426;
+    float: left;
+    font-size: 12px;
+    height: 40px;
+    padding: 4px;
+    width: 300px;
+}
+
+.pg-btn-custom {
+    background: #FFF none repeat scroll 0px 0px;
+    border-radius: 4px 0px 0px 4px;
+    color: #3E3D3B;
+    float: left;
+    font-size: 12px;
+    height: 40px;
+    line-height: 1.429;
+    text-align: left;
+    border: 1px solid #4B93CD;
+    width: 150px;
+    overflow: hidden;
+}
+
+.btn-holder {
+    float: left;
+}
+
+.searchpage-button {
+    -moz-user-select: none;
+    background-color: #FFF;
+    background-image: none;
+    border-width: 1px 1px 1px medium;
+    border-style: solid solid solid none;
+    border-color: #4B93CD #4B93CD #4B93CD -moz-use-text-color;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    border-radius: 0px 4px 4px 0px;
+    color: #4B93CD;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    height: 40px;
+}
+
+.white-text {
+    color: #FFF;
+    padding-left: 30px;
+    font-size: 12px;
+}
+
+.btn-group {
+    float: left;
+}
+
+.btn-white-search {
+    background-color: #FFF;
+    border-color: #FFF;
+    border-radius: 4px;
+    color: #292929;
+    text-shadow: none;
+    padding: 10px 12px;
+}
+
+.btn-green-search:hover {
+    background-color: #79C17C;
+    border-color: #79C17C;
+    color: #FFF;
+}
+
+.btn-green-search {
+    background-color: #7ABA60;
+    border-color: #7ABA60;
+    border-radius: 4px;
+    color: #FFF;
+    text-shadow: none;
+    padding: 10px 12px;
+}
+
+#mainSearchbox {
+    padding-top: 10px;
+}
+
+#extendedSearchOptions label {
+    font-weight: 100;
+    color: #FFF;
+}
+
+.bootstrap-select.btn-group .btn .filter-option {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    text-align: left;
+}
+
+/* register content starts */
+
+.register-bg {
+    background: transparent url("../images/city.jpg") no-repeat scroll center top;
+    height: 500px;
+}
+
+.custom-form-group {
+    margin-left: 0px !important;
+}
+
+
+/* rent page */
+
+.rent_header_img_section{ background-image:url('../images/vacation-bg.jpg');
+                            background-size: cover;
+                            min-height: 600px;
+                            width:100%;}
