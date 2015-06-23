@@ -18,7 +18,14 @@
 </script>
 
 <?php
+if(isset($_GET['id']))
+{
+    $id=$_GET['id'];
+    $table='department';
+    $id_field='department_id';
+    $result=$this->select_model->Select_Single_Row($id,$table,$id_field);
 
+}
 
 ?>
 
