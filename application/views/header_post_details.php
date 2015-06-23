@@ -97,10 +97,11 @@
               </form>
               <ul class="nav navbar-nav navbar-right">
               <li><a href="<?php echo base_url(); ?>en/listingpage/">Property List</a></li>
+              <li><a href="<?php echo base_url(); ?>en/postpage/">Property Details</a></li>
 					<li><a href="<?php echo base_url(); ?>en/seller/">Sellers</a></li>
 					<li><a href="<?php echo base_url(); ?>en/buyer/">Buyers</a></li>
 					<li><a href="<?php echo base_url(); ?>en/mortgage">Mortgages</a></li>
-					<li><a href="<?php echo base_url(); ?>en/mortgage">Rent</a></li>
+					<li><a href="<?php echo base_url(); ?>en/rent">Rent</a></li>
                     <?php
                     if($this->session->userdata('email_address')){
 						?>

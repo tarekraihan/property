@@ -17,6 +17,11 @@
 
 </script>
 
+<?php
+
+
+?>
+
 <div class="container-fluid no-margin no-padding" style="background-color: #F6F7F9;">
     <div class="post_page_add_01">
     

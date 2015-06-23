@@ -69,9 +69,9 @@ class Admin_Panel extends CI_Controller {
 				$this->form_validation->set_rules('txtZoning','Zoning','trim|required|min_length[2]|max_length[100]|xss_clean');
 				$this->form_validation->set_rules('txtWaterSource','Water Source','trim|required|min_length[2]|max_length[100]|xss_clean');
 				$this->form_validation->set_rules('txtInterior','Interior','trim|required|min_length[2]|max_length[100]|xss_clean');
-				$this->form_validation->set_rules('txtPrice','Price','trim|required|min_length[2]|max_length[12]|xss_clean');
-				$this->form_validation->set_rules('txtBedroom','Bedroom','trim|required|min_length[2]|max_length[12]|xss_clean');
-				$this->form_validation->set_rules('txtBathroom','Bathroom','trim|required|min_length[2]|max_length[12]|xss_clean');
+				$this->form_validation->set_rules('txtPrice','Price','trim|required|min_length[2]|max_length[12]|is_natural|xss_clean');
+				$this->form_validation->set_rules('txtBedroom','Bedroom','trim|required|min_length[1]|is_natural|max_length[12]|xss_clean');
+				$this->form_validation->set_rules('txtBathroom','Bathroom','trim|required|min_length[1]|max_length[12]|is_natural|xss_clean');
 				
 			if ($this->form_validation->run() == FALSE)
 			{

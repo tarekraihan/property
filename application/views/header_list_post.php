@@ -48,12 +48,26 @@
 				</div><!-- /input-group -->
               </form>
               <ul class="nav navbar-nav navbar-right">
+              <li><a href="<?php echo base_url(); ?>en/listingpage/">Property List</a></li>
+              <li><a href="<?php echo base_url(); ?>en/postpage/">Property Details</a></li>
 					<li><a href="<?php echo base_url(); ?>en/seller/">Sellers</a></li>
 					<li><a href="<?php echo base_url(); ?>en/buyer/">Buyers</a></li>
 					<li><a href="<?php echo base_url(); ?>en/mortgage">Mortgages</a></li>
-					
+					<li><a href="<?php echo base_url(); ?>en/rent">Rent</a></li>
+                    <?php
+                    if($this->session->userdata('email_address')){
+						?>
+                        <li><a href="<?php echo base_url(); ?>en/dashboard/">Dashboard</a></li>
+					<li><a href="<?php echo base_url(); ?>en/mortgage">Welcome <?php echo $this->session->userdata('first_name'); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>login/log_out">Log Out</a></li>
+                   <?php 
+				   }else{ 
+				   ?>
 					<li class="hidden-xs hidden-sm" style="padding-top: 18px;">|</li>
 					<li class="login_menu" data-toggle="modal" data-target="#myModal"><a href="#">Join or Login <span></span></a></li>
+                    <?php
+                    }
+					?>
 					<li class="pad-top hidden-xs hidden-sm"><img src="<?php echo base_url(); ?>/images/login-placeholder.jpg" class="socialLoginThumbnail"></li>
               </ul>
             </div><!-- /.navbar-collapse -->

@@ -72,11 +72,19 @@
 
                                                     </div>
 
+
+
+
+
+
+
+
+
                                                         <div class="pull-right hidden-xs hidden-sm">
 
                                                              <div class="btn-group">
 
-                                                             <button type="button" class="btn btn-white-search" id="toggleGridSearch"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Grid View</button>
+                                                                                                                    <button type="button" class="btn btn-white-search" id="toggleGridSearch"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Grid View</button>
                                                                 <button type="button" class="btn btn-green-search" id="submitMapSearch"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Map View</button>
                                                                 <button type="button" class="btn btn-green-search hidden-xs" id="submitCalendarSearch"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Open House</button>
                                                                                                                  </div>		
@@ -313,8 +321,8 @@
 					<p class="region_name pull-left"><a href="#">Waterloo,on</a></p>
 					<p class="subregion_name pull-left">&nbsp; >> &nbsp;Sub Region</p>
 				</div>
-			</div>
-		</div>
+			
+		
 		
 		<div class="col-xs-12 col-sm-12 hidden-xs hidden-sm">
 							<div class="well well-sm">
@@ -413,91 +421,43 @@
 				</ul>
 			</div>
 		</div>
+		</div><!-- container-->
+		</div>
 		
 		<div class="row no-margin">
 			<div class="container no-padding">
 				<div class="row no-margin">
 					<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
 							<div class="row no-margin">
+                            <?php 
+								$this->common_model->order_column = 'property_id';
+								$this->common_model->table_name = 'tbl_property';
+								$query=$this->common_model->select_all();
+							
+								foreach ($query->result() as $row)
+								{
+							?>
+                            
 								<div class="col-sm-12 col-md-4">
                                     <div class="item">
-                                            <span class="label label-primary">Most Popular</span>
-                                                <a href="#"><img class="prop-img" src="http://lorempixel.com/260/175/"></a>
+                                            <span class="label label-primary most_popular">Most Popular</span>
+                                                <a href="#"><img class="prop-img" src="<?php echo base_url(); ?>/images/property/<?php echo $row->image_name;?>"></a>
                                                 <div class="info"> 
-                                                    <h2><a href="/property/index/id/86837">$669,900</a></h2>
-                                                    <div class="price">464 Lake Louise Blvd Waterloo, ON</div> 
-                                                    <div class="bedsbaths"><strong>3</strong> beds <strong>3</strong> baths</div>
+                                                    <h2><a href="/property/index/id/86837">$<?php echo $row->price;?></a></h2>
+                                                    <div class="price"><?php echo $row->property_address;?></div> 
+                                                    <div class="bedsbaths"><strong><?php echo $row->bedroom_no;?></strong> beds <strong><?php echo $row->bathroom_no;?></strong> baths</div>
 
                                                     <div class="info-listing">
 
                                                         <span class="badge-row">		                             
                                                             <ul class="list-inline badges pull-left">				                             	
 
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_commuter_on.png"></li>
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_new_on.png"></li>
+                                                                <li><img src="<?php echo base_url(); ?>/images/icon_16_commuter_on.png"></li>
+                                                                <li><img src="<?php echo base_url(); ?>/images/icon_16_new_on.png"></li>
                                                             </ul>		                            
                                                         </span>
 
-                                                        <span class="full-details pull-right"><a href="#">Full Details</a></span>
-                                                    </div>
-
-                                                        <div class="clearfix"></div>
-
-                                                    </d	iv>
-                                                </div>
-                                    </div>	
-                                </div>	
-							
-							
-									<div class="col-sm-12 col-md-4">
-										<div class="item">
-                                                <a href="#"><img class="prop-img" src="http://lorempixel.com/260/175/"></a>
-                                                <div class="info"> 
-                                                    <h2><a href="/property/index/id/86837">$669,900</a></h2>
-                                                    <div class="price">464 Lake Louise Blvd Waterloo, ON</div> 
-                                                    <div class="bedsbaths"><strong>3</strong> beds <strong>3</strong> baths</div>
-
-                                                    <div class="info-listing">
-
-                                                        <span class="badge-row">		                             
-                                                            <ul class="list-inline badges pull-left">				                             	
-
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_commuter_on.png"></li>
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_new_on.png"></li>
-                                                            </ul>		                            
-                                                        </span>
-
-                                                        <span class="full-details pull-right"><a href="#">Full Details</a></span>
-                                                    </div>
-
-                                                        <div class="clearfix"></div>
-
-                                                    </d	iv>
-                                                </div>
-                                    </div>	
-									</div>
-							
-							
-							
-									<div class="col-sm-12 col-md-4">
-										<div class="item">
-                                                <a href="#"><img class="prop-img" src="http://lorempixel.com/260/175/"></a>
-                                                <div class="info"> 
-                                                    <h2><a href="/property/index/id/86837">$669,900</a></h2>
-                                                    <div class="price">464 Lake Louise Blvd Waterloo, ON</div> 
-                                                    <div class="bedsbaths"><strong>3</strong> beds <strong>3</strong> baths</div>
-
-                                                    <div class="info-listing">
-
-                                                        <span class="badge-row">		                             
-                                                            <ul class="list-inline badges pull-left">				                             	
-
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_commuter_on.png"></li>
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_new_on.png"></li>
-                                                            </ul>		                            
-                                                        </span>
-
-                                                        <span class="full-details pull-right"><a href="#">Full Details</a></span>
+                                                        <span class="full-details pull-right"><a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>">Full Details</a></span>
                                                     </div>
 
                                                         <div class="clearfix"></div>
@@ -505,96 +465,11 @@
                                                     </d	iv>
                                                 </div>
                                             </div>	
-									  </div>
-									</div>
-            
-							<div class="row no-margin">
-								<div class="col-sm-12 col-md-4">
-                                    <div class="item">
-                                            <span class="label label-primary">Most Popular</span>
-                                                <a href="#"><img class="prop-img" src="http://lorempixel.com/260/175/"></a>
-                                                <div class="info"> 
-                                                    <h2><a href="/property/index/id/86837">$669,900</a></h2>
-                                                    <div class="price">464 Lake Louise Blvd Waterloo, ON</div> 
-                                                    <div class="bedsbaths"><strong>3</strong> beds <strong>3</strong> baths</div>
-
-                                                    <div class="info-listing">
-
-                                                        <span class="badge-row">		                             
-                                                            <ul class="list-inline badges pull-left">				                             	
-
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_commuter_on.png"></li>
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_new_on.png"></li>
-                                                            </ul>		                            
-                                                        </span>
-
-                                                        <span class="full-details pull-right"><a href="#">Full Details</a></span>
-                                                    </div>
-
-                                                        <div class="clearfix"></div>
-
-                                                    </div>
-                                                </div>
-                                    </div>	
-                                
-							
-							
-									<div class="col-sm-12 col-md-4">
-										<div class="item">
-                                                <a href="#"><img class="prop-img" src="http://lorempixel.com/260/175/"></a>
-                                                <div class="info"> 
-                                                    <h2><a href="/property/index/id/86837">$669,900</a></h2>
-                                                    <div class="price">464 Lake Louise Blvd Waterloo, ON</div> 
-                                                    <div class="bedsbaths"><strong>3</strong> beds <strong>3</strong> baths</div>
-
-                                                    <div class="info-listing">
-
-                                                        <span class="badge-row">		                             
-                                                            <ul class="list-inline badges pull-left">				                             	
-
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_commuter_on.png"></li>
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_new_on.png"></li>
-                                                            </ul>		                            
-                                                        </span>
-
-                                                        <span class="full-details pull-right"><a href="#">Full Details</a></span>
-                                                    </div>
-
-                                                        <div class="clearfix"></div>
-
-                                                    </div>
-                                                </div>
-                                    
-									</div>
-							
-							
-							
-									<div class="col-sm-12 col-md-4">
-										<div class="item">
-                                                <a href="#"><img class="prop-img" src="http://lorempixel.com/260/175/"></a>
-                                                <div class="info"> 
-                                                    <h2><a href="/property/index/id/86837">$669,900</a></h2>
-                                                    <div class="price">464 Lake Louise Blvd Waterloo, ON</div> 
-                                                    <div class="bedsbaths"><strong>3</strong> beds <strong>3</strong> baths</div>
-
-                                                    <div class="info-listing">
-
-                                                        <span class="badge-row">		                             
-                                                            <ul class="list-inline badges pull-left">				                             	
-
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_commuter_on.png"></li>
-                                                                <li><img src="<?php echo base_url() ?>/images/icon_16_new_on.png"></li>
-                                                            </ul>		                            
-                                                        </span>
-
-                                                        <span class="full-details pull-right"><a href="#">Full Details</a></span>
-                                                    </div>
-
-                                                        <div class="clearfix"></div>
-
-                                                    </div>
-                                                </div>
                                         </div>	
+                                        <?php
+                                       }
+                                      ?>
+		
 									  
 									</div> <!-- row end-->
 					        </div>

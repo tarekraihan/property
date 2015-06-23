@@ -795,3 +795,29 @@ p.big_title{text-align: center;
                             background-size: cover;
                             min-height: 600px;
                             width:100%;}
+							
+							
+/* Property listing page */
+.prop-img
+{
+	height:175px;
+	width:260px;	
+	
+}
+
+.region_name {
+    font-size: 40px !important;
+    font-weight: 500 !important;
+    font-family: "open sans",sans-serif;
+}
+
+.subregion_name {
+    font-size: 25px !important;
+    margin-top: 16px !important;
+}
+
+.price {
+    font-size: 12px;
+}
+
+.most_popular{position:absolute}

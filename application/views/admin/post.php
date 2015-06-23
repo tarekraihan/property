@@ -65,10 +65,10 @@ $(document).ready(function(){
                 <form role="form"  action="" method="post" enctype="multipart/form-data">
                 
                 <div class="form-group col-md-6">
-                    <label class="control-label" for="inputSuccess1">Country Name</label>
+                    <label class="control-label" for="inputSuccess1">Province Name</label>
                     <div class="controls">
                         <select pattern="[0-9]{1,3}" title="Select a country !!!" name="txtCountry" id="txtCountry" data-rel="chosen" class="form-control">
-                            <option value="">Select Country</option>
+                            <option value="">Select Province</option>
 							<?php 
                                 $this->common_model->order_column = 'country_id';
                                 $this->common_model->table_name = 'tbl_country';
@@ -88,10 +88,10 @@ $(document).ready(function(){
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label class="control-label" for="inputSuccess1">State Name</label>
+                    <label class="control-label" for="inputSuccess1">Division Name</label>
                     <div class="controls">
                         <select pattern="[0-9]{1,3}" title="Select a State !!!" name="txtStates"  id="txtStates" data-rel="chosen" class="form-control" >
-                            <option value="">Select State</option>
+                            <option value="">Select Division</option>
                             
                                 
                         </select>
@@ -99,10 +99,10 @@ $(document).ready(function(){
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label class="control-label" for="inputSuccess1">Area Name</label>
+                    <label class="control-label" for="inputSuccess1">City Name</label>
                     <div class="controls">
                         <select name="txtArea" name="txtArea"id="txtArea" data-rel="chosen" class="form-control">
-                        	<option value="">Select Area</option>
+                        	<option value="">Select City</option>
                         </select>
                     </div>
                 </div>
