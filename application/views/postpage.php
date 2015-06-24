@@ -83,7 +83,7 @@
 									<div class="item">            
 										<div class="clearfix" style="max-width:595px;">
 											<ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-												<li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>" class="slide_thumb"> 
+												<li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>" class="slide_thumb"/> 
 													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>"  class="slide_image"/>
 													 </li>
 												
@@ -140,16 +140,18 @@
                                                 <div class="clear"></div>
                                             </li>
 
-                                                <li><div class="marker">Property Use:</div>
-                                            <div class="data">Residential</div><div class="clear"></div></li>
+                                            <li>
+                                                <div class="marker">Property Use:</div>
+                                                <div class="data">Residential</div>
+                                                <div class="clear"></div>
+                                            </li>
 
 
-                                              <li><div class="marker">Annual Taxes:</div>
-                                            <div class="data">$<?php echo $row->annual_tax; ?></div><div class="clear"></div></li>
-
-
-
-
+                                              <li>
+                                                  <div class="marker">Annual Taxes:</div>
+                                                  <div class="data">$<?php echo $row->annual_tax; ?></div>
+                                                  <div class="clear"></div>
+                                              </li>
 
                                                 <li><div class="marker">Age:</div>
                                             <div class="data"><?php echo $row->age; ?></div><div class="clear"></div></li>

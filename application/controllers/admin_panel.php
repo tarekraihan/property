@@ -55,7 +55,7 @@ class Admin_Panel extends CI_Controller {
 				$this->form_validation->set_rules('txtOwenr','Owner', 'trim|required|is_natural|xss_clean');
 				
 				$this->form_validation->set_rules('txtPropertyAddress','Property Address','trim|required|min_length[2]|max_length[250]|xss_clean');
-				$this->form_validation->set_rules('txtDescription','Property Description','trim|required|min_length[2]|max_length[1500]|xss_clean');
+				$this->form_validation->set_rules('txtDescription','Property Description','trim|required|xss_clean');
 				$this->form_validation->set_rules('txtPropertyType','Property Type', 'trim|required|is_natural|xss_clean');
 				$this->form_validation->set_rules('txtPropertyUsed','Property Used', 'trim|required|is_natural|xss_clean');
 				$this->form_validation->set_rules('txtAnnualTax','Annual Tax','trim|required|is_natural|min_length[2]|max_length[12]|xss_clean');
@@ -98,13 +98,12 @@ class Admin_Panel extends CI_Controller {
 				
 				$upload_result = $this->do_upload('./images/property/','image');
 				$this->common_model->data=array(
-				
+				'state_id'=>$this->input->post('txtStates'),
                 'area_id'=>$this->input->post('txtArea'),
                 'property_owner_id'=>$this->input->post('txtOwenr'),
                 'sign'=>$sign,
                 'property_address'=>$this->input->post('txtPropertyAddress'),
                 'description'=>$this->input->post('txtDescription'),
-              
                 'property_type_id'=>$this->input->post('txtPropertyType'),
                 'property_use_id'=>$this->input->post('txtPropertyUsed'),
                 'annual_tax'=>$this->input->post('txtAnnualTax'),
@@ -117,7 +116,6 @@ class Admin_Panel extends CI_Controller {
                 'heat_source'=>$this->input->post('txtHeatSource'),
                 'garage'=>$this->input->post('txtGarage'),
                 'water_source' =>$this->input->post('txtWaterSource'),
-				
 				'interior'=>$this->input->post('txtInterior'),
                 'price'=>$this->input->post('txtPrice'),
                 'bedroom_no'=>$this->input->post('txtBedroom'),

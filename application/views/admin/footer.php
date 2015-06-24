@@ -17,7 +17,7 @@
 <!-- data table plugin -->
 <script src='<?php echo base_url(); ?>js/jquery.dataTables.min.js'></script>
 
-    
+ <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>   
 
 <!-- notification plugin -->
 <script src="<?php echo base_url(); ?>js/admin_js/jquery.noty.js"></script>

@@ -140,9 +140,11 @@ $(document).ready(function(){
                 
                 <div class="form-group col-md-12">
                     <label for="exampleInputEmail1">Property Descriptions</label>
-                     <textarea class="form-control" name="txtDescription" rows="6">
-                   	  <?php echo set_value('txtDescription'); ?> 
+                    
+                     <textarea class="ckeditor form-control" name="txtDescription">
+                      <?php echo set_value('txtDescription'); ?> 
                      </textarea>
+                   	 
                 </div>
                 
                 <div class="form-group col-md-6">

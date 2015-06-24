@@ -36,6 +36,7 @@
     <!-- topbar starts -->
     <div class="navbar navbar-default" role="navigation">
 
+	
         <div class="navbar-inner">
             <button type="button" class="navbar-toggle pull-left animated flip">
                 <span class="sr-only">Toggle navigation</span>
@@ -48,15 +49,9 @@
 
             <!-- user dropdown starts -->
             <div class="btn-group pull-right">
-                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> <a href="<?php echo base_url(); ?>login/admin_log_out"">Log out</a></span>
+                
+                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> <a style="color:white;" href="<?php echo base_url(); ?>login/admin_log_out">Log out</a></span>
                     <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Profile</a></li>
-                    <li class="divider"></li>
-                    <li>Logout</a></li>
-                </ul>
             </div>
             <!-- user dropdown ends -->
 
