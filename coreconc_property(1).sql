@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2015 at 12:02 AM
+-- Generation Time: Jun 24, 2015 at 06:23 AM
 -- Server version: 5.5.39
 -- PHP Version: 5.4.31
 
@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `tbl_property` (
   `foundation` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `heatmethod` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `heat_source` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `zoning` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `garage` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `water_source` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `interior` varchar(225) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `price` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -161,7 +161,16 @@ CREATE TABLE IF NOT EXISTS `tbl_property` (
   `bathroom_no` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `feature_post` int(2) NOT NULL,
   `image_name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `tbl_property`
+--
+
+INSERT INTO `tbl_property` (`property_id`, `area_id`, `property_owner_id`, `sign`, `property_address`, `description`, `property_type_id`, `property_use_id`, `annual_tax`, `age`, `exterior`, `floring`, `leavels`, `foundation`, `heatmethod`, `heat_source`, `garage`, `water_source`, `interior`, `price`, `bedroom_no`, `bathroom_no`, `feature_post`, `image_name`) VALUES
+(2, 45, 5, '#123288', '36 Nightingale Crescent Elmira, ON', 'The maintenance free exterior is a brick / vinyl combination. The driveway accommodates 4 vehicles. The lovely front garden accentuates the home''s curb appeal. The fully fenced, private, pool-sized backyard with mature trees has an expansive deck with lower level patio with adjacent hot tub. The yard backs on a tranquil babbling brook! \r\n\r\nRecent Upgrades:\r\n* Built-in Dishwasher (2014)\r\n* Insulated Garage Door (2014)\r\n* Roof (2013)', 13, 4, '567', '40 years old', 'Wood', 'Hardwood', '1', 'Stone', 'Baseboard', 'Electricity, Wood', 'Multi-Vehicle', 'Well', 'Formal Dining', '464900', '7', '3', 1, '1.jpg'),
+(3, 44, 4, '#987908', '6497 Roszell Rd Puslinch, ON', 'This custom designed home at the edge of Cambridge was built in 2003. A loft bungalow floor plan with 4,529 sq feet of finished space. \r\n\r\nThe main floor has a large entry way the leads into the great room with a ceiling that rises to 17 feet. The great room is flows into the over-sized kitchen with a breakfast bar and eat in dining area. The elevated southern view from the great room and kitchen provide a panoramic view of the back yard, in-ground pool, gardens, surrounding forest and mill pond. \r\n\r\nThe home has living space on 3 levels with 2,100 sq feet on the main level, 980 sq. feet on the second floor and another 1,500 sq. feet on the lower level.', 13, 4, '2200', '10 years old', 'Wood', 'Hardwood', '2', 'Stone', 'Baseboard', 'Electricity, Wood', 'Multi-Vehicle', 'Well', 'Formal Dining', '1150000', '6', '4', 1, '11.jpg'),
+(4, 45, 2, '#836278', '12 Butler Ave Cambridge, ON', 'There are only a few times you can say "Custom One of a Kind Home". This is one of them. From the custom designed bungaloft to the 100 feet of waterfront property to the unique cottage like community with easy access to KW, Cambridge and Guelph as well as minutes from the 401 for the commuters.\r\n\r\nLocated on a private road on the north side of Puslinch Lake this 2600+ square foot bungaloft is the ideal property for someone looking to downsize from their large family home and live life on one level. With the multi-use loft space and a finished basement walkout with 2 additional bedrooms it provides additional opportunity for families or even an in-law suite in the basement.', 12, 4, '3463', '2 years', 'Brick', 'Hardwood', '1', 'Stone', 'Baseboard', 'Electricity, Wood', 'Single-Vehicle', 'Well', 'Formal Dining', '829900', '6', '4', 1, '12.jpg');
 
 -- --------------------------------------------------------
 
@@ -330,7 +339,7 @@ MODIFY `country_id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `tbl_property`
 --
 ALTER TABLE `tbl_property`
-MODIFY `property_id` int(10) NOT NULL AUTO_INCREMENT;
+MODIFY `property_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_property_type`
 --
