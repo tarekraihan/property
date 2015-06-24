@@ -17,17 +17,7 @@
 
 </script>
 
-<?php
-if(isset($_GET['id']))
-{
-    $id=$_GET['id'];
-    $table='department';
-    $id_field='department_id';
-    $result=$this->select_model->Select_Single_Row($id,$table,$id_field);
 
-}
-
-?>
 
 <div class="container-fluid no-margin no-padding" style="background-color: #F6F7F9;">
     <div class="post_page_add_01">
@@ -43,21 +33,32 @@ if(isset($_GET['id']))
                     <div class="col-xs-12" style="padding-top: 5px;">
                         <a type="button" class="btn btn-default btn-sm" href=""><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back to Search</a>
                     </div>
+                    
+                    <?php
+						if(isset($_GET['id']))
+						{
+							$property_id=$_GET['id'];
+							
+							$query=$this->select_model->Select_Single_Property_Info($property_id);
+							foreach($query->result() as $row)
+							{
+						
+					?>
 
                     <div class="col-xs-12 hidden-xs">
-                        <span class="price padding-right opensans_thin">$464,900</span>
-                        <span class="beds-baths">4</span> 
+                        <span class="price padding-right opensans_thin">$<?php echo $row->price; ?></span>
+                        <span class="beds-baths"><?php echo $row->bedroom_no; ?></span> 
                         <span class="bb-text padding-right opensans_thin">beds</span> 
-                        <span class="beds-baths">2.5</span> 
+                        <span class="beds-baths"><?php echo $row->bathroom_no; ?></span> 
                         <span class="bb-text opensans_thin">baths</span>
 
                     </div>
                     
                     <div class="row clearfix">
                         <div class="col-sm-12" style="padding: 0px 35px; padding-bottom: 10px;">
-                            <span class="address opensans_thin">26 Meadow Crescent </span>
+                            <span class="address opensans_thin"><?php echo $row->property_address; ?> </span>
                             <span class="city-province opensans_thin">Guelph, ON </span> 
-                            <span class="label label-default sign-style">SIGN # 58526</span>
+                            <span class="label label-default sign-style">SIGN  <?php echo $row->sign; ?> </span>
                         </div>
                     </div>
 
@@ -82,48 +83,10 @@ if(isset($_GET['id']))
 									<div class="item">            
 										<div class="clearfix" style="max-width:595px;">
 											<ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-												<li data-thumb="http://lorempixel.com/122/82/transport/"> 
-													<img src="http://lorempixel.com/595/400/people/" />
+												<li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>" class="slide_thumb"> 
+													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>"  class="slide_image"/>
 													 </li>
-												<li data-thumb="http://lorempixel.com/122/82/city/"> 
-													<img src="http://lorempixel.com/595/400/city/" />
-													 </li>
-												<li data-thumb="http://lorempixel.com/122/82/transport/"> 
-													<img src="http://lorempixel.com/595/400/people/" />
-													 </li>
-												<li data-thumb="http://lorempixel.com/122/82/city/"> 
-													<img src="http://lorempixel.com/595/400/city/" />
-													 </li>
-												<li data-thumb="http://lorempixel.com/122/82/transport/"> 
-													<img src="http://lorempixel.com/595/400/" />
-													 </li>
-												<li data-thumb="http://lorempixel.com/122/82/city/"> 
-													<img src="http://lorempixel.com/595/400/people/" />
-													 </li>
-												<li data-thumb="<?php echo base_url(); ?>/img/thumb/cS-7.jpg"> 
-													<img src="http://lorempixel.com/595/400/city/" />
-													 </li>
-												<li data-thumb="<?php echo base_url(); ?>/img/thumb/cS-1.jpg"> 
-													<img src="http://lorempixel.com/595/400/people/" />
-													 </li>
-												<li data-thumb="<?php echo base_url(); ?>/img/thumb/cS-2.jpg"> 
-													<img src="http://lorempixel.com/595/400/city/" />
-													 </li>
-												<li data-thumb="<?php echo base_url(); ?>/img/thumb/cS-3.jpg"> 
-													<img src="http://lorempixel.com/595/400/people/" />
-													 </li>
-												<li data-thumb="<?php echo base_url(); ?>/img/thumb/cS-4.jpg"> 
-													<img src="http://lorempixel.com/595/400/city/" />
-													 </li>
-												<li data-thumb="<?php echo base_url(); ?>/img/thumb/cS-5.jpg"> 
-													<img src="http://lorempixel.com/595/400/" />
-													 </li>
-												<li data-thumb="<?php echo base_url(); ?>/img/thumb/cS-6.jpg"> 
-													<img src="http://lorempixel.com/595/400/people/" />
-													 </li>
-												<li data-thumb="<?php echo base_url(); ?>/img/thumb/cS-7.jpg"> 
-													<img src="http://lorempixel.com/595/400/city/" />
-													 </li>
+												
 											</ul>
 										</div>
 									</div>
@@ -160,25 +123,7 @@ if(isset($_GET['id']))
                             <div role="tabpanel" class="tab-pane active" id="description">
                                 <p class="tab-pane description clear-fix active">
                                 
-                                    This custom designed home at the edge of Cambridge was built in 2003. A loft bungalow floor plan with 4,529 sq feet of finished space.
-
-                                    The main floor has a large entry way the leads into the great room with a ceiling that rises to 17 feet. The great room is flows into the over-sized kitchen with a breakfast bar and eat in dining area. The elevated southern view from the great room and kitchen provide a panoramic view of the back yard, in-ground pool, gardens, surrounding forest and mill pond.</br></br>
-
-The home has living space on 3 levels with 2,100 sq feet on the main level, 980 sq. feet on the second floor and another 1,500 sq. feet on the lower level.</br></br>
-
-Highlights include the main floor master bedroom with dressing room and private bath. A main floor office doubles as a guest room complete with an adjacent 3pc bath. A formal dining room that looks out to the front of the house. And the most popular room, the kitchen, measures 14.5 x 24 feet.
-
-Upstairs are 3 generous bedrooms and a shared 4pc bath. On the lower level, which has a walk out to the lower level patio, you will find 2 additional bedrooms, plus a 4pc bath.</br></br>
-
-The lower level has 600 sq. feet set aside for storage and a full sized workshop. Downstairs has an open billiards room with oversized pool table and built in bar. And the home theatre room with a 10 foot screen, digital 7.1 sound system and ample seating area for 8-10.</br></br>
-
-From the kitchen, sliding doors leads outside to the 400 sq foot covered outdoor patio. The patio includes outdoor living space, dining area and outdoor kitchen with built in BBQ, counter and sink.
-
-From the patio, stairs lead down to the 20 x 40 salt-water pool and pool patio which includes 1,100 sq. ft stamped cement patio and pool house. There has been extensive landscaping done with armor stone walls, many varieties of trees, shrubs and ground cover used throughout. The pool area serves as a focal point and offers ultimate privacy in resort-like surroundings.</br></br>
-
-There is a 3 car attached garage which has been insulated dry-walled and stuccoed. The house is heated with natural gas, which is also used for the stove, hot-water, fireplace, pool heater and outdoor BBQ. All lines and piping are buried. The deep well provides unlimited spring like water.</br></br>
-
-The property is 6 minutes off Hwy 401 from the Town Line exit in Cambridge. Easy access to schools, shopping, sports facilities. The Speed river trail is literally out the front door, Irish Creek in the back yard and the surrounding property is environmentally protected. 
+                                   <?php echo $row->description; ?>
                                 
                                 </p>
                             </div>
@@ -195,79 +140,58 @@ The property is 6 minutes off Hwy 401 from the Town Line exit in Cambridge. Easy
                                                 <div class="clear"></div>
                                             </li>
 
-                                                                                <li><div class="marker">Property Use:</div>
+                                                <li><div class="marker">Property Use:</div>
                                             <div class="data">Residential</div><div class="clear"></div></li>
 
 
-                                                                                                                    <li><div class="marker">Annual Taxes:</div>
-                                            <div class="data">$8,479</div><div class="clear"></div></li>
+                                              <li><div class="marker">Annual Taxes:</div>
+                                            <div class="data">$<?php echo $row->annual_tax; ?></div><div class="clear"></div></li>
 
 
 
 
 
-                                                                                <li><div class="marker">Age:</div>
-                                            <div class="data">10 years old (circa 2005)</div><div class="clear"></div></li>
+                                                <li><div class="marker">Age:</div>
+                                            <div class="data"><?php echo $row->age; ?></div><div class="clear"></div></li>
 
-                                                                                <li><div class="marker">Exterior:</div>
-                                            <div class="data">Brick</div><div class="clear"></div></li>
-
-
-                                                                                <li><div class="marker">Flooring:</div>
-                                            <div class="data">Carpet, Ceramic Tile, Hardwood</div><div class="clear"></div></li>
+                                                  <li><div class="marker">Exterior:</div>
+                                            <div class="data"><?php echo $row->exterior; ?></div><div class="clear"></div></li>
 
 
-                                                                                <li><div class="marker">Levels:</div>
-                                            <div class="data">2</div><div class="clear"></div></li>
-
-                                                                                <li><div class="marker">Space:</div>
-                                            <div class="data">4,529 sq. ft. (421 m<span class="super">2</span>)</div><div class="clear"></div></li>
-
-                                                                                <li><div class="marker">Foundation:</div>
-                                            <div class="data">Poured Concrete</div><div class="clear"></div></li>
-
-                                                                                <li><div class="marker">Roof Age:</div>
-                                            <div class="data">10 years old (circa 2005)</div><div class="clear"></div></li>
-
-                                                                                <li><div class="marker">Basement:</div>
-                                            <div class="data">Partially Finished</div><div class="clear"></div></li>
+                                                  <li><div class="marker">Flooring:</div>
+                                            <div class="data"><?php echo $row->floring; ?></div><div class="clear"></div></li>
 
 
-                                                                                <li><div class="marker">Cabinets:</div>
-                                            <div class="data">Wood Veneer</div><div class="clear"></div></li>
+                                                  <li><div class="marker">Levels:</div>
+                                            <div class="data"><?php echo $row->leavels; ?></div><div class="clear"></div></li>
+
+                                                                                
+                                                   <li><div class="marker">Foundation:</div>
+                                            <div class="data"><?php echo $row->foundation; ?></div><div class="clear"></div></li>
+
+                                                   <li><div class="marker">Heatmethod:</div>
+                                            <div class="data"><?php echo $row->heatmethod; ?></div><div class="clear"></div></li>
 
 
-                                                                                <li><div class="marker">Countertop:</div>
-                                            <div class="data">Laminate</div><div class="clear"></div></li>
+                                                  <li><div class="marker">Heat Source:</div>
+                                            <div class="data"><?php echo $row->heat_source; ?></div><div class="clear"></div></li>
 
 
-                                                                                <li><div class="marker">Garage:</div>
-                                            <div class="data">Multi-Vehicle</div><div class="clear"></div></li>
+                                                  <li><div class="marker">Garage:</div>
+                                            <div class="data"><?php echo $row->garage; ?></div><div class="clear"></div></li>
 
-                                                                                <li><div class="marker">Driveway:</div>
-                                            <div class="data">Gravel</div><div class="clear"></div></li>
+                                                                           
 
-                                                                                <li><div class="marker">Parking Spaces:</div>
-                                            <div class="data">10</div><div class="clear"></div></li>
+                                                   <li><div class="marker">Water Source:</div>
+                                            <div class="data"><?php echo $row->water_source; ?></div><div class="clear"></div></li>
 
-
-                                                                                <li><div class="marker">Heat Method:</div>
-                                            <div class="data">Forced Air, Furnace</div><div class="clear"></div></li>
-
-                                                                                <li><div class="marker">Heat Source:</div>
-                                            <div class="data">Natural Gas</div><div class="clear"></div></li>
+                                                                               
 
 
-                                                                                <li><div class="marker">Zoning:</div>
-                                            <div class="data">RT- Residential</div><div class="clear"></div></li>
+                                                   <li><div class="marker">Interior:</div>
+                                            <div class="data"><?php echo $row->interior; ?></div><div class="clear"></div></li>
 
-                                                                                <li><div class="marker">Lot:</div>
-                                            <div class="data">60,400 sq. ft. / 1.39 ac. (5,611 m<span class="super">2</span>)</div><div class="clear"></div></li>
-
-                                                                                <li><div class="marker">Lot Dimensions:</div>
-                                            <div class="data">148FT x443FT</div><div class="clear"></div></li>
-
-
+                                               
                                         </ul>
                                     </div>
                                     
@@ -339,7 +263,7 @@ The property is 6 minutes off Hwy 401 from the Town Line exit in Cambridge. Easy
                                 </div>
                             </div>
 
-                            
+                   <?php }}?>
                              <!--mortgage part starts-->
                             <div role="tabpanel" class="tab-pane" id="mdetails">
                                 <div class="row property_details">

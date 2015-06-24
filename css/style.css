@@ -821,3 +821,18 @@ p.big_title{text-align: center;
 }
 
 .most_popular{position:absolute}
+
+/* Property Details Page */
+.slide_image
+{
+	width:595px;
+	height:400px;
+	
+}
+
+.slide_thumb
+{
+	
+	width:122px;
+	height:82px;
+}

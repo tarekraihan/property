@@ -232,8 +232,8 @@ $(document).ready(function(){
                 </div>
                 
                 <div class="form-group col-md-6">
-                    <label for="exampleInputEmail1">Zoning</label>
-                    <input type="text" class="form-control" id="txtZoning" value="<?php echo set_value('txtZoning');?>" name="txtZoning" placeholder="Enter Zoning">
+                    <label for="exampleInputEmail1">Garage</label>
+                    <input type="text" class="form-control" id="txtGarage" value="<?php echo set_value('txtGarage');?>" name="txtGarage" placeholder="Enter Garage">
                 </div>
                 
                 <div class="form-group col-md-6">

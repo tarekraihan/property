@@ -59,14 +59,14 @@ class Admin_Panel extends CI_Controller {
 				$this->form_validation->set_rules('txtPropertyType','Property Type', 'trim|required|is_natural|xss_clean');
 				$this->form_validation->set_rules('txtPropertyUsed','Property Used', 'trim|required|is_natural|xss_clean');
 				$this->form_validation->set_rules('txtAnnualTax','Annual Tax','trim|required|is_natural|min_length[2]|max_length[12]|xss_clean');
-				$this->form_validation->set_rules('txtPropertyAge','Property Age','trim|required|min_length[1]|max_length[20]|xss_clean');
+				$this->form_validation->set_rules('txtPropertyAge','Property Age','trim|required|min_length[1]|max_length[25]|xss_clean');
 				$this->form_validation->set_rules('txtExterior','Exterior','trim|required|min_length[2]|max_length[255]|xss_clean');
 				$this->form_validation->set_rules('txtFloring','Floring','trim|required|min_length[2]|max_length[200]|xss_clean');
 				$this->form_validation->set_rules('txtLevels','Levels','trim|required|min_length[1]|max_length[2]|xss_clean');
 				$this->form_validation->set_rules('txtFoundation','Foundation','trim|required|min_length[2]|max_length[200]|xss_clean');
 				$this->form_validation->set_rules('txtHeatmethod','Heat method','trim|required|min_length[2]|max_length[100]|xss_clean');
 				$this->form_validation->set_rules('txtHeatSource','HeatSource','trim|required|min_length[2]|max_length[100]|xss_clean');
-				$this->form_validation->set_rules('txtZoning','Zoning','trim|required|min_length[2]|max_length[100]|xss_clean');
+				$this->form_validation->set_rules('txtGarage','Garage','trim|required|min_length[2]|max_length[100]|xss_clean');
 				$this->form_validation->set_rules('txtWaterSource','Water Source','trim|required|min_length[2]|max_length[100]|xss_clean');
 				$this->form_validation->set_rules('txtInterior','Interior','trim|required|min_length[2]|max_length[100]|xss_clean');
 				$this->form_validation->set_rules('txtPrice','Price','trim|required|min_length[2]|max_length[12]|is_natural|xss_clean');
@@ -115,7 +115,7 @@ class Admin_Panel extends CI_Controller {
                 'foundation'=>$this->input->post('txtFoundation'),
                 'heatmethod'=>$this->input->post('txtHeatmethod'),
                 'heat_source'=>$this->input->post('txtHeatSource'),
-                'zoning'=>$this->input->post('txtZoning'),
+                'garage'=>$this->input->post('txtGarage'),
                 'water_source' =>$this->input->post('txtWaterSource'),
 				
 				'interior'=>$this->input->post('txtInterior'),

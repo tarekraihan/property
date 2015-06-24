@@ -22,6 +22,14 @@ class Select_Model extends CI_Model
 		return $query;
 		
 	}
+	
+	public function Select_Single_Property_Info($property_id)
+	{
+		$sql="SELECT a.*, b.first_name, b.last_name,b.area_code, b.phone_start,b.phone_end FROM `tbl_property` as a inner join customer_profile as b on a.property_owner_id=b.customer_id where a.property_id='$property_id'";
+		$query=$this->db->query($sql);
+		return $query;
+		
+	}
 
 	
 }
