@@ -32,7 +32,7 @@ if(isset($_GET['id']))
                 <form role="form"  action="" method="post">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Property Type </label>
-                        <input type="text" name="txtProperty_Type" class="form-control" id="exampleInputEmail1" placeholder="Write Property Type">
+                        <input type="text" name="txtProperty_Type" class="form-control" id="exampleInputEmail1" placeholder="Write Contry">
                     </div>
                     
                     <div class="form-group">

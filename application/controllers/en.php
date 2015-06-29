@@ -22,7 +22,7 @@ class EN extends CI_Controller {
 	public function buyer()
     {
 		$data['title']="Buyer";
-        $this->load->view('header',$data);
+        $this->load->view('header_post',$data);
 		$this->load->view('buyer');
         $this->load->view('footer1');
 	    $this->load->view('footer2');
@@ -30,7 +30,7 @@ class EN extends CI_Controller {
 	public function seller()
     {
 		$data['title']="Seller";
-        $this->load->view('header',$data);
+        $this->load->view('header_post',$data);
 		$this->load->view('seller');
         $this->load->view('footer1');
 		$this->load->view('footer2');
@@ -38,7 +38,7 @@ class EN extends CI_Controller {
 	public function mortgage()
     {
 		$data['title']="Mortgage";
-        $this->load->view('header',$data);
+        $this->load->view('header_post',$data);
 		$this->load->view('mortgage');
         $this->load->view('footer1');
 		$this->load->view('footer2');
@@ -46,7 +46,8 @@ class EN extends CI_Controller {
 	
 	public function sell_listing()
     {
-		$this->load->view('header');
+		$data['title']="Sell Listing";
+		$this->load->view('header_post',$data);
 		$this->load->view('sell_listing');
         $this->load->view('footer1');
 		$this->load->view('footer2');
@@ -54,21 +55,23 @@ class EN extends CI_Controller {
 	public function register()
     {
 		$data['title']="Member Registration";
-        $this->load->view('header',$data);
+        $this->load->view('header_post',$data);
 		$this->load->view('register');
         $this->load->view('footer1');
 		$this->load->view('footer2');
     }
 	public function dashboard()
     {
-		$this->load->view('header_dashboard');
+		$data['title']="Member Dashboard";
+		$this->load->view('header_dashboard',$data);
 		$this->load->view('dashboard');
 		$this->load->view('footer2');
     }
 	
 	public function listingpage()
     {
-        $this->load->view('header_list_post');
+		$data['title']="property List";
+        $this->load->view('header_list_post',$data);
 		$this->load->view('listingpage');
 		$this->load->view('footer1');
         $this->load->view('footer2');
@@ -86,7 +89,7 @@ class EN extends CI_Controller {
 	public function rent()
     {
 		$data['title']="Rent";
-		$this->load->view('header',$data);
+		$this->load->view('header_post',$data);
 		$this->load->view('rent');
         $this->load->view('footer1');
 		$this->load->view('footer2');

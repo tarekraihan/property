@@ -57,7 +57,7 @@
                     <div class="row clearfix">
                         <div class="col-sm-12" style="padding: 0px 35px; padding-bottom: 10px;">
                             <span class="address opensans_thin"><?php echo $row->property_address; ?> </span>
-                            <span class="city-province opensans_thin">Guelph, ON </span> 
+                            <span class="city-province opensans_thin"><?php echo $row->state_name; ?> </span> 
                             <span class="label label-default sign-style">SIGN  <?php echo $row->sign; ?> </span>
                         </div>
                     </div>
@@ -83,8 +83,16 @@
 									<div class="item">            
 										<div class="clearfix" style="max-width:595px;">
 											<ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-												<li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>" class="slide_thumb"/> 
-													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>"  class="slide_image"/>
+												
+                                                <li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>" > 
+													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>"  />
+													 </li>
+                                                     
+                                                  <li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>" > 
+													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>"  />
+													 </li>
+												<li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>" > 
+													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>"  />
 													 </li>
 												
 											</ul>
@@ -136,22 +144,20 @@
 																		
                                             <li>
                                                 <div class="marker">Property Type:</div>
-                                                <div class="data">Detached House</div>
+                                                <div class="data"><?php echo $row->property_type_name; ?></div>
                                                 <div class="clear"></div>
                                             </li>
 
-                                            <li>
-                                                <div class="marker">Property Use:</div>
-                                                <div class="data">Residential</div>
-                                                <div class="clear"></div>
-                                            </li>
+                                                <li><div class="marker">Property Use:</div>
+                                            <div class="data"><?php echo $row->property_used_name; ?></div><div class="clear"></div></li>
 
 
-                                              <li>
-                                                  <div class="marker">Annual Taxes:</div>
-                                                  <div class="data">$<?php echo $row->annual_tax; ?></div>
-                                                  <div class="clear"></div>
-                                              </li>
+                                              <li><div class="marker">Annual Taxes:</div>
+                                            <div class="data">$<?php echo $row->annual_tax; ?></div><div class="clear"></div></li>
+
+
+
+
 
                                                 <li><div class="marker">Age:</div>
                                             <div class="data"><?php echo $row->age; ?></div><div class="clear"></div></li>
@@ -270,10 +276,10 @@
                             <div role="tabpanel" class="tab-pane" id="mdetails">
                                 <div class="row property_details">
                                     <div class="col-sm-12 text-center">
-                                        <h1 class="better-tag hidden-xs opensans_thin">PropertyGuys.com Mortgage</h1>
-                                        <h3 class="visible-xs opensans_thin">PropertyGuys.com Mortgage</h3>
+                                        <h1 class="better-tag hidden-xs opensans_thin">Vista Maison Mortgage</h1>
+                                        <h3 class="visible-xs opensans_thin">Vista Maison Mortgage</h3>
                                         <h2 class="caption-title opensans_thin">We work for you.</h2>
-                                        <h3 class="caption-text opensans_thin">Your situation is unique and you are not just a number to us. We work with over 30 lenders and banks. Banks are limited to their own financial products and bankers work for banks - not for you. Allow us to show you a whole new world of competitive and flexible mortgage solutions. But don't just take our word for it, hear directly from our customers.</h3>
+                                        <h3 class="caption-text opensans_thin">Your situation is unique and you are not just a number to us. We work with over 30 lenders and banks. Banks are limited to their own financial products and bankers work for banks - not for you. Allow us to show you a whole new world of competitive and flexible mortgage solutions. But dont just take our word for it, hear directly from our customers.</h3>
                                         <p class="caption-text opensans_thin">Get started and apply online, or speak to a <strong>PropertyGuys.com MortgagePro at 1 (888) 765-7333.</strong></p>						
                                         <div class="padding-top-50"><a href="#" type="button" class="btn btn-green">More Information</a></div>
 
@@ -303,10 +309,10 @@
 
                                 <div class="content">
                                     <div class="main">
-                                        <h3 class="name">Emmi Perkins</h3>
+                                        <h3 class="name"><?php echo $row->first_name;?> <?php echo $row->last_name;?></h3>
                                         <p class="profession">Contact the Seller</p>
 
-                                        <h5><i class="fa fa-map-marker fa-phone text-muted"></i> 1 (519) 341-0987 </h5>
+                                        <h5><i class="fa fa-map-marker fa-phone text-muted"></i> 1 (<?php echo $row->area_code;?>) <?php echo $row->phone_start;?>-<?php echo $row->phone_end;?> </h5>
                                                                             <h5><i class="fa fa-building-o fa-phone text-muted"></i> 1 (855) 742-4539</h5>
                                                                         <h5><i class="fa fa-envelope-o fa-envelope-o  text-muted"></i> <a href="/launch-messages/compose/p/86605">Send a Message</a></h5>
 
@@ -389,7 +395,7 @@
                 <h3>Locations Serving </h3>
 						
 
-                <h4><a href="/location/site/f/2209">PropertyGuys.com Guelph</a></h4>
+                <h4><a href="/location/site/f/2209">Vista Maison Guelph</a></h4>
                 <p>Servicing Guelph and Wellington County. Dave and Mike are your local PG Pros and their years of experience, along with the local partners will be able to provide you everything from Pricing to Legal to SOLD. Contact us directly for a free information session where we can answer all your questions. </p>
 				<h4>1 (519) 824-7253</h4>
 

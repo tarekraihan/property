@@ -318,7 +318,7 @@
 		<div class="row no-margin">
 			<div class="container">
 				<div class="row no-margin">
-					<p class="region_name pull-left"><a href="#">Waterloo,on</a></p>
+					<p class="region_name pull-left"><a href="#"><?php $state_name=$this->input->post('coreSearch'); echo $state_name;?></a></p>
 					<p class="subregion_name pull-left">&nbsp; >> &nbsp;Sub Region</p>
 				</div>
 			
@@ -328,75 +328,30 @@
 							<div class="well well-sm">
 								<h4>Surrounding Communities</h4>
 									<ul class="list-inline community">
+                                    
+                                    <?php 
+									$state_id=$this->input->post('coreSearchID');
+									$this->common_model->order_column = 'area_id';
+									$this->common_model->table_name = 'tbl_area';
+									$this->common_model->where = array('state_id'=>$state_id);
+									$query=$this->common_model->select_all();
+							
+								foreach ($query->result() as $row)
+								{
+								?>
 									<li class="town">	
-										<a href="#">Ayr</a>
+										<a href="#"><?php echo $row->area_name;?></a>
 									</li>
 									
-									<li class="town">	
-										<a href="#">Winterbourne</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">Ayr</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">Winterbourne</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">Ayr</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">Waterloo</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">Ayr</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">Waterloo</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">Waterloo</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">Ayr</a>
-									</li>
-									
-										<li class="town">	
-										<a href="#">Waterloo</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">Ayr</a>
-									</li>
-										
-                                    <li class="town">	
-										<a href="#">Wallenstein</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">Ayr</a>
-									</li>	
-										
-									<li class="town">	
-										<a href="#">St. Jacobs</a>
-									</li>
-									
-									<li class="town">	
-										<a href="#">St. Clements</a>
-									</li>
                                         
-								    <li class="town">
+								   
+									<?php 
+									}
+									?>	
+                                     <li class="town">
 										<a >St. Clements</a>
 										<input id="cityProfileProvince_185" value="ON" type="hidden">
 									</li>
-										
 								</ul>
 							</div>	
 		</div>
@@ -430,8 +385,10 @@
 					<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
 							<div class="row no-margin">
                             <?php 
+								$state_id=$this->input->post('coreSearchID');
 								$this->common_model->order_column = 'property_id';
 								$this->common_model->table_name = 'tbl_property';
+								$this->common_model->where = array('states_id'=>$state_id);
 								$query=$this->common_model->select_all();
 							
 								foreach ($query->result() as $row)
@@ -443,7 +400,7 @@
                                             <span class="label label-primary most_popular">Most Popular</span>
                                                 <a href="#"><img class="prop-img" src="<?php echo base_url(); ?>/images/property/<?php echo $row->image_name;?>"></a>
                                                 <div class="info"> 
-                                                    <h2><a href="/property/index/id/86837">$<?php echo $row->price;?></a></h2>
+                                                    <h2><a href="">$<?php echo $row->price;?></a></h2>
                                                     <div class="price"><?php echo $row->property_address;?></div> 
                                                     <div class="bedsbaths"><strong><?php echo $row->bedroom_no;?></strong> beds <strong><?php echo $row->bathroom_no;?></strong> baths</div>
 

@@ -3,7 +3,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo $title; ?></title>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/font-awesome.min.css">
@@ -11,8 +11,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <link rel="stylesheet"  href="<?php echo base_url(); ?>/src/css/lightslider.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/boostrap_select.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/style.css">	
     
     
@@ -23,49 +25,7 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    
-    
-    <style>
-    	ul{
-			list-style: none outside none;
-		    padding-left: 0;
-            margin: 0;
-		}
-        .demo .item{
-            margin-bottom: 60px;
-        }
-		.content-slider li{
-		    background-color: #ed3020;
-		    text-align: center;
-		    color: #FFF;
-		}
-		.content-slider h3 {
-		    margin: 0;
-		    padding: 70px 0;
-		}
-		.demo{
-			width: 800px;
-		}
-		
-		.slider_img{margin:25px;}
-		
-		.content-slider li {
-			background-color: rgb(59, 59, 59);
-			height: 210px;
-		}
-		
-		#content-slider{height:210px;}
-		
-		.lSPager {
-			display: none;
-		}
-		
-		.content-slider h3 {
-			margin: 0px;
-			padding-top: 26px;
-			padding-bottom: 30px;
-		}
-    </style>
+ 
     
     <script>
     	 $(document).ready(function() {
@@ -91,7 +51,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>/images/nav-logo.jpg"/></a>
+              <a class="navbar-brand" href="<?php echo base_url(); ?>"><img class="logo" src="<?php echo base_url(); ?>/images/logo_prop.png"/></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -105,8 +65,7 @@
 				</div><!-- /input-group -->
               </form>
               <ul class="nav navbar-nav navbar-right">
-              <li><a href="<?php echo base_url(); ?>en/listingpage/">Property List</a></li>
-              <li><a href="<?php echo base_url(); ?>en/postpage/">Property Details</a></li>
+              
 					<li><a href="<?php echo base_url(); ?>en/seller/">Sellers</a></li>
 					<li><a href="<?php echo base_url(); ?>en/buyer/">Buyers</a></li>
 					<li><a href="<?php echo base_url(); ?>en/mortgage">Mortgages</a></li>
@@ -125,7 +84,6 @@
                     <?php
                     }
 					?>
-					
 					<li class="pad-top hidden-xs hidden-sm"><img src="<?php echo base_url(); ?>/images/login-placeholder.jpg" class="socialLoginThumbnail"></li>
               </ul>
             </div><!-- /.navbar-collapse -->

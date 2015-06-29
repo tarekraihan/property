@@ -55,7 +55,7 @@ class Admin_Panel extends CI_Controller {
 				$this->form_validation->set_rules('txtOwenr','Owner', 'trim|required|is_natural|xss_clean');
 				
 				$this->form_validation->set_rules('txtPropertyAddress','Property Address','trim|required|min_length[2]|max_length[250]|xss_clean');
-				$this->form_validation->set_rules('txtDescription','Property Description','trim|required|xss_clean');
+				$this->form_validation->set_rules('txtDescription','Property Description','trim|required|min_length[2]|max_length[1500]|xss_clean');
 				$this->form_validation->set_rules('txtPropertyType','Property Type', 'trim|required|is_natural|xss_clean');
 				$this->form_validation->set_rules('txtPropertyUsed','Property Used', 'trim|required|is_natural|xss_clean');
 				$this->form_validation->set_rules('txtAnnualTax','Annual Tax','trim|required|is_natural|min_length[2]|max_length[12]|xss_clean');
@@ -98,12 +98,14 @@ class Admin_Panel extends CI_Controller {
 				
 				$upload_result = $this->do_upload('./images/property/','image');
 				$this->common_model->data=array(
-				'state_id'=>$this->input->post('txtStates'),
+				
+				'states_id'=>$this->input->post('txtStates'),
                 'area_id'=>$this->input->post('txtArea'),
                 'property_owner_id'=>$this->input->post('txtOwenr'),
                 'sign'=>$sign,
                 'property_address'=>$this->input->post('txtPropertyAddress'),
                 'description'=>$this->input->post('txtDescription'),
+              
                 'property_type_id'=>$this->input->post('txtPropertyType'),
                 'property_use_id'=>$this->input->post('txtPropertyUsed'),
                 'annual_tax'=>$this->input->post('txtAnnualTax'),
@@ -116,6 +118,7 @@ class Admin_Panel extends CI_Controller {
                 'heat_source'=>$this->input->post('txtHeatSource'),
                 'garage'=>$this->input->post('txtGarage'),
                 'water_source' =>$this->input->post('txtWaterSource'),
+				
 				'interior'=>$this->input->post('txtInterior'),
                 'price'=>$this->input->post('txtPrice'),
                 'bedroom_no'=>$this->input->post('txtBedroom'),
@@ -407,5 +410,132 @@ class Admin_Panel extends CI_Controller {
         echo $option;
 		
     }
+	
+	public function edit_province($msg='')
+	{
+		
+		if(!$this->session->userdata('email_address')){
+			redirect('admin_panel');
+		}else{
+			
+			if($msg == 'success'){
+			$data['feedback'] = '<h4 style="text-align:center; " class="animated green flipInX">Successfull Update !!</h4>';
+			}else if($msg == 'error')
+			{
+				$data['feedback'] = '<h4 style="text-align:center; " class="animated red flipInX">Problem to update !!</h4>';
+			}
+			
+			$this->form_validation->set_rules('txtCountry','Edit Province', 'trim|required|min_length[2]|max_length[40]|xss_clean');
+			if ($this->form_validation->run() == FALSE)
+			{
+			 
+				$data['title']="Edit Province";
+				$this->load->view('admin/header',$data);
+				$this->load->view('admin/edit_country');
+				$this->load->view('admin/footer');
+			}
+			else
+			{
+				$this->common_model->data=array('country_name'=>$this->input->post('txtCountry'));
+				$this->common_model->where = array('country_id'=>$this->input->post('txtCountryID'));
+				$this->common_model->table_name='tbl_country';
+				$result=$this->common_model->update();
+				
+				if($result)
+				{
+					redirect('admin_panel/edit_province/success');
+				}
+				else
+				{
+					redirect('admin_panel/edit_province/error');
+				}
+			}
+		}
+		
+		
+	}
+	
+	public function image_water()
+	{	
+	
+	/*
+		// Create Thumbnail of an image
+	
+		$config['image_library'] = 'gd2';
+		$config['source_image'] = './images/w.jpg';
+		$config['create_thumb'] = TRUE;
+		$config['maintain_ratio'] = TRUE;
+		$config['width'] = 75;
+		$config['height'] = 50;
+		$config['new_image'] = './images/';
+		$this->load->library('image_lib', $config);
+*/
+
+		/*if(!$this->image_lib->resize())
+		{
+			 echo $this->image_lib->display_errors();
+			
+		}
+		else
+		{
+			echo "generate img ";	
+		}*/		
+	
+	
+	/*	// Text Woater mark script----working 100%
+	
+	
+		$config['image_library'] = 'gd2';
+		$config['source_image'] = './images/w.jpg';
+		$config['wm_text'] = 'Copyright 2006 - Tarek Raihan';
+		$config['wm_type'] = 'text';
+		$config['wm_font_path'] = './system/fonts/texb.ttf';
+		$config['wm_font_size'] = '26';
+		$config['wm_font_color'] = '000fff';
+		$config['wm_vrt_alignment'] = 'top';
+		$config['wm_hor_alignment'] = 'center';
+		$config['wm_padding'] = '100';
+		$config['new_image'] = './images/';
+		$this->load->library('image_lib', $config);
+		
+		
+		if(!$this->image_lib->watermark())
+		{
+			 echo $this->image_lib->display_errors();
+			
+		}
+		else
+		{
+			echo "generate watermark text ";	
+		}*/	
+		
+		
+		
+		
+		/* // 
+		// Image Watermark script----working 100%
+		
+		
+		$config['image_library'] = 'gd2';
+		$config['source_image'] = './images/new_image.jpg';
+		
+		$config['wm_type'] = 'overlay';
+		$config['wm_overlay_path'] = './images/nav-logo.png';
+		$config['wm_vrt_alignment'] = 'bottom';
+		$config['wm_hor_alignment'] = 'left';
+		$config['new_image'] = './images/';
+		$this->load->library('image_lib', $config);
+		
+		
+		if(!$this->image_lib->watermark())
+		{
+			 echo $this->image_lib->display_errors();
+			
+		}
+		else
+		{
+			echo "generate Watermark overlay ";	
+		}*/
+	}
 
 }

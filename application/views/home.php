@@ -1,4 +1,52 @@
-		<div class="row no-margin">
+		 
+		<link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery-ui.css">
+
+  		<script src="<?php echo base_url(); ?>js/jquery-ui.js"></script>  
+		 
+		 <?php
+			$this->common_model->order_column = 'states_id';
+			$this->common_model->table_name = 'tbl_states`';
+			$query=$this->common_model->select_all();
+							
+			?>
+		 
+		 
+		 <script>
+			 $(function() {
+			 var projects = [
+			 <?php
+			  foreach ($query->result() as $row){?>
+				{
+				  value: "<?php echo $row->states_id;?>",
+				  label: "<?php echo $row->state_name;?>",
+			   },
+			  <?php }
+			 ?>
+			  ];
+			 $( "#searchcase" ).autocomplete({
+			 minLength: 0,
+			 source: projects,
+			 focus: function( event, ui ) {
+				$( "#searchcase" ).val( ui.item.label );
+				return false;
+				},
+			 select: function( event, ui ) {
+				$( "#searchcase" ).val( ui.item.label );
+				$( "#searchid" ).val( ui.item.value );
+				return false;
+			 }
+			 })
+			 .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+			 return $( "<li>" )
+			 .append( "<a>" + item.label + "</a>" )
+			 .appendTo( ul );
+			 };
+			 }); 
+		 
+		</script>
+				
+        
+        <div class="row no-margin">
 			
 			<div class="front_page_search_section">
 				<div class="container">
@@ -23,6 +71,7 @@
 							
 								<div id="searchbox" class="searchcontrols">			  			
 									<div class="btn-group pull-left">
+                                    <form action="<?php echo base_url();?>en/listingpage/" method="post">
 									  <button type="button" class="btn dropdown-toggle pg-btn" data-toggle="dropdown"><span id="searchToggle">Find a Home</span> <span class="caret"></span></button>
 									  <ul class="dropdown-menu" role="menu">
 										<li><a href="#" id="menuBuyHouse">Find a Home</a></li>
@@ -31,8 +80,12 @@
 										<li><a href="/vacation-rentals" id="">Vacation Rentals</a></li>				    
 									  </ul>
 									</div>	
-									<input autocomplete="off" class="search-textbox ui-autocomplete-input" name="coreSearch" value="" placeholder="Search by Location or Sign Number" id="coreSearch" type="text"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span>
-									<div class="btn-holder"><button type="button" class="btn pg-button btn-search pgbutton-30" id="coreSearchButton"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></div>						 
+                                    
+                                    
+									 <input type="hidden" name="coreSearchID" id="searchid" />
+									<input class="search-textbox ui-autocomplete-input" name="coreSearch" value="" placeholder="Search by Location or Sign Number" id="searchcase" type="text"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span>
+									<div class="btn-holder"><button type="submit" class="btn pg-button btn-search pgbutton-30" id="coreSearchButton"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></div>	
+                                    </form>					 
 								</div>
 								
 								
@@ -69,43 +122,35 @@
 			<div class="home_page_listing_carousel">
 			     <div class="item">
                     <ul id="content-slider" class="content-slider">
-                        <li>
-							<img class="pull-left slider_img" src="http://lorempixel.com/170/140/city/"/>
-                            <h3>$ 3,3000</h3>
-							<p>This is a lorem text.</p>
-                        </li>
+                    <?php 
+						$this->common_model->order_column="property_id";
+						$this->common_model->table_name="tbl_property";
+						$this->common_model->where=array('feature_post'=>1);
+						$query=$this->common_model->select_all();
 						
-						<li>
-							<img class="pull-left slider_img" src="http://lorempixel.com/170/140/people/"/>
-                            <h3>$ 3,3000</h3>
-							<p>This is a lorem text.</p>
-                        </li>
+						foreach($query->result() as $row)
+						{
+					
+					?>
+                    
+                    
                         <li>
-							<img class="pull-left slider_img" src="http://lorempixel.com/170/140/"/>
-                            <h3>$ 3,3000</h3>
-							<p>This is a lorem text.</p>
+							<img width="180" height="140" class="pull-left slider_img" src="<?php echo base_url();?>images/property/<?php echo $row->image_name;?>"/>
+                            <h3>$ <?php echo $row->price;?></h3>
+							<p><?php echo $row->property_address;?></p>
                         </li>
-                        <li>
-							<img class="pull-left slider_img" src="http://lorempixel.com/170/140/city/"/>
-                            <h3>$ 3,3000</h3>
-							<p>This is a lorem text.</p>
-                        </li>
+                        
+                        <?php
+						}
+						?>
 						
-						<li>
-							<img class="pull-left slider_img" src="http://lorempixel.com/170/140/people/"/>
-                            <h3>$ 3,3000</h3>
-							<p>This is a lorem text.</p>
-                        </li>
-                        <li>
-							<img class="pull-left slider_img" src="http://lorempixel.com/170/140/"/>
-                            <h3>$ 3,3000</h3>
-							<p>This is a lorem text.</p>
-                        </li>
+						
                     </ul>
                 </div>
 			</div>
 		</div>
-		
+        
+        
 		<div class="icon_homepage_section_01">
 			<div class="container-fluid no-margin no-padding">
 				<div class="row no-margin section_01_title">
@@ -124,7 +169,7 @@
 
                             <div class="thumbnail cusrom_thumbnail">
 
-                                  <img src="http://lorempixel.com/300/200/city/" alt="...">
+                                 <img src="<?php echo base_url(); ?>/images/icon1.png" alt="Icon">
                                   <div class="caption">
 
                                     <p>re-engineered almost everything you thought you knew about real estate - not only making it different but                                        also making it better.</p>
@@ -179,7 +224,7 @@
 					  
 							    <div class="item active text-center" style="height: 600px; padding-top: 200px;">
 							     <div class="row no-margin"><div class="col-sm-8 col-sm-offset-2"><span class="quote">"Nous les remercions de leur bon service."</span></div></div>
-							     <div class="row no-margin" style="margin-top: 100px;"><span class="quote-name"><img src="http://lorempixel.com/100/100/people/" class="quote-image"/></span></div>
+							     <div class="row no-margin" style="margin-top: 100px;"><span class="quote-name"><img src="<?php echo base_url(); ?>/images/03.png" class="quote-image"/></span></div>
 							     <div class="row no-margin" style="padding-top: 30px;"><span class="quote-name">Rechelle Bourque</span></div>	     
 							     <div class="row no-margin" style="padding-top: 10px; display: none;"><span class="quote-name"><button class="btn btn-primary btn-inverse">Customer Profiles</button></span></div>
 							    </div>
@@ -187,7 +232,7 @@
 				   
 				    			<div class="item text-center" style="height: 600px; padding-top: 200px;">
 							     <div class="row no-margin"><div class="col-sm-8 col-sm-offset-2"><span class="quote">"Ils ont été d’une grande aide."</span></div></div>
-							     <div class="row no-margin" style="margin-top: 100px;"><span class="quote-name"><img src="http://lorempixel.com/100/100/people/" class="quote-image"/></span></div>
+							     <div class="row no-margin" style="margin-top: 100px;"><span class="quote-name"><img src="<?php echo base_url(); ?>/images/o2.jpg" class="quote-image"/></span></div>
 							     <div class="row no-margin" style="padding-top: 30px;"><span class="quote-name">Dana Derbowka</span></div>	     
 							     <div class="row no-margin" style="padding-top: 10px; display: none;"><span class="quote-name"><button class="btn btn-primary btn-inverse">Customer Profiles</button></span></div>
 							    </div>
@@ -195,7 +240,7 @@
 				   
 				   				<div class="item text-center" style="height: 600px; padding-top: 200px;">
 							     <div class="row no-margin"><div class="col-sm-8 col-sm-offset-2"><span class="quote">"c’est simple et efficace avec vista Maison "</span></div></div>
-							     <div class="row no-margin" style="margin-top: 100px;"><span class="quote-name"><img src="http://lorempixel.com/100/100/people/" class="quote-image"/></span></div>
+							     <div class="row no-margin" style="margin-top: 100px;"><span class="quote-name"><img src="<?php echo base_url(); ?>/images/03.jpg" class="quote-image"/></span></div>
 							     <div class="row no-margin" style="padding-top: 30px;"><span class="quote-name">Guillaume Thibeault</span></div>	     
 							     <div class="row no-margin" style="padding-top: 10px; display: none;"><span class="quote-name"><button class="btn btn-primary btn-inverse">Customer Profiles</button></span></div>
 							    </div>

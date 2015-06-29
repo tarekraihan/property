@@ -19,39 +19,38 @@
 				  <div class="carousel-inner  custom_carousel_inner" role="listbox">				   
 					  
 							    <div class="item active text-center">
-							     <p class="slider_tagline">How PropertyGuys.com Works</p>
+							     <p class="slider_tagline">How vista Maison Work’s</p>
                                  
-                                 <p class="slider_subtagline">Instead of using a "Jack Of All Trades" single agent concept, our approach leverages a team of savvy specialists which include private sale marketers, real estate brokers, certified appraisers, real estate lawyers and a truly helpful answering and appointment booking service to keep everything in check.</br>
-
+                                 <p class="slider_subtagline">Instead of using a conventional single agent concept, our approach leverages a team of savvy specialists which include private sale marketers, real estate brokers, certified appraisers, real estate lawyers and a truly helpful answering and appointment booking service to keep everything in check and also offer you a quick sale option. </br>
 We've basically removed the typical hassles often associated with selling without an agent, making it more convenient than anyone ever imagined possible. By having our PROs on your side, all the important details are taken care of so you can make more money and sell faster.
+
                                 </p>
                                 
-                                <p class="text-center"><a href="#">A better way to show your home</a>&nbsp; &nbsp; &nbsp;<a href="#">How we compare</a></p>
+                              
                                
 							    </div>
 							
 				   
 				    			<div class="item text-center">
-							     <p class="slider_tagline">How PropertyGuys.com Works</p>
+							     <p class="slider_tagline">How vista Maison Work’s</p>
                                  
-                                 <p class="slider_subtagline">Instead of using a "Jack Of All Trades" single agent concept, our approach leverages a team of savvy specialists which include private sale marketers, real estate brokers, certified appraisers, real estate lawyers and a truly helpful answering and appointment booking service to keep everything in check.</br>
+                                 <p class="slider_subtagline">An important part of our program is having you do your own showings. That's because the concept of having your property "show ready" at all times makes absolutely no sense.</br>
+When you list with Vista Maison , the best part is you get to show-off your property on your schedule. Our system makes managing your showings easy.
 
-We've basically removed the typical hassles often associated with selling without an agent, making it more convenient than anyone ever imagined possible. By having our PROs on your side, all the important details are taken care of so you can make more money and sell faster.
                                 </p>
-                                
-                                <p class="text-center"><a href="#">A better way to show your home</a>&nbsp; &nbsp; &nbsp;<a href="#">How we compare</a></p>
+
                                
 							    </div>
 				   
 				   				<div class="item text-center">
-							     <p class="slider_tagline">How PropertyGuys.com Works</p>
+							     <p class="slider_tagline">How vista Maison Work’s</p>
                                  
-                                 <p class="slider_subtagline">Instead of using a "Jack Of All Trades" single agent concept, our approach leverages a team of savvy specialists which include private sale marketers, real estate brokers, certified appraisers, real estate lawyers and a truly helpful answering and appointment booking service to keep everything in check.</br>
+                                 <p class="slider_subtagline">Our selling process works much differently than the way most agents do it.
+Instead of charging commission, we collect a low flat fee. Our flat fee is not based on your final sale price but instead on the level of service you choose.</br>
+This non-agency (non-representation) scenario allows you to market directly and simultaneously to both private buyers and buyer agents.
+This approach of creating competition between independent buyers and buyer agents is what gives you the opportunity to make more money.</br>
 
-We've basically removed the typical hassles often associated with selling without an agent, making it more convenient than anyone ever imagined possible. By having our PROs on your side, all the important details are taken care of so you can make more money and sell faster.
                                 </p>
-                                
-                                <p class="text-center"><a href="#">A better way to show your home</a>&nbsp; &nbsp; &nbsp;<a href="#">How we compare</a></p>
                                
 							    </div>
 				   
@@ -76,10 +75,10 @@ We've basically removed the typical hassles often associated with selling withou
 
         <div class="row no-margin">
            
-            <p class="big_title seller_section_03_title_text">Exposure on Realtor.ca*</p>
-            <p class="caption-text" style="padding:0px 18%; text-align:center;">Your Realtor.ca* posting will help you reach a wider audience, including buyers who work with agents. Marketing your home on PropertyGuys.com and Realtor.ca* (through our partnership with real estate brokers who are members of the Canadian Real Estate Association) will give your property all the exposure you'll ever need to get it SOLD.</p>
+            <p class="big_title seller_section_03_title_text">Exposure on the MLS</p>
+            <p class="caption-text" style="padding:0px 18%; text-align:center;">If you want to sell something go where the buyers are. With Vista maison you have the option to list on the MLS . We will help you reach a wider audience and we will give your property all the exposure you'll ever need to get it SOLD. </p>
             
-            <div class="col-sm-12 text-center"><p class="caption-text"><small>*Through our partnership with real estate brokers who are members of the Canadian Real Estate Association.</small></p>
+            <div class="col-sm-12 text-center"><p class="caption-text"><small></small></p>
 	 		</div>
             
         </div>
@@ -263,58 +262,45 @@ We've basically removed the typical hassles often associated with selling withou
 
                             <div class="carousel-inner">
 
-                                    <div class="item">
-                                       <h3 class="faq-title text-center">How are you different from agents?</h3>	
-                                        <p class="faq-text">We're not agent or brokers. We're a specialized marketing company that helps sellers market their properties directly to buyers or even buyer's agents over a private platform instead of the way agents do it. This way of selling is not only less expensive but can also be more convenient. Lucky for us, our customers agree.</p>		      
-                                    </div>
-
-                                    <div class="item">
-                                       <h3 class="faq-title text-center">How much does it cost?</h3>	
-                                        <p class="faq-text">The price of a PropertyGuys.com marketing package is completely dependent on the level of service you choose <a href="/sell/listing/">SELF serve or FULL serve</a> and also what services you require. The best way to find out how much it costs is to <a href="#" data-toggle="modal" data-target="#modalFreeQuote">request a quote</a> or <a href="#" data-toggle="modal" data-target="#modalContact">contact an office.</a></p>		      
-                                    </div>
-
-    <!-- 							    <div class="item"> -->
-    <!-- 								   <h3 class="faq-title text-center">What about handling offers, negotiations and closing the deal?</h3>	 -->
-    <!-- 								    <p class="faq-text">From the moment a property is activated on our system, sellers have access to expert advice and guidance from our LegalPros&copy;. These specialized real estate lawyers help with:</p>  -->
-
-    <!-- 										<ul class="text-center"> -->
-    <!-- 											<li>Advice and answers to legal questions such as dealing with buyer's agents and negotiation </li> -->
-    <!-- 											<li>Advice on offers in advance of signing </li> -->
-    <!-- 											<li>Preparation of legal documents and assistance closing the sale</li> -->
-    <!-- 										</ul> -->
-
-    <!-- 							    </div> -->
-
-                                    <div class="item">
-                                       <h3 class="faq-title text-center">What about extra exposure on Realtor.ca*?</h3>	
-                                        <p class="faq-text">Sellers can enjoy the benefit and added exposure of having their property posted onto Realtor.ca* thanks to our partnerships with real estate brokers who are members of the Canadian Real Estate Association.</p>		      
-                                    </div>
-
-                                    <div class="item">
-                                       <h3 class="faq-title text-center">What about dealing with buyers' agents?</h3>	
-                                        <p class="faq-text">We make it easy for sellers to consider offers from buyers who use buyers' agents. How much commission is offered and paid to a buyer's agent is totally up to the seller.</p>		      
-                                    </div>
-
-                                    <div class="item">
-                                       <h3 class="faq-title text-center">What about setting an asking price?</h3>	
-                                        <p class="faq-text">Sellers are able to get a pricing blueprint specific to their property by experts we call PricePros©. Unlike agents, these certified appraisers have nothing to lose or gain from the sale, so the advice they provide is truly unbiased.</p>		      
-                                    </div>
-
                                     <div class="item active">
-                                       <h3 class="faq-title text-center">What about taking calls &amp; booking appointments?</h3>	
-                                        <p class="faq-text">Sellers can enjoy the convenience of a 24/7 answering service to answer calls and help book showings. We call this ContactPro©.</p>		      
-                                    </div>
+                                           <h3 class="faq-title text-center">What about dealing with buyers' agents?</h3>	
+                                            <p class="faq-text">We make it easy for sellers to consider offers from buyers who use buyers' agents. How much commission is offered and paid to a buyer's agent is totally up to the seller.</p>		      
+                                        </div>
 
-                                    <div class="item">
-                                       <h3 class="faq-title text-center">What about showings?</h3>	
-                                        <p class="faq-text">We believe that the seller is the best person to show the property. After all, sellers know the details of the property and the neighborhood better than anyone.</p>		      
-                                    </div>
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">How do I set up my house at the right price ?</h3>	
+                                            <p class="faq-text">Sellers are able to get a pricing blueprint specific to their property by experts we call vista Value . Unlike agents, these certified appraisers have nothing to lose or gain from the sale, so the advice they provide is truly unbiased.</p>		      
+                                        </div>
 
-                                    <div class="item">
-                                       <h3 class="faq-title text-center">Can I defer my payment instead of paying for the package upfront?</h3>	
-                                        <p class="faq-text">Yes, we call this "List now. Pay Later."</p>	
-                                        <p class="faq-text">With this option, sellers can enjoy the benefit of our marketing package today with a convenient way of paying for it later. Sellers often choose to pay once their property has sold.</p>	      
-                                    </div>
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">What about taking calls & booking appointments?</h3>	
+                                            <p class="faq-text">Sellers can enjoy the convenience of our  answering service to answer calls and help book showings. We call this Vista Assistance ©</p>	                                             
+                                        </div>
+                                        
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">What about showings?</h3>	
+                                            <p class="faq-text">We believe that the seller is the best person to show the property. After all, sellers know the details of the property and the neighborhood better than anyone.</p>	                                             
+                                        </div>
+                                        
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">Can I delay my payment instead of paying for the package right now ?</h3>	
+                                            <p class="faq-text">Yes, With this option, sellers can enjoy the benefit of our marketing package today with a convenient way of paying for it later. Sellers often choose to pay once their property has sold.</p>	                                             
+                                        </div>
+                                        
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">How do you differ from agents ?</h3>	
+                                            <p class="faq-text">We're not agent or brokers. We're a specialized marketing company that helps sellers market their properties directly to buyers or even buyer's agents over a private platform instead of the way agents do it. This way of selling is not only less expensive but can also be more convenient. Lucky for us, our customers agree.</p>	                                             
+                                        </div>
+                                        
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">How much is it going to cost ?</h3>	
+                                            <p class="faq-text">The price of Vista Maison marketing package is completely dependent on the level of service you choose and also what services you require. The best way to find out how much it costs is to request a quote orcontact us.</p>	                                             
+                                        </div>
+                                        
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">What about extra exposure on on the Mls ?</h3>	
+                                            <p class="faq-text">With Vista maison you have the option to list on the MLS . We will help you reach a wider audience and we will give your property all the exposure you'll ever need to get it SOLD.</p>	                                             
+                                        </div>
 
                             </div>
 
@@ -334,8 +320,8 @@ We've basically removed the typical hassles often associated with selling withou
         
             <div class="container">
                   <div class="row clearfix no-margin">
-                    <div class="col-sm-12 text-center padding-top-25"><h1 class="proservices-maintitle opensans_thin white">With PropertyGuys.com <span class="pg-text-blue">RealEstatePro©</span><br>we take care of everything</h1></div>
-                    <div class="col-sm-12 text-center" style="padding: 0px 20%;"><p class="proservices-text opensans_thin">We will come to your home to help you build a Custom Marketing Plan that leaves nothing about your property sale to chance. From photos to virtual tours (including a catchy property descriptions) - you'll get the guidance and expertise you need to attract you more buyers.</p></div>
+                    <div class="col-sm-12 text-center padding-top-25"><h1 class="proservices-maintitle opensans_thin white">Pros from Vista Maison will guide you </br>true the process</h1></div>
+                    <div class="col-sm-12 text-center" style="padding: 0px 20%;"><p class="proservices-text opensans_thin">We will guide you by coming to your home and help you set up a personalized top notch  Marketing plan . starting with  catchy property descriptions , advice on how to take photos photos and awesome ways to create to virtual tours of your property.with Vista Maison nothing will be left to chanche so you can attract more buyers .</p></div>
 
                     <div class="text-center padding-top-25">
 
@@ -343,8 +329,8 @@ We've basically removed the typical hassles often associated with selling withou
                                 <div class="thumbnail proservices sellpro custom_thumbnail">
                                   <img alt="" src="<?php echo base_url(); ?>/images/icon-white-exposure.png" class="img-responsive" style="height: 80px;">
                                   <div class="caption text-left">
-                                    <span class="proservices-title opensans_thin">ExposurePro©</span>
-                                    <p class="proservices-text opensans_thin">A proven way to attract even more buyers by marketing your property simultaneously to a wider audience of buyers on PropertyGuys.com and  Realtor.ca* - your property will have all the exposure you'll ever need to get it SOLD.</p>	            
+                                    <span class="proservices-title opensans_thin">Vista Attract</span>
+                                    <p class="proservices-text opensans_thin">A proven way to attract even more buyers by marketing your property simultaneously to a wider audience of buyers on VistaMaison.com and The Mls  - your property will have all the exposure you'll ever need to get it SOLD.</p>	            
 
 
                                   </div>
@@ -355,8 +341,8 @@ We've basically removed the typical hassles often associated with selling withou
                                 <div class="thumbnail proservices sellpro custom_thumbnail">
                                   <img alt="" src="<?php echo base_url(); ?>/images/icon-white-calc.png" class="img-responsive" style="height: 80px;">
                                   <div class="caption text-left">
-                                    <span class="proservices-title opensans_thin">PricePro©</span>
-                                    <p class="proservices-text opensans_thin">PricePro© is designed to help you implement your pricing strategy. It starts with an objective appraisal of your property which is provided to you by a certified professional appraiser.</p>	            
+                                    <span class="proservices-title opensans_thin">Vista Value</span>
+                                    <p class="proservices-text opensans_thin">Vista Value is designed to help you implement your pricing strategy. It starts with an objective appraisal of your property which is provided to you by a certified professional appraiser.</p>	            
                                   </div>
                                 </div>
                               </div>
@@ -365,8 +351,8 @@ We've basically removed the typical hassles often associated with selling withou
                                 <div class="thumbnail proservices sellpro custom_thumbnail">
                                    <img alt="" src="<?php echo base_url(); ?>/images/icon-white-book.png" class="img-responsive" style="height: 80px;">
                                   <div class="caption text-left">
-                                    <span class="proservices-title opensans_thin">LegalPro©</span>
-                                    <p class="proservices-text opensans_thin">From the moment you list until you have a signed offer, you have access to legal advice from our real estate lawyers, we call them LegalPros. You can also refer your buyers to your LegalPro©, so they feel completely comfortable purchasing your house.</p>
+                                    <span class="proservices-title opensans_thin">Vista lawful</span>
+                                    <p class="proservices-text opensans_thin">From the moment you list until you have a signed offer, you have access to legal advice from our real estate lawyers, we call them Legal Pros. You can also refer your buyers to your Vista lawful so they feel completely comfortable purchasing your house.</p>
 
                                   </div>
                                 </div>
@@ -376,8 +362,8 @@ We've basically removed the typical hassles often associated with selling withou
                                 <div class="thumbnail proservices sellpro custom_thumbnail">
                                   <img alt="" src="<?php echo base_url(); ?>/images/icon-white-phone.png" class="img-responsive" style="height: 80px;">
                                   <div class="caption text-left">
-                                    <span class="proservices-title opensans_thin">ContactPro©</span>
-                                    <p class="proservices-text opensans_thin">Our appointment booking service will not only take your incoming calls 24/7, they will also help you manage all of your communications and showing requests.</p>
+                                    <span class="proservices-title opensans_thin">Vista Assistance</span>
+                                    <p class="proservices-text opensans_thin"> Sellers can enjoy the convenience of our answering service to answer calls and help book showings. We call this Vista Assistance </p>
 
                                   </div>
                                 </div>
@@ -397,7 +383,7 @@ We've basically removed the typical hassles often associated with selling withou
 
         <!-- seller page section 07 mortgage pro -->
 
-        <div class="greenback hidden-xs" id="calc">
+        <div class="blue_bg hidden-xs" id="calc">
             <div class="container text-center panel-padding-50">
                  <div class="row clearfix no-margin">
 
@@ -441,7 +427,7 @@ We've basically removed the typical hassles often associated with selling withou
                      <div id="better" class="better">			
                         <div class="container">
                             <div class="row clearfix no-margin">
-                              <div class="col-md-12 pg-better-panel"><p class="better-tag opensans_thin">The Right Tools for SOLD</p></div>
+                              <div class="col-md-12 pg-better-panel"><p class="better-tag opensans_thin">The Right Tools to SELL</p></div>
                             </div>
                             <div class="col-md-12 column text-center padding-bottom-50">
                                 <div class="text-center">
@@ -457,7 +443,7 @@ We've basically removed the typical hassles often associated with selling withou
                                           <img alt="" src="<?php echo base_url(); ?>/images/icon-green-100-share.png" class="img-responsive">
                                           <div class="caption text-center">
                                             <span class="caption-title">Social Media</span>
-                                            <p class="caption-text">Don't know the difference between Facebook, Twitter or Pinterest?  No worries, we can help get a buzz going about your listing over social media.</p>	            
+                                                        
                                           </div>
                                         </div>
                                       </div>
@@ -466,8 +452,8 @@ We've basically removed the typical hassles often associated with selling withou
                                         <div class="thumbnail custom_thumbnail">
                                            <img alt="" src="<?php echo base_url(); ?>/images/icon-green-100-book.png" class="img-responsive">
                                           <div class="caption text-center">
-                                            <span class="caption-title">You on the Cover</span>
-                                            <p class="caption-text">Every one of our RealEstatePro listings comes complete with 15 copies of your very own Hot Property magazine, in which your property is featured on the cover!</p>
+                                            <span class="caption-title">Be Maximum exposure </span>
+                                            
 
                                           </div>
                                         </div>
@@ -477,8 +463,8 @@ We've basically removed the typical hassles often associated with selling withou
                                         <div class="thumbnail custom_thumbnail">
                                           <img alt="" src="<?php echo base_url(); ?>/images/icon-green-100-dashboard.png" class="img-responsive">
                                           <div class="caption text-center">
-                                            <span class="caption-title">Digital Dashboard</span>
-                                            <p class="caption-text">Imagine the power of having easy, instant access to real-time information and analytics that help you maximize all your marketing efforts.</p>
+                                            <span class="caption-title">Follow your progress</span>
+                                            
 
                                           </div>
                                         </div>
@@ -560,7 +546,7 @@ We've basically removed the typical hassles often associated with selling withou
 
                                     <div class="item active text-center" style="height: 600px; padding-top: 200px;">
                                      <div class="row"><div class="col-sm-8 col-sm-offset-2"><span class="quote">"Nous les remercions de leur bon service."</span></div></div>
-                                     <div class="row" style="margin-top: 100px;"><span class="quote-name"><img src="http://lorempixel.com/100/100/people/" class="quote-image"/></span></div>
+                                     <div class="row" style="margin-top: 100px;"><span class="quote-name"><img src="<?php echo base_url(); ?>/images/03.png" class="quote-image" class="quote-image"/></span></div>
                                      <div class="row" style="padding-top: 30px;"><span class="quote-name">Rechelle Bourque</span></div>	     
                                      <div class="row" style="padding-top: 10px; display: none;"><span class="quote-name"><button class="btn btn-primary btn-inverse">Customer Profiles</button></span></div>
                                     </div>
@@ -568,7 +554,7 @@ We've basically removed the typical hassles often associated with selling withou
 
                                     <div class="item text-center" style="height: 600px; padding-top: 200px;">
                                      <div class="row"><div class="col-sm-8 col-sm-offset-2"><span class="quote">"Ils ont été d’une grande aide."</span></div></div>
-                                     <div class="row" style="margin-top: 100px;"><span class="quote-name"><img src="http://lorempixel.com/100/100/people/" class="quote-image"/></span></div>
+                                     <div class="row" style="margin-top: 100px;"><span class="quote-name"><img src="<?php echo base_url(); ?>/images/o2.jpg" class="quote-image"/></span></div>
                                      <div class="row" style="padding-top: 30px;"><span class="quote-name">Dana Derbowka</span></div>	     
                                      <div class="row" style="padding-top: 10px; display: none;"><span class="quote-name"><button class="btn btn-primary btn-inverse">Customer Profiles</button></span></div>
                                     </div>
@@ -576,7 +562,7 @@ We've basically removed the typical hassles often associated with selling withou
 
                                     <div class="item text-center" style="height: 600px; padding-top: 200px;">
                                      <div class="row"><div class="col-sm-8 col-sm-offset-2"><span class="quote">"c’est simple et efficace avec vista Maison "</span></div></div>
-                                     <div class="row" style="margin-top: 100px;"><span class="quote-name"><img src="http://lorempixel.com/100/100/people/" class="quote-image"/></span></div>
+                                     <div class="row" style="margin-top: 100px;"><span class="quote-name"><img src="<?php echo base_url(); ?>/images/03.jpg" class="quote-image"/></span></div>
                                      <div class="row" style="padding-top: 30px;"><span class="quote-name">Guillaume Thibeault</span></div>	     
                                      <div class="row" style="padding-top: 10px; display: none;"><span class="quote-name"><button class="btn btn-primary btn-inverse">Customer Profiles</button></span></div>
                                     </div>
@@ -597,49 +583,4 @@ We've basically removed the typical hassles often associated with selling withou
                     </div>
                 </div>
 
-                <!-- section call and quote strats -->
-
-                <div class="row clearfix no-margin">
-                    <div class="section_02_title">
-                        <p class="big_title">you are one step away </p>
-                    </div>
-                </div>
-
-                <div class="row clearfix section_02 no-margin">
-
-                                <div class="container">
-
-                                  <div class=" col-lg-4 col-md-4 col-xs-12 col-sm-12">
-                                    <div class="thumbnail thumbnail_section_02">
-                                      <a href="#" data-toggle="modal" data-target="#sevenMinModal"><img alt="" src="<?php echo base_url(); ?>/images/icon-green-clock.png" class="img-responsive"></a>
-                                      <div class="caption text-center">
-                                        <span class="caption-title"><a href="#" data-toggle="modal" data-target="#sevenMinModal">Easy Call</a></span>
-                                        <p class="caption-text">It all starts with a conversation that on average takes only seven minutes. Take the call that could make you thousands of dollars when you sell. <a href="#" data-toggle="modal" data-target="#sevenMinModal">Request a call.</a></p>	            
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
-                                    <div class="thumbnail thumbnail_section_02">
-                                       <a href="#" data-toggle="modal" data-target="#freeOfferModal"><img alt="" src="<?php echo base_url(); ?>/images/icon-green-tag.png" class="img-responsive"></a>
-                                      <div class="caption text-center">
-                                        <span class="caption-title"><a href="#" data-toggle="modal" data-target="#freeOfferModal">What's my home worth?</a></span>
-                                        <p class="caption-text">With our pricing blueprint, you can more easily establish your asking price in a way that helps you make more money. <br><a href="#" data-toggle="modal" data-target="#freeOfferModal">Send me a sample blueprint.</a></p>
-
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
-                                    <div class="thumbnail thumbnail_section_02">
-                                      <a href="#" class="launchContactModalQuote" data-toggle="modal" data-target="#modalFreeQuote"><img alt="" src="<?php echo base_url(); ?>/images/icon-green-book.png" class="img-responsive"></a>
-                                      <div class="caption text-center">
-                                        <span class="caption-title"><a href="#" class="launchContactModalQuote" data-toggle="modal" data-target="#modalFreeQuote">Request a Free Quote</a></span>
-                                        <p class="caption-text">The cost of our services varies. We offer both full and self service options. Requesting a quote is the best way to know how much it will actually cost you. <a href="#" class="launchContactModalQuote" data-toggle="modal" data-target="#modalFreeQuote">Request a FREE quote.</a></p>
-
-                                      </div>
-                                    </div>
-                                  </div>
-                               </div>
-
-                </div>  <!-- section 02 end -->
+            

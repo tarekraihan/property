@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <link rel="stylesheet"  href="<?php echo base_url(); ?>/src/css/lightslider.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/style.css">	
@@ -82,7 +83,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>/images/nav-logo.jpg"/></a>
+              <a class="navbar-brand" href="<?php echo base_url(); ?>"><img class="logo" src="<?php echo base_url(); ?>/images/logo_prop.png"/></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -96,8 +97,7 @@
 				</div><!-- /input-group -->
               </form>
               <ul class="nav navbar-nav navbar-right">
-              <li><a href="<?php echo base_url(); ?>en/listingpage/">Property List</a></li>
-              <li><a href="<?php echo base_url(); ?>en/postpage/">Property Details</a></li>
+              
 					<li><a href="<?php echo base_url(); ?>en/seller/">Sellers</a></li>
 					<li><a href="<?php echo base_url(); ?>en/buyer/">Buyers</a></li>
 					<li><a href="<?php echo base_url(); ?>en/mortgage">Mortgages</a></li>

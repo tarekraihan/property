@@ -2,8 +2,10 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?php echo $title; ?></title
+
 	
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	><link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/font-awesome.min.css">
@@ -12,6 +14,7 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -34,7 +37,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>/images/nav-logo.jpg"/></a>
+              <a class="navbar-brand" href="<?php echo base_url(); ?>"><img class="logo" src="<?php echo base_url(); ?>/images/logo_prop.png"/></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,8 +51,7 @@
 				</div><!-- /input-group -->
               </form>
               <ul class="nav navbar-nav navbar-right">
-              <li><a href="<?php echo base_url(); ?>en/listingpage/">Property List</a></li>
-              <li><a href="<?php echo base_url(); ?>en/postpage/">Property Details</a></li>
+              
 					<li><a href="<?php echo base_url(); ?>en/seller/">Sellers</a></li>
 					<li><a href="<?php echo base_url(); ?>en/buyer/">Buyers</a></li>
 					<li><a href="<?php echo base_url(); ?>en/mortgage">Mortgages</a></li>
@@ -98,21 +100,21 @@
 
                             <div class="row omb_row-sm-offset-3">
                                 <div class="col-xs-12 col-sm-6">	
-                                    <form class="omb_loginForm" action="/start" autocomplete="off" method="POST">
-                                    <input name="c" value="" type="hidden">
+                                   <form class="omb_loginForm" action="<?php echo base_url(); ?>login/login_validation/" autocomplete="off" method="POST">
+                                  
                                         <div class="input-group">
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-                                            <input class="form-control" placeholder="email address" name="email" id="email" type="text">
+                                            <input class="form-control" placeholder="email address" name="login_email" id="email" type="text">
                                         </div>
                                         <span class="help-block"></span>
 
                                         <div class="input-group">
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
-                                            <input class="form-control" placeholder="Password" name="password_input" id="password_input" type="password">
+                                            <input class="form-control" placeholder="Password" name="password" id="password_input" type="password">
                                         </div>
                                         <span class="help-block" style="display: none;">Password error</span>
 
-                                        <div class="text-center"><button class="btn btn-green" type="submit" style="margin-top: 10px;">Login</button></div>
+                                        <div class="text-center"><button class="btn btn-green" type="submit" name="btnLogin" style="margin-top: 10px;">Login</button></div>
                                     </form>
                                 </div>
                             </div>

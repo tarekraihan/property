@@ -4,6 +4,8 @@
 
 .white{color: #fff;}
 
+.blue_bg{background-color: #4B93CD !important;}
+
 .error
 {
 	color:#C00;
@@ -11,6 +13,7 @@
 }
 .navbar-right
 {margin:0;}
+
 .success
 {
     color: #2acc57;
@@ -20,6 +23,8 @@
 .opensans_thin{ font-family: 'open sans',sans-serif;
            font-weight: 100;
         }
+        
+.roboto{font-family: 'Roboto', sans-serif;}      
 
 .custom_nav{background-image:none;
 			background-color:#fff;
@@ -36,6 +41,12 @@
 .custom_nav .navbar-brand {
     color: #EEE;
     padding: 5px 0px 0px;
+}
+
+.logo{
+    width: 310px;
+    height: auto;
+    margin: 13px;
 }
 
 .navbar-nav > li:hover{background-color: #EDECED;}
@@ -233,7 +244,7 @@ p.big_title{text-align: center;
             font-family: 'Open Sans', sans-serif;
             font-weight: 100;}
 
-.section_01_bg{background-color: rgb(83,181,172);
+.section_01_bg{background-color: #FA9638;
                padding-top: 30px;
                padding-bottom: 40px;
                 }
@@ -316,7 +327,7 @@ p.big_title{text-align: center;
     padding-top: 20px;
 }
 
-.contact-bg{ background-color: rgb(1,136,201);
+.contact-bg{ background-color: #FA9638;
              min-height: 200px;
              text-align: center;
             }
@@ -341,10 +352,10 @@ p.big_title{text-align: center;
 /* Footer starts */
 
 .footer-bg {
-    min-height: 400px;
-    background-color: #FA9638;
+    min-height: 200px;
+    background-color: #0188C9;
     color: #FFF;
-    padding: 60px 0px;
+    padding: 30px 0px;
 }
 
 #footer a {
@@ -397,7 +408,7 @@ p.big_title{text-align: center;
 .seller_section_03_title_text{ margin-bottom: 10px;
                                 margin-top: 20px;}
 
-.selleer_page_section_04{ background-color: #7ABA60;
+.selleer_page_section_04{ background-color: #0188C9;
                           min-height: 450px;}
 
 .dollars {
@@ -449,7 +460,7 @@ p.big_title{text-align: center;
 }
 
 
-.seller_page_section_06_pro{background-color: #0188C9;}
+.seller_page_section_06_pro{background-color: #FA9638;}
 
 .proservices-maintitle {
     color: #FFF;
@@ -458,7 +469,7 @@ p.big_title{text-align: center;
 }
 
 .proservices {
-    background-color: #0188C9;
+    background-color: #FA9638;
 }
 
 .proservices-text {
@@ -481,7 +492,7 @@ p.big_title{text-align: center;
 }
 
 .proservices-title {
-    color: #5CDEFE;
+    color: #fff;
     font-weight: 100;
     font-size: 20px;
     line-height: 60px;
@@ -798,11 +809,9 @@ p.big_title{text-align: center;
 							
 							
 /* Property listing page */
-.prop-img
-{
-	height:175px;
-	width:260px;	
-	
+.prop-img {
+    height: 175px;
+    width: 260px;
 }
 
 .region_name {
@@ -837,4 +846,244 @@ p.big_title{text-align: center;
 	height:82px;
 }
 
-.data{float:left;}
+
+.tab-content {
+    padding: 15px;
+}
+.bg-white {
+    background-color: #FFF;
+}
+
+
+.property_details ul li {
+    display: block;
+}
+.marker {
+    float: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: #125793;
+    padding-right: 2px;
+}
+.data {
+    font-weight: 300;
+    float: left;
+    font-size: 12px;
+}
+
+.clear {
+    clear: both;
+}
+
+
+.post_dec_subcat {
+    margin: 0px 0px 3px;
+    color: #125793;
+    font-size: 12px;
+    font-weight: bold;
+}
+.unstyled {
+    padding: 0px;
+    font-size: 12px;
+}
+
+
+.price {
+    color: #25292A;
+    font-weight: 100;
+    font-size: 50px;
+}
+.beds-baths {
+    color: #25292A;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.bb-text {
+    color: #626365;
+    font-weight: 100;
+    font-size: 35px;
+}
+
+.address {
+    color: #25292A;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.sign-style {
+    background-color: #50585B;
+    font-size: 100%;
+    border-color: #252324;
+    font-weight: 200;
+    vertical-align: text-top;
+}
+
+.city-province {
+    color: #626365;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.card-container {
+    border-radius: 4px;
+    min-height: 420px;
+    width: 100%;
+    box-shadow: 0.5px 0.5px 0.5px #C6CCCC;
+    margin-top: 10px;
+    border-top: 1px solid #D4D9D9 !important;
+}
+
+.card {
+    background: #FFF none repeat scroll 0px 0px;
+    border-radius: 4px;
+    color: #444;
+}
+
+.card .content {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 10px 20px 20px;
+}
+
+.card .content .main {
+    min-height: 160px;
+}
+
+.card .name {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 10px 0px 0px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card .profession {
+    color: #999;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card h5 {
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 15px;
+    margin: 5px 0px;
+}
+
+.btn-lgx {
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 30px;
+    width: 100%;
+}
+
+.btn-question {
+    border-color: #0188C9;
+    color: #FFF;
+    background-color: #0188C9;
+    margin-bottom: 10px;
+}
+
+/* post slider */
+
+.viewer-border {
+    border: 1px solid #C6CCCC;
+    border-radius: 4px;
+    min-height: 500px;
+    background-color: #FFF;
+}
+/* post slider end*/
+
+.post_details_part {
+    border: 1px solid #DDD;
+    margin-top: 30px;
+    border-radius: 3px;
+}
+
+.post_page_prefooter_image {
+    background: transparent url("../images/locationserving-bg.jpg") no-repeat scroll center top;
+    min-height: 350px;
+    margin-top: 30px;
+}
+
+/*list page*/
+
+.info {
+    background: #FFF none repeat scroll 0px 0px;
+    box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.1);
+    padding: 10px 15px;
+    height: 155px;
+    border: 1px solid #ddd;
+    width: 260px;
+}
+
+.info h2 {
+    font-size: 20px;
+    line-height: normal;
+    margin: 0px;
+}
+
+.info .price {
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.info-listing {
+    border-top: 1px solid #CCC;
+    display: block;
+    margin-top: 10px;
+}
+
+/*mortgage page css*/
+
+.mortgage_text {
+    font-size: 45px;
+    padding: 205px;
+    color: #fff;
+}
+
+
+/*Header list page ar css*/
+
+ul{
+			list-style: none outside none;
+		    padding-left: 0;
+            margin: 0;
+		}
+        .demo .item{
+            margin-bottom: 60px;
+        }
+		.content-slider li{
+		    background-color: #ed3020;
+		    text-align: center;
+		    color: #FFF;
+		}
+		.content-slider h3 {
+		    margin: 0;
+		    padding: 70px 0;
+		}
+		.demo{
+			width: 800px;
+		}
+		
+		.slider_img{margin:25px;}
+		
+		.content-slider li {
+			background-color: rgb(59, 59, 59);
+			height: 210px;
+		}
+		
+		#content-slider{height:210px;}
+		
+		.lSPager {
+			display: none;
+		}
+		
+		.content-slider h3 {
+			margin: 0px;
+			padding-top: 26px;
+			padding-bottom: 30px;
+		}

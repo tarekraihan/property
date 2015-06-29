@@ -67,7 +67,33 @@
 		
 		<div class="row no-margin">
 			<div class="home_page_listing_carousel">
-			
+			     <div class="item">
+                    <ul id="content-slider" class="content-slider">
+                    <?php 
+						$this->common_model->order_column="property_id";
+						$this->common_model->table_name="tbl_property";
+						$this->common_model->where=array('feature_post'=>1);
+						$query=$this->common_model->select_all();
+						
+						foreach($query->result() as $row)
+						{
+					
+					?>
+                    
+                    
+                        <li>
+							<img width="180" height="140" class="pull-left slider_img" src="<?php echo base_url();?>images/property/<?php echo $row->image_name;?>"/>
+                            <h3>$ <?php echo $row->price;?></h3>
+							<p><?php echo $row->property_address;?></p>
+                        </li>
+                        
+                        <?php
+						}
+						?>
+						
+						
+                    </ul>
+                </div>
 			</div>
 		</div>
         
@@ -130,12 +156,12 @@
         
             <!-- Buyer page section 07 mortgage pro -->
 
-            <div class="greenback hidden-xs" id="calc">
+            <div class="greenback hidden-xs blue_bg" id="calc">
                 <div class="container text-center panel-padding-50">
                      <div class="row no-margin clearfix">
 
                             <div class="col-xs-12 column">
-                                <h1 class="mortgage-title white">MortgagePro©</h1>
+                                <h1 class="mortgage-title white">vista Mortgage</h1>
                             </div>
 
 
@@ -160,7 +186,7 @@
 
                         <div class="padding-top-25">				
                             <div class="col-12-xs padding-bottom-50">
-                                <a href="/mortgage/" type="button" class="btn btn-white btn-lg">More Information</a>
+                                <a href="<?php echo base_url();?>en/mortgage/" type="button" class="btn btn-white btn-lg">More Information</a>
                             </div>		
                         </div>
                     </div>
@@ -182,57 +208,44 @@
 
                                 <div class="carousel-inner">
 
-                                        <div class="item">
-                                           <h3 class="faq-title text-center">How are you different from agents?</h3>	
-                                            <p class="faq-text">We're not agent or brokers. We're a specialized marketing company that helps sellers market their properties directly to buyers or even buyer's agents over a private platform instead of the way agents do it. This way of selling is not only less expensive but can also be more convenient. Lucky for us, our customers agree.</p>		      
-                                        </div>
-
-                                        <div class="item">
-                                           <h3 class="faq-title text-center">How much does it cost?</h3>	
-                                            <p class="faq-text">The price of a PropertyGuys.com marketing package is completely dependent on the level of service you choose <a href="/sell/listing/">SELF serve or FULL serve</a> and also what services you require. The best way to find out how much it costs is to <a href="#" data-toggle="modal" data-target="#modalFreeQuote">request a quote</a> or <a href="#" data-toggle="modal" data-target="#modalContact">contact an office.</a></p>		      
-                                        </div>
-
-        <!-- 							    <div class="item"> -->
-        <!-- 								   <h3 class="faq-title text-center">What about handling offers, negotiations and closing the deal?</h3>	 -->
-        <!-- 								    <p class="faq-text">From the moment a property is activated on our system, sellers have access to expert advice and guidance from our LegalPros&copy;. These specialized real estate lawyers help with:</p>  -->
-
-        <!-- 										<ul class="text-center"> -->
-        <!-- 											<li>Advice and answers to legal questions such as dealing with buyer's agents and negotiation </li> -->
-        <!-- 											<li>Advice on offers in advance of signing </li> -->
-        <!-- 											<li>Preparation of legal documents and assistance closing the sale</li> -->
-        <!-- 										</ul> -->
-
-        <!-- 							    </div> -->
-
-                                        <div class="item">
-                                           <h3 class="faq-title text-center">What about extra exposure on Realtor.ca*?</h3>	
-                                            <p class="faq-text">Sellers can enjoy the benefit and added exposure of having their property posted onto Realtor.ca* thanks to our partnerships with real estate brokers who are members of the Canadian Real Estate Association.</p>		      
-                                        </div>
-
-                                        <div class="item">
+                                        <div class="item active">
                                            <h3 class="faq-title text-center">What about dealing with buyers' agents?</h3>	
                                             <p class="faq-text">We make it easy for sellers to consider offers from buyers who use buyers' agents. How much commission is offered and paid to a buyer's agent is totally up to the seller.</p>		      
                                         </div>
 
                                         <div class="item">
-                                           <h3 class="faq-title text-center">What about setting an asking price?</h3>	
-                                            <p class="faq-text">Sellers are able to get a pricing blueprint specific to their property by experts we call PricePros©. Unlike agents, these certified appraisers have nothing to lose or gain from the sale, so the advice they provide is truly unbiased.</p>		      
+                                           <h3 class="faq-title text-center">How do I set up my house at the right price ?</h3>	
+                                            <p class="faq-text">Sellers are able to get a pricing blueprint specific to their property by experts we call vista Value . Unlike agents, these certified appraisers have nothing to lose or gain from the sale, so the advice they provide is truly unbiased.</p>		      
                                         </div>
 
-                                        <div class="item active">
-                                           <h3 class="faq-title text-center">What about taking calls &amp; booking appointments?</h3>	
-                                            <p class="faq-text">Sellers can enjoy the convenience of a 24/7 answering service to answer calls and help book showings. We call this ContactPro©.</p>		      
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">What about taking calls & booking appointments?</h3>	
+                                            <p class="faq-text">Sellers can enjoy the convenience of our  answering service to answer calls and help book showings. We call this Vista Assistance ©</p>	                                             
                                         </div>
-
+                                        
                                         <div class="item">
                                            <h3 class="faq-title text-center">What about showings?</h3>	
-                                            <p class="faq-text">We believe that the seller is the best person to show the property. After all, sellers know the details of the property and the neighborhood better than anyone.</p>		      
+                                            <p class="faq-text">We believe that the seller is the best person to show the property. After all, sellers know the details of the property and the neighborhood better than anyone.</p>	                                             
                                         </div>
-
+                                        
                                         <div class="item">
-                                           <h3 class="faq-title text-center">Can I defer my payment instead of paying for the package upfront?</h3>	
-                                            <p class="faq-text">Yes, we call this "List now. Pay Later."</p>	
-                                            <p class="faq-text">With this option, sellers can enjoy the benefit of our marketing package today with a convenient way of paying for it later. Sellers often choose to pay once their property has sold.</p>	      
+                                           <h3 class="faq-title text-center">Can I delay my payment instead of paying for the package right now ?</h3>	
+                                            <p class="faq-text">Yes, With this option, sellers can enjoy the benefit of our marketing package today with a convenient way of paying for it later. Sellers often choose to pay once their property has sold.</p>	                                             
+                                        </div>
+                                        
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">How do you differ from agents ?</h3>	
+                                            <p class="faq-text">We're not agent or brokers. We're a specialized marketing company that helps sellers market their properties directly to buyers or even buyer's agents over a private platform instead of the way agents do it. This way of selling is not only less expensive but can also be more convenient. Lucky for us, our customers agree.</p>	                                             
+                                        </div>
+                                        
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">How much is it going to cost ?</h3>	
+                                            <p class="faq-text">The price of Vista Maison marketing package is completely dependent on the level of service you choose and also what services you require. The best way to find out how much it costs is to request a quote orcontact us.</p>	                                             
+                                        </div>
+                                        
+                                        <div class="item">
+                                           <h3 class="faq-title text-center">What about extra exposure on on the Mls ?</h3>	
+                                            <p class="faq-text">With Vista maison you have the option to list on the MLS . We will help you reach a wider audience and we will give your property all the exposure you'll ever need to get it SOLD.</p>	                                             
                                         </div>
 
                                 </div>
@@ -254,22 +267,10 @@
                 <div class="container">
                     <div class="row no-margin clearfix">
 
-                        <div class="col-xs-12 text-center"><h1 class="proservices-maintitle opensans_thin"><span class="pg-text-blue">Buyer</span> Tool Box</h1></div>
+                        <div class="col-xs-12 text-center"><h1 class="proservices-maintitle opensans_thin"><span class="pg-text-blue">VistaMaison  buyer’s Assistance </h1></div>
                         <div class="col-xs-12 text-center" style="display: none;"><p class="proservices-text"></p></div>
 
                         <div class="col-xs-10 col-xs-offset-1 padding-bottom-100">
-
-
-                            <div class="media">
-                              <div class="pull-left media-image-fix">
-                                  <img alt="" class="media-object" src="<?php echo base_url(); ?>/images/icon-white-alert.png">			       
-                              </div>
-                              <div class="media-body">
-                                <h4 class="media-heading pg-text-blue media-title opensans_thin">Alerts &amp; Notifications</h4>
-                                <span class="proservices-text">Our alert &amp; notification functions let you choose to get instant updates, a once daily summary, or no alerts at all. You can save your searches and create alerts so that you don't have to spend time re-entering all of the criteria that is important to you. You can be notified whenever new properties come on the market matching your criteria.</span>
-                              </div>
-                            </div>
-
 
                             <div class="media">
                               <div class="pull-left media-image-fix">
@@ -326,14 +327,13 @@
 </div>
     
     
-    <script><!-- HotProperty Modal -->
+    <!-- HotProperty Modal -->
         <div class="modal fade" id="hotPropertyModal" tabindex="-1" role="dialog" >
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body">
 
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="/images/panels/modal_close.png" /></button>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
                         <h2 class="caption-title text-center">Get a FREE SAMPLE</h2> 
                             <div class="caption-text"><p>All we need is your email address and we'll send you a link to download a sample Buyer's Guide.</p></div>
                                 <div class="row clear-fix">
@@ -355,21 +355,20 @@
                                                       </div>
                                                     </div>
                                           <div class="row text-center hidden-sm hidden-sm">
-                                            <div class="alert alert-success" role="alert" id="ppSuccess158">Success! We\'ve recieved your request, check your inbox for the download link.</div>
-                                            <div class="alert alert-warning" role="alert" id="ppError158">Something went wrong. Check your email address and try again.</div>
+                                            
                                             <button type="submit" class="btn btn-green btn-block" id="btn_158">Send me a FREE sample!</button>
                                           </div>
                                         </form>
                                 </div>
 
-                            <div class="col-md-6 pull-right hidden-xs hidden-sm "><img class="downloadables-image"  src="<?php echo base_url(); ?>/images/panels/hotpropertysample.jpg" style="width: 200px;"/></div>
-                        </div>    
+                            <div class="col-md-6 pull-right hidden-xs hidden-sm "><img class="downloadables-image"  src="<?php echo base_url(); ?>/images/book_PNG2116.png" style="width: 200px;"/></div>
+                        </div>
 
               </div><!-- Close Body -->
             </div><!-- .modal-content -->
           </div><!-- .modal-dialog -->
         </div><!-- .modal -->
 
-    </script>
+   
 </body>
 </html>
