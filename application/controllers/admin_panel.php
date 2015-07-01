@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Admin_Panel extends CI_Controller {
-
+	
 	
 	/**********************************************
 	 * Developer : Tarek Raihan                   *
@@ -11,6 +11,15 @@ class Admin_Panel extends CI_Controller {
 	 * Start Date : 10-05-2015                    *
      * Last Update : 10-05-2015                   *
 	 **********************************************/
+	 
+	 public function __construct() {
+        parent:: __construct();
+        $this->load->helper("url");
+        $this->load->model("cities");
+        $this->load->library("pagination");
+    }
+	
+	
 	public function index()
     {
 		if($this->session->userdata('email_address')){
@@ -266,6 +275,31 @@ class Admin_Panel extends CI_Controller {
 			$this->form_validation->set_rules('txtArea','Area Name', 'trim|required|min_length[2]|max_length[40]|xss_clean');
 			if ($this->form_validation->run() == FALSE)
 			{
+				
+				$config["base_url"] = base_url() . "admin_panel/area/";
+				$total_row = $this->cities->record_count();
+				$config["total_rows"] = $total_row;
+				$config["per_page"] = 1;
+				$config['use_page_numbers'] = TRUE;
+				$config['num_links'] = 3;
+				$config['cur_tag_open'] = '&nbsp;<a class="current">';
+				$config['cur_tag_close'] = '</a>';
+				$config['next_link'] = 'Next';
+				$config['prev_link'] = 'Previous';
+				
+				$this->pagination->initialize($config);
+				if($this->uri->segment(3)){
+				$page = ($this->uri->segment(3)) ;
+				  }
+				else{
+					   $page = 1;
+				}
+				$data["results"] = $this->cities->fetch_data($config["per_page"], $page);
+				$str_links = $this->pagination->create_links();
+				$data["links"] = explode('&nbsp;',$str_links );
+        
+		
+		
 			 
 				$data['title']="City Post";
 				$this->load->view('admin/header',$data);
@@ -454,6 +488,49 @@ class Admin_Panel extends CI_Controller {
 		
 		
 	}
+	
+	
+	public function pagination()
+	{
+		 //$config = array();
+       $config["base_url"] = base_url() . "admin_panel/pagination";
+        $total_row = $this->cities->record_count();
+        $config["total_rows"] = $total_row;
+        $config["per_page"] = 1;
+        $config['use_page_numbers'] = TRUE;
+        $config['num_links'] = 3;
+        $config['cur_tag_open'] = '&nbsp;<a class="current">';
+        $config['cur_tag_close'] = '</a>';
+        $config['next_link'] = 'Next';
+        $config['prev_link'] = 'Previous';
+        
+        $this->pagination->initialize($config);
+        if($this->uri->segment(3)){
+        $page = ($this->uri->segment(3)) ;
+          }
+        else{
+               $page = 1;
+        }
+        $data["results"] = $this->cities->fetch_data($config["per_page"], $page);
+        $str_links = $this->pagination->create_links();
+        $data["links"] = explode('&nbsp;',$str_links );
+		
+		foreach ($results as $data) {
+			$sl=1;
+			echo"<tr>
+                        <td> ". $sl ."</td>
+                        <td class='center'>". $row->area_name."</td>
+                        <td class='center'>". $row->state_name."</td>
+                        <td class='center'>".$row->country_name ."</td>
+                        <td class='center'><i class='glyphicon glyphicon-edit'></td>
+                        <td class='center'><a href='?id=".$row->area_id ."' onclick='return confirm(\"Are you really want to delete this item\")'><i class='glyphicon glyphicon-remove red'></a></td>
+                        
+                    </tr>";
+					$sl++;
+		}
+		
+	}
+	
 	
 	public function image_water()
 	{	

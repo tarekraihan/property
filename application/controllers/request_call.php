@@ -62,7 +62,7 @@ class Request_Call extends CI_Controller {
 			<html>
 			<head>
 			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
-			<title>Untitled Document</title>
+			<title>Vistamaison</title>
 			</head>
 			
 			<body style=' font-family:Georgia, Times, serif; font-size:14px; '>
@@ -102,7 +102,7 @@ class Request_Call extends CI_Controller {
 			$this->email->set_mailtype("html");
 		
 		  $this->email->from('academyofheart00@gmail.com', " Vistamaison");
-		  $this->email->to('tarekraihan@yahoo.com',' Vistamaison');
+		  $this->email->to('info@brossarddesign.com',' Vistamaison');
 		  //$this->email->cc("testcc@domainname.com");
 		  $this->email->subject("Call Request from Client ");
 		  $this->email->message($code);

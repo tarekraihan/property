@@ -130,10 +130,10 @@ $(document).ready(function(){
                     <tbody>
                     <?php 
 						
-						$query=$this->select_model->Select_Area_With_State_With_Country();
+						//$query=$this->select_model->Select_Area_With_State_With_Country();
 						
 						$sl=1;
-						foreach ($query->result() as $row)
+						foreach ($results as $row)
 						{
 					?>
                     <tr>

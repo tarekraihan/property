@@ -65,7 +65,7 @@ class Message extends CI_Controller {
 			<html>
 			<head>
 			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
-			<title>Untitled Document</title>
+			<title>Vistamaison</title>
 			</head>
 			
 			<body style=' font-family:Georgia, Times, serif; font-size:14px; '>
@@ -104,8 +104,8 @@ class Message extends CI_Controller {
 			$this->email->set_newline("\r\n");
 			$this->email->set_mailtype("html");
 		
-		  $this->email->from('academyofheart00@gmail.com', "Property Guy");
-		  $this->email->to('tarekraihan@yahoo.com','Property Guy');
+		  $this->email->from('academyofheart00@gmail.com', "Vistamaison");
+		  $this->email->to('info@brossarddesign.com','Vistamaison');
 		  //$this->email->cc("testcc@domainname.com");
 		  $this->email->subject("Message from Client ");
 		  $this->email->message($code);
