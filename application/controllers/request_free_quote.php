@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Message extends CI_Controller {
+class Request_Free_Quote extends CI_Controller {
 
 	
 	/**********************************************
@@ -11,7 +11,7 @@ class Message extends CI_Controller {
 	 * Start Date : 1-07-2015                     *
      * Last Update : 1-07-2015                    *
 	 **********************************************/
-	function customer_message($msg='')//Insert Information and create user name and Password----
+	function request_free_quote($msg='')//Insert Information and create user name and Password----
     {
 		if($msg == 'success'){
 			$data['feedback'] = 'Thank you</div>';
@@ -104,18 +104,18 @@ class Message extends CI_Controller {
 			$this->email->set_newline("\r\n");
 			$this->email->set_mailtype("html");
 		
-		  $this->email->from('academyofheart00@gmail.com', "Property Guy");
-		  $this->email->to('tarekraihan@yahoo.com','Property Guy');
+		  $this->email->from('academyofheart00@gmail.com', "Vistamaison");
+		  $this->email->to('tarekraihan@yahoo.com','Vistamaison');
 		  //$this->email->cc("testcc@domainname.com");
-		  $this->email->subject("Message from Client ");
+		  $this->email->subject("Free Quote Request from Client ");
 		  $this->email->message($code);
 		  $this->email->send();
 	  
   
-                redirect('message/customer_message/success');
+                redirect('request_free_quote/request_free_quote/success');
             }else
             {
-                redirect('message/customer_message/error');
+                redirect('request_free_quote/request_free_quote/error');
             }
 
         }

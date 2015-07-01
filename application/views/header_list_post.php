@@ -5,7 +5,7 @@
 	<title><?php echo $title; ?></title
 
 	
-	><link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     
     <link rel="stylesheet" href="<?php echo base_url(); ?>/css/font-awesome.min.css">
@@ -100,21 +100,21 @@
 
                             <div class="row omb_row-sm-offset-3">
                                 <div class="col-xs-12 col-sm-6">	
-                                   <form class="omb_loginForm" action="<?php echo base_url(); ?>login/login_validation/" autocomplete="off" method="POST">
-                                  
+                                    <form class="omb_loginForm" action="/start" autocomplete="off" method="POST">
+                                    <input name="c" value="" type="hidden">
                                         <div class="input-group">
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-                                            <input class="form-control" placeholder="email address" name="login_email" id="email" type="text">
+                                            <input class="form-control" placeholder="email address" name="email" id="email" type="text">
                                         </div>
                                         <span class="help-block"></span>
 
                                         <div class="input-group">
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
-                                            <input class="form-control" placeholder="Password" name="password" id="password_input" type="password">
+                                            <input class="form-control" placeholder="Password" name="password_input" id="password_input" type="password">
                                         </div>
                                         <span class="help-block" style="display: none;">Password error</span>
 
-                                        <div class="text-center"><button class="btn btn-green" type="submit" name="btnLogin" style="margin-top: 10px;">Login</button></div>
+                                        <div class="text-center"><button class="btn btn-green" type="submit" style="margin-top: 10px;">Login</button></div>
                                     </form>
                                 </div>
                             </div>

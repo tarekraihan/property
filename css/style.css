@@ -1087,3 +1087,41 @@ ul{
 			padding-top: 26px;
 			padding-bottom: 30px;
 		}
+		
+		/*homepage post */
+		
+		.titlebox_image{width:565px;
+	                    height:285px;
+						}
+						
+	        .homepage_post_title{width:600px;
+		                    margin: 0 auto;
+		                    padding: 50px 35px;
+		                    }
+		
+		.homepage_post_title_head{font-size: 40px;
+		                          margin-bottom: 30px;
+								  }
+	    
+		.homepage_post_address p{padding-top: 16px;
+							   padding-bottom: 3px;
+							   font-size: 18px;
+							}	
+
+	        .homepage_post_details{border-bottom: 2px solid #000; margin-bottom: 15px;}
+		
+		.homepage_post_details ul li {padding: 15px;
+									text-transform: uppercase;
+									color: #000;
+									display:block;
+									}
+									
+		.homepage_post_state p { padding-bottom: 16px;
+								padding-top: 3px;
+								font-size: 16px;}
+		
+		.homepage_post_details ul li{list-style: none;
+											display: inline;
+								  }
+								  
+		.padding_bottom_50{padding-bottom: 50px;}

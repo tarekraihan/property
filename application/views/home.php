@@ -118,6 +118,7 @@
 		
 		</div>
 		
+		<!--
 		<div class="row no-margin">
 			<div class="home_page_listing_carousel">
 			     <div class="item">
@@ -149,6 +150,8 @@
                 </div>
 			</div>
 		</div>
+		
+		-->
         
         
 		<div class="icon_homepage_section_01">

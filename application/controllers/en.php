@@ -16,7 +16,7 @@ class EN extends CI_Controller {
 		$data['title']="Home";
         $this->load->view('header_post',$data);
 		$this->load->view('home');
-        $this->load->view('footer1');
+        $this->load->view('footer_home');
 		$this->load->view('footer2');
     }
 	public function buyer()

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Message extends CI_Controller {
+class Request_Call extends CI_Controller {
 
 	
 	/**********************************************
@@ -11,7 +11,7 @@ class Message extends CI_Controller {
 	 * Start Date : 1-07-2015                     *
      * Last Update : 1-07-2015                    *
 	 **********************************************/
-	function customer_message($msg='')//Insert Information and create user name and Password----
+	function call_request($msg='')//Insert Information and create user name and Password----
     {
 		if($msg == 'success'){
 			$data['feedback'] = 'Thank you</div>';
@@ -24,10 +24,10 @@ class Message extends CI_Controller {
 		//-----Form Validation-------
 		  $this->form_validation->set_rules('txtfirst_name','First Name', 'trim|required|min_length[4]|max_length[40]|xss_clean');
 		  $this->form_validation->set_rules('txtlast_name','Last Name', 'trim|required|min_length[4]|max_length[40]|xss_clean');
-     	  $this->form_validation->set_rules('txtEmail','Email Address', 'trim|required|min_length[7]|max_length[50]|xss_clean');
+     	  //$this->form_validation->set_rules('txtEmail','Email Address', 'trim|required|min_length[7]|max_length[50]|xss_clean');
        	  $this->form_validation->set_rules('txtphone','Phone', 'trim|required|min_length[4]|max_length[15]|xss_clean');
 		  $this->form_validation->set_rules('txtpostalCode','Postal Code', 'trim|required|min_length[4]|max_length[12]|xss_clean');
-			$this->form_validation->set_rules('txtcontactMessage','Message ', 'trim|required|min_length[4]|xss_clean');
+			//$this->form_validation->set_rules('txtcontactMessage','Message ', 'trim|required|min_length[4]|xss_clean');
         if ($this->form_validation->run() == FALSE)
         {
 			$data['title']="Home";
@@ -46,20 +46,17 @@ class Message extends CI_Controller {
             $this->common_model->data=array(        //Receive form data in post method---
                 'first_name'=>$this->input->post('txtfirst_name'),
                 'last_name'=>$this->input->post('txtlast_name'),
-                'email_address'=>$this->input->post('txtEmail'),
-				'phone'=>$this->input->post('txtphone'),
-                'postalcode'=>$this->input->post('txtpostalCode'),
-                'message_body'=>$this->input->post('txtcontactMessage'),
-               
+                'phone'=>$this->input->post('txtphone'),
+                'postal_code'=>$this->input->post('txtpostalCode'),
+                            
                 
             );
 			
 			
 			$name=$this->input->post('txtfirst_name')." ".$this->input->post('txtlast_name');
-			$email=$this->input->post('txtEmail');
 			$phone=$this->input->post('txtphone');
 			$postalCode=$this->input->post('txtpostalCode');
-			$message_body=$this->input->post('txtcontactMessage');
+			//$message_body=$this->input->post('txtcontactMessage');
            
             $code="<!DOCTYPE HTML>
 			<html>
@@ -70,11 +67,11 @@ class Message extends CI_Controller {
 			
 			<body style=' font-family:Georgia, Times, serif; font-size:14px; '>
 				<h3>Name : ".$name."</h3>
-				<h4>Email : ".$email."</h4>
+				
 				<h4>Phone : ".$phone."</h4>
 				<h4>postalCode : ".$postalCode."</h4><br/>
-				<p>
-				".$message_body."
+				<p style='color:red'>
+					Request Call Only 5 minutes.
 				</p>
 			
 			</body>
@@ -82,7 +79,7 @@ class Message extends CI_Controller {
 
 			";
 		
-             $this->common_model->table_name='tbl_message';
+             $this->common_model->table_name='tbl_call_request';
             $result=$this->common_model->insert();
             if($result)
             {
@@ -104,18 +101,18 @@ class Message extends CI_Controller {
 			$this->email->set_newline("\r\n");
 			$this->email->set_mailtype("html");
 		
-		  $this->email->from('academyofheart00@gmail.com', "Property Guy");
-		  $this->email->to('tarekraihan@yahoo.com','Property Guy');
+		  $this->email->from('academyofheart00@gmail.com', " Vistamaison");
+		  $this->email->to('tarekraihan@yahoo.com',' Vistamaison');
 		  //$this->email->cc("testcc@domainname.com");
-		  $this->email->subject("Message from Client ");
+		  $this->email->subject("Call Request from Client ");
 		  $this->email->message($code);
 		  $this->email->send();
 	  
   
-                redirect('message/customer_message/success');
+                redirect('request_call/call_request/success');
             }else
             {
-                redirect('message/customer_message/error');
+                redirect('request_call/call_request/error');
             }
 
         }
