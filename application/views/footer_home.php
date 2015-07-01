@@ -148,7 +148,7 @@
 															<div class="caption-text"><p>With our pricing blueprint you can more easily establish your asking price in a way that helps you make more money. All we need is your email address and we'll send you a link to download a sample blueprint that shows you the value of our pricing strategy.</p></div>
 																<div class="row clear-fix">
 																	<div class="col-xs-12 col-md-6" style="padding-top: 25px;">   
-																		<form  action="<?php echo base_url();?>request_blueprint/blueprint_request/" class="form fv-form fv-form-bootstrap" role="form" >				        	<button style="display: none; width: 0px; height: 0px;" class="fv-hidden-submit" type="submit"></button>
+																		<form  action="<?php echo base_url();?>request_blueprint/blueprint_request/" method="post" class="form fv-form fv-form-bootstrap" role="form" >				        	<button style="display: none; width: 0px; height: 0px;" class="fv-hidden-submit" type="submit"></button>
 																				        	
 																				  <div class="row padding-bottom-10">
 																					  <div class="form-group has-feedback">
