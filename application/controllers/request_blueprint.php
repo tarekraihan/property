@@ -53,7 +53,7 @@ class Request_Blueprint extends CI_Controller {
 					</head>
 					
 					<body style=' font-family:Georgia, Times, serif; font-size:14px; '>
-						<h3>Blueprint Request From</h3>
+						<h3>A Blueprint Request</h3>
 						
 						<h4>Email : ".$email."</h4>
 					
