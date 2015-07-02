@@ -139,8 +139,8 @@ $(document).ready(function(){
                     <tr>
                         <td><?php echo $sl; ?></td>
                         <td class="center"><?php echo $row->area_name;?></td>
-                        <td class="center"><?php echo $row->state_name;?></td>
-                        <td class="center"><?php echo $row->country_name;?></td>
+                        <td class="center"><?php echo $row->area_id;?></td>
+                        <td class="center"><?php echo $row->state_id;?></td>
                         <td class="center"><i class="glyphicon glyphicon-edit"></td>
                         <td class="center"><a href="?id=<?php echo $row->area_id;?>" onclick="return confirm(\'Are you really want to delete this item\')"><i class="glyphicon glyphicon-remove red"></a></td>
                         

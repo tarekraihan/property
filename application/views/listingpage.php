@@ -398,7 +398,7 @@
 								<div class="col-sm-12 col-md-4">
                                     <div class="item">
                                             <span class="label label-primary most_popular">Most Popular</span>
-                                                <a href="#"><img class="prop-img" src="<?php echo base_url(); ?>/images/property/<?php echo $row->image_name;?>"></a>
+                                                <a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>"><img class="prop-img" src="<?php echo base_url(); ?>/images/property/<?php echo $row->image_name;?>"></a>
                                                 <div class="info"> 
                                                     <h2><a href="">$<?php echo $row->price;?></a></h2>
                                                     <div class="price"><?php echo $row->property_address;?></div> 
@@ -419,7 +419,7 @@
 
                                                         <div class="clearfix"></div>
 
-                                                    </d	iv>
+                                                    </div>
                                                 </div>
                                             </div>	
                                         </div>	

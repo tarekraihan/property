@@ -279,13 +279,13 @@ class Admin_Panel extends CI_Controller {
 				$config["base_url"] = base_url() . "admin_panel/area/";
 				$total_row = $this->cities->record_count();
 				$config["total_rows"] = $total_row;
-				$config["per_page"] = 1;
+				$config["per_page"] = 10;
 				$config['use_page_numbers'] = TRUE;
 				$config['num_links'] = 3;
 				$config['cur_tag_open'] = '&nbsp;<a class="current">';
 				$config['cur_tag_close'] = '</a>';
 				$config['next_link'] = 'Next';
-				$config['prev_link'] = 'Previous';
+				$config['prev_link'] = 'Prev';
 				
 				$this->pagination->initialize($config);
 				if($this->uri->segment(3)){

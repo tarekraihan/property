@@ -46,7 +46,7 @@
 													  <strong>Error.</strong> Something went wrong. Please ckeck you information and try again.
 													</div>
 
-													<form novalidate="novalidate" class="form-horizontal fv-form fv-form-bootstrap" role="form" id="sevenMinuteForm"><button style="display: none; width: 0px; height: 0px;" class="fv-hidden-submit" type="submit"></button>
+													<form action="<?php echo base_url();?>request_call/call_request/" method="post" novalidate="novalidate" class="form-horizontal fv-form fv-form-bootstrap" role="form" id="sevenMinuteForm"><button style="display: none; width: 0px; height: 0px;" class="fv-hidden-submit" type="submit"></button>
 
 															 <div class="form-group">
 																		
@@ -54,8 +54,7 @@
 																			<div class="form-group row has-feedback">
 																				<label for="inputKey" class="col-md-2 control-label">First:</label>
 																				<div class="col-md-6">
-																					 <input data-fv-field="first_name" class="form-control" id="sevenMinuteFirstName" placeholder="Your First Name" value="" name="first_name" required="" data-bv-notempty="true" type="text"><i data-fv-icon-for="first_name" class="form-control-feedback" style="display: none;"></i>
-																				<small data-fv-result="NOT_VALIDATED" data-fv-for="first_name" data-fv-validator="notEmpty" class="help-block" style="display: none;">Please enter a value</small></div>
+																					 <input data-fv-field="first_name" class="form-control" id="sevenMinuteFirstName" placeholder="Your First Name" value="" name="txtfirst_name" required="required" data-bv-notempty="true" type="text"></div>
 																		
 																				
 																			</div>
@@ -64,41 +63,31 @@
 																		<div class="col-md-12">
 																			<div class="form-group row has-feedback">
 																				
-																				<label for="inputValue" class="col-md-2 control-label">Last:</label>
+																				<label for="inputValue" class="col-md-2 control-label">Last :</label>
 																				<div class="col-md-6">
-																				   <input data-fv-field="last_name" class="form-control" id="sevenMinuteLastName" placeholder="Your Last Name" value="" name="last_name" required="" data-bv-notempty="true" type="text"><i data-fv-icon-for="last_name" class="form-control-feedback" style="display: none;"></i>
-																				<small data-fv-result="NOT_VALIDATED" data-fv-for="last_name" data-fv-validator="notEmpty" class="help-block" style="display: none;">Please enter a value</small></div>
+																				   <input data-fv-field="last_name" class="form-control" id="sevenMinuteLastName" placeholder="Your Last Name" value="" name="txtlast_name" required="required"  data-bv-notempty="true" type="text"></div>
 																			</div>
 																		</div>
 																	</div><!-- End FForm Group -->
 															 
 															 
-															 
-															 
-																 <div class="form-group">
+															 <div class="form-group">
 																   <div class="col-md-12">
 																			<div class="form-group row has-feedback">
 																				
 																				<label for="inputValue" class="col-md-2 control-label">Email:</label>
 																				<div class="col-md-6">
-																				   <input data-fv-field="last_name" class="form-control" id="sevenMinuteLastName" placeholder="Your Email" value="" name="last_name" required="" data-bv-notempty="true" type="text"><i data-fv-icon-for="last_name" class="form-control-feedback" style="display: none;"></i>
-																				<small data-fv-result="NOT_VALIDATED" data-fv-for="last_name" data-fv-validator="notEmpty" class="help-block" style="display: none;">Please enter a value</small></div>
+																				   <input data-fv-field="last_name" class="form-control" id="sevenMinuteLastName" placeholder="Your Email" value="" name="txtEmail" required="required"  data-bv-notempty="true" type="email"></div>
 																			</div>
 																		</div>
 																</div>
-															 
-															 
-																
-																	
-																	
-																	
+										
 																	<div class="form-group">					        
 																		<div class="col-md-12">
 																			<div class="form-group row has-feedback">
 																				<label for="inputKey" class="col-md-2 control-label">Phone:</label>
 																				<div class="col-md-4">
-																					 <input data-fv-field="phone" class="form-control" id="sevenMinutePhone" placeholder="Phone Number" value="" name="phone" required="" data-bv-notempty="true" type="text"><i data-fv-icon-for="phone" class="form-control-feedback" style="display: none;"></i>
-																				<small data-fv-result="NOT_VALIDATED" data-fv-for="phone" data-fv-validator="notEmpty" class="help-block" style="display: none;">Please enter a value</small></div>
+																					 <input data-fv-field="phone" class="form-control" id="sevenMinutePhone" placeholder="Phone Number" value="" name="txtphone" required="required"  data-bv-notempty="true" type="text"></div>
 																				
 																			</div>
 																		</div>
@@ -108,7 +97,7 @@
 																				
 																				<label for="inputValue" class="col-md-2 control-label">Postal:</label>
 																				<div class="col-md-4">
-																				  <input class="form-control" id="sevenMinutePostal" placeholder="Postal Code" value="" data-bv-zipcode="true" required="" data-bv-notempty="true" type="text">
+																				  <input class="form-control" id="sevenMinutePostal" placeholder="Postal Code" value="" data-bv-zipcode="true" name="txtpostalCode" type="text" required="required" >
 																				</div>
 																			</div>
 																		</div>
@@ -157,17 +146,16 @@
 															<div class="caption-text"><p>With our pricing blueprint you can more easily establish your asking price in a way that helps you make more money. All we need is your email address and we'll send you a link to download a sample blueprint that shows you the value of our pricing strategy.</p></div>
 																<div class="row clear-fix">
 																	<div class="col-xs-12 col-md-6" style="padding-top: 25px;">   
-																		<form novalidate="novalidate" class="form fv-form fv-form-bootstrap" role="form" id="frmPricePro"><button style="display: none; width: 0px; height: 0px;" class="fv-hidden-submit" type="submit"></button>				        	
-																			<input name="firstName_151" id="firstName_151" value="" type="hidden">
-																			<input name="lastName_151" id="lastName_151" value="" type="hidden">				        	
+																		<form  action="<?php echo base_url();?>request_blueprint/blueprint_request/" method="post" class="form fv-form fv-form-bootstrap" role="form" >				        	<button style="display: none; width: 0px; height: 0px;" class="fv-hidden-submit" type="submit"></button>
+																				        	
 																				  <div class="row padding-bottom-10">
 																					  <div class="form-group has-feedback">
 																						<label class="" for="exampleInputEmail2">Email Address</label>
-																						<input data-fv-field="email_151" class="form-control" id="email_151" name="email_151" value="" placeholder="Email Address" type="email"><i data-fv-icon-for="email_151" class="form-control-feedback" style="display: none;"></i>
+																						<input data-fv-field="email_151" class="form-control" id="email_151" name="txtEmail" placeholder="Email Address" type="email">
 																										
 																							<div class="checkbox">					    
 																								<label style="font-size: 11px;">
-																								  <input data-fv-field="agree_151" id="agree_151" name="agree_151" value="1" type="checkbox">  I agree to receive email messages from PropertyGuys.com Inc. containing news, updates and promotions. I understand I can withdraw my consent at any time by using the "Unsubscribe" link contained in each email message. You can view the site <a href="/site/privacy">Privacy Policy here</a>.
+																								  <input data-fv-field="agree_151" id="agree_151" name="txtagree" value="1" type="checkbox">  I agree to receive email messages from PropertyGuys.com Inc. containing news, updates and promotions. I understand I can withdraw my consent at any time by using the "Unsubscribe" link contained in each email message. You can view the site <a href="#">Privacy Policy here</a>.
 																								</label>
 																							</div><i data-fv-icon-for="agree_151" class="form-control-feedback" style="display: none;"></i>
 																					  <small data-fv-result="NOT_VALIDATED" data-fv-for="email_151" data-fv-validator="emailAddress" class="help-block" style="display: none;">Please check your email address.</small><small data-fv-result="NOT_VALIDATED" data-fv-for="email_151" data-fv-validator="notEmpty" class="help-block" style="display: none;">Your email name is required</small><small data-fv-result="NOT_VALIDATED" data-fv-for="agree_151" data-fv-validator="notEmpty" class="help-block" style="display: none;">You must agree to our terms of use</small></div>
@@ -221,44 +209,41 @@
 															  <strong>Error.</strong> Something went wrong. Please ckeck you information and try again.
 															</div>
 
-															<form novalidate="novalidate" class="form-horizontal fv-form fv-form-bootstrap" role="form" id="freeQuoteForm"><button style="display: none; width: 0px; height: 0px;" class="fv-hidden-submit" type="submit"></button>
+															<form action="<?php echo base_url();?>request_free_quote/request_free_quote/" method="post" class="form-horizontal fv-form fv-form-bootstrap" role="form" id="freeQuoteForm"><button style="display: none; width: 0px; height: 0px;" class="fv-hidden-submit" type="submit"></button>
 																	 
 																			<div class="form-group has-feedback">
 																				<label for="inputEmail3" class="col-sm-3 control-label">Name:</label>
 																				<div class="col-sm-4">
-																				  <input data-fv-field="first_name" class="form-control" id="freequoteFirstName" placeholder="Your First Name" value="" name="first_name" type="text"><i data-fv-icon-for="first_name" class="form-control-feedback" style="display: none;"></i>
-																				<small data-fv-result="NOT_VALIDATED" data-fv-for="first_name" data-fv-validator="notEmpty" class="help-block" style="display: none;">Your first name is required</small></div>
+																				  <input data-fv-field="first_name" class="form-control" id="freequoteFirstName" placeholder="Your First Name" value="" name="txtfirst_name" type="text"></div>
 																				<div class="col-sm-5">
-																				  <input data-fv-field="last_name" class="form-control" id="freequoteLastName" placeholder="Your Last Name" value="" name="last_name" type="text"><i data-fv-icon-for="last_name" class="form-control-feedback" style="display: none;"></i>
-																				<small data-fv-result="NOT_VALIDATED" data-fv-for="last_name" data-fv-validator="notEmpty" class="help-block" style="display: none;">Your last name is required</small></div>
+																				  <input data-fv-field="last_name" class="form-control" id="freequoteLastName" placeholder="Your Last Name" value="" name="txtlast_name" type="text"></div>
 																			 </div>
 																			
 																			<div class="form-group has-feedback">
 																				<label for="inputEmail3" class="col-sm-3 control-label">Email:</label>
 																				<div class="col-sm-9">
-																				  <input data-fv-field="email" class="form-control" id="freequoteEmail" placeholder="Email Address" value="" name="email" type="email"><i data-fv-icon-for="email" class="form-control-feedback" style="display: none;"></i>
-																				<small data-fv-result="NOT_VALIDATED" data-fv-for="email" data-fv-validator="emailAddress" class="help-block" style="display: none;">Please check your email address.</small><small data-fv-result="NOT_VALIDATED" data-fv-for="email" data-fv-validator="notEmpty" class="help-block" style="display: none;">Your email name is required</small></div>
+																				  <input data-fv-field="email" class="form-control" id="freequoteEmail" placeholder="Email Address" value="" name="txtEmail" type="email"></div>
 																				</div>
 																			
 																			
 																			<div class="form-group">
 																				<label for="inputEmail3" class="col-sm-3 control-label">Phone:</label>
 																				<div class="col-sm-9">
-																				  <input class="form-control" id="freequotePhone" placeholder="Primary Phone Number" value="" name="phone" type="text">
+																				  <input class="form-control" id="freequotePhone" placeholder="Primary Phone Number" value="" name="txtphone" type="text">
 																				</div>
 																				</div>
 																			
 																			<div class="form-group">
 																				<label for="inputEmail3" class="col-sm-3 control-label">Postal Code:</label>
 																				<div class="col-sm-9">
-																				  <input class="form-control" id="freequotePostal" placeholder="Postal Code" value="" data-bv-zipcode="true" type="text">
+																				  <input class="form-control" id="freequotePostal" placeholder="Postal Code" value="" data-bv-zipcode="true" type="text" name="txtpostalCode">
 																				</div>
 																			 </div>
 																	
 																			<div class="form-group">
 																				<label for="InputMessage" class="col-sm-3 control-label">Message:</label>
 																					<div class="col-sm-9">
-																						<textarea name="freequoteMessage" id="freequoteMessage" class="form-control" rows="3"></textarea>
+																						<textarea name="freequoteMessage" id="freequoteMessage" name="txtcontactMessage" class="form-control" rows="3"></textarea>
 																					</div>
 																		  </div>
 																			

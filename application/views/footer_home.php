@@ -278,83 +278,41 @@
 			</div>
 			
 			<div class="row no-margin">
+            
+             <?php 
+						$this->common_model->order_column = 'property_id';
+						$this->common_model->table_name = 'tbl_property';
+						$this->common_model->join = array('tbl_area','tbl_area.area_id=tbl_property.area_id');
+						$this->common_model->where = array('tbl_property.feature_post'=>'1');
+						$this->common_model->limit = 4;
+						$query=$this->common_model->select_all();
+						
+						foreach ($query->result() as $row)
+						{
+					?>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<img class="titlebox_image img-responsive" src="<?php echo base_url(); ?>/images/property/1.jpg"/>
+					<a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>"><img class="titlebox_image img-responsive" src="<?php echo base_url(); ?>/images/property/<?php echo $row->image_name;?>"/></a>
 					<div class="homepage_post_address">
-						<p>12 Butler Ave Cambridge, ON</p>
+						<p><?php echo $row->property_address;?></p>
 					</div>
 					
 					<div class="homepage_post_state:;">
-						<p>Montreal Island</p>
+						<p><?php echo $row->area_name;?></p>
 					</div>
 					
 					<div class="homepage_post_details">
 						<ul>
-							<li>4 BD</li>
-							<li>4 BA</li>
-							<li>$3.45M</li>
+							<li><?php echo $row->bedroom_no;?> BD</li>
+							<li><?php echo $row->bathroom_no;?> BA</li>
+							<li>$<?php echo $row->price;?></li>
 						</ul>
 					</div>
 				</div>
-				
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<img class="titlebox_image img-responsive" src="<?php echo base_url(); ?>/images/property/11.jpg"/>
-					<div class="homepage_post_address">
-						<p>12 Butler Ave Cambridge, ON</p>
-					</div>
-					
-					<div class="homepage_post_state:;">
-						<p>Montreal Island</p>
-					</div>
-					
-					<div class="homepage_post_details">
-						<ul>
-							<li>4 BD</li>
-							<li>4 BA</li>
-							<li>$3.45M</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row no-margin">
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<img class="titlebox_image img-responsive" src="<?php echo base_url(); ?>/images/property/12.jpg"/>
-					<div class="homepage_post_address">
-						<p>12 Butler Ave Cambridge, ON</p>
-					</div>
-					
-					<div class="homepage_post_state:;">
-						<p>Montreal Island</p>
-					</div>
-					
-					<div class="homepage_post_details">
-						<ul>
-							<li>4 BD</li>
-							<li>4 BA</li>
-							<li>$3.45M</li>
-						</ul>
-					</div>
-				</div>
-				
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<img class="titlebox_image img-responsive" src="<?php echo base_url(); ?>/images/property/1.jpg"/>
-					<div class="homepage_post_address">
-						<p>12 Butler Ave Cambridge, ON</p>
-					</div>
-					
-					<div class="homepage_post_state:;">
-						<p>Montreal Island</p>
-					</div>
-					
-					<div class="homepage_post_details">
-						<ul>
-							<li>4 BD</li>
-							<li>4 BA</li>
-							<li>$3.45M</li>
-						</ul>
-					</div>
-				</div>
+                <?php
+						
+						}
+					?>
+
 			</div>
 		</div>
 		<!--post section end -->
