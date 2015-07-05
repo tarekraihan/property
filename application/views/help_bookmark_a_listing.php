@@ -315,154 +315,51 @@
         </div>
         <!--List page selection part end here -->
 		
+		<!--main body part starts-->
 		<div class="row no-margin">
 			<div class="container">
-				<div class="row no-margin">
-					<p class="region_name pull-left"><a href="#"><?php $state_name=$this->input->post('coreSearch'); echo $state_name;?></a></p>
-					<p class="subregion_name pull-left">&nbsp; >> &nbsp;Sub Region</p>
-				</div>
-			
-		
-		
-		<div class="col-xs-12 col-sm-12 hidden-xs hidden-sm">
-							<div class="well well-sm">
-								<h4>Surrounding Communities</h4>
-									<ul class="list-inline community">
-                                    
-                                    <?php 
-									$state_id=$this->input->post('coreSearchID');
-									$this->common_model->order_column = 'area_id';
-									$this->common_model->table_name = 'tbl_area';
-									$this->common_model->where = array('state_id'=>$state_id);
-									$query=$this->common_model->select_all();
+					<h1 class="black">Help Knowledge Base</h1>	
+				
+				<div id="left">
+							<ol class="breadcrumb">
+							  <li><a href="/help/">Help Topics</a></li>
+							  <li><a href="/help/category/id/1">Account Profile</a></li>
+							  <li class="active">How do I change my email address?</li>
+							</ol>
 							
-								foreach ($query->result() as $row)
-								{
-								?>
-									<li class="town">	
-										<a href="#"><?php echo $row->area_name;?></a>
-									</li>
-									
-                                        
-								   
-									<?php 
-									}
-									?>	
-                                     <li class="town">
-										<a >St. Clements</a>
-										<input id="cityProfileProvince_185" value="ON" type="hidden">
-									</li>
-								</ul>
-							</div>	
-		</div>
-		
-		
-		<div id="sort" style="margin-left: 95px; margin-right:0px;" class="row  hidden-xs">
-			<div class="margin-top-10">
-					<ul class="list-inline">
-						<li>Sort by: </li>
-						<li><a class="current" id="sortByPrice" href="#">Price</a></li>
-						<li><a id="sortByViews" href="#">Popularity</a></li>
-						<li>Include Sold: </li>
-						<li> <a class="current" id="showSold" href="#">Yes</a></li>
-						<li><a id="dontShowSold" href="#">No</a></li>
-						  	
-						<li>Results <span>1 - 12</span> of
-						<span>30</span> 
-						  	
-					    </li>
+					<div class="col-md-6">
+							<h3 class="drop black">How do I bookmark a listing?</h3>
 							
-		
-				</ul>
-			</div>
-		</div>
-		</div><!-- container-->
-		</div>
-		
-		<div class="row no-margin">
-			<div class="container no-padding">
-				<div class="row no-margin">
-					<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-							<div class="row no-margin">
-                            <?php 
-								$state_id=$this->input->post('coreSearchID');
-								$this->common_model->order_column = 'property_id';
-								$this->common_model->table_name = 'tbl_property';
-								$this->common_model->where = array('states_id'=>$state_id);
-								$query=$this->common_model->select_all();
+							<div id="helpdoc">
+							<!-- START Help Insert -->
+								<p class="black">Please note that these step-by-step instructions assume that you are currently signed into <strong>Vistamaison.com </strong>. If you're not currently signed in, <a href="<?php echo base_url();?>en/dashboard/">sign in now</a> before continuing.</p>
+								<p class="black"><strong>From search results:</strong></p>
+								<p class="black">Beneath the photo of the property, and to the right of the price you will find a star shaped icon.  Clicking on the star icon once will bookmark the listings.</p>
+								<p class="black">Listings which have been bookmarked will have their star icon turn yellow in colour. You can click the yellow star icon again to remove the bookmark from the property, the icon will return to a gray colour.</p>
+								<p class="black"><strong>From a property listing:</strong></p>
+								<p class="black">On the property listing page, located as part of the <strong>Do Stuff</strong> menu, on the right hand side is a star shaped button with the word <strong>Bookmark</strong> beneath it. Click on the star icon, or Bookmark to bookmark the listing.</p>
+								<p class="black">If a property has already been bookmarked the star will be larger than the other icons and the word <strong>Bookmarked</strong> will appear in orange beneath the star. You can click the star again to remove the bookmark.</p>							<!-- END Help Insert -->
+							</div>
+
+						</div>
+					<div class="col-md-6">
+						<h3 class="drop black">Popular Questions</h3>
+							<ul class="faq">
+								<li><a href="<?php echo base_url();?>en/help_contact_property_seller/">How do I contact a property seller?</a></li>
+								<li><a href="<?php echo base_url();?>en/help_Income_property/">What does 'Income Property' mean?</a></li>
+								<li><a href="<?php echo base_url();?>en/help_different_property_types/">What do the different property uses mean?</a></li>
+								<li><a href="<?php echo base_url();?>en/help_continue_a_saved_search/">How do I continue a saved search?</a></li>
+								<li><a href="<?php echo base_url();?>en/help_save_search/">How do I save a search?</a></li>
+							</ul>
 							
-								foreach ($query->result() as $row)
-								{
-							?>
-                            
-								<div class="col-sm-12 col-md-4">
-                                    <div class="item">
-                                            <span class="label label-primary most_popular">Most Popular</span>
-                                                <a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>"><img class="prop-img" src="<?php echo base_url(); ?>/images/property/<?php echo $row->image_name;?>"></a>
-                                                <div class="info"> 
-                                                    <h2><a href="">$<?php echo $row->price;?></a></h2>
-                                                    <div class="price"><?php echo $row->property_address;?></div> 
-                                                    <div class="bedsbaths"><strong><?php echo $row->bedroom_no;?></strong> beds <strong><?php echo $row->bathroom_no;?></strong> baths</div>
-
-                                                    <div class="info-listing">
-
-                                                        <span class="badge-row">		                             
-                                                            <ul class="list-inline badges pull-left">				                             	
-
-                                                                <li><img src="<?php echo base_url(); ?>/images/icon_16_commuter_on.png"></li>
-                                                                <li><img src="<?php echo base_url(); ?>/images/icon_16_new_on.png"></li>
-                                                            </ul>		                            
-                                                        </span>
-
-                                                        <span class="full-details pull-right"><a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>">Full Details</a></span>
-                                                    </div>
-
-                                                        <div class="clearfix"></div>
-
-                                                    </d	iv>
-                                                </div>
-                                            </div>	
-                                        </div>	
-                                        <?php
-                                       }
-                                      ?>
-		
-									  
-									</div> <!-- row end-->
-					        </div>
-					
-					</div> <!-- col-8 end-->
-					
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					
+						
+											
 					</div>
-
-                    <nav>
-                      <ul class="pagination">
-                            <li>
-                              <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                              </a>
-                            </li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                              <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                              </a>
-                            </li>
-                      </ul>
-                    </nav>
-
-				    </div>
-			    </div>
-
-		    </div>
-		</div>
+				</div>
+			</div>
+		</div><!-- row-->
 		
+		<!--main body part end-->
 		
 		
 		

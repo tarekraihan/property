@@ -316,153 +316,227 @@
         <!--List page selection part end here -->
 		
 		<div class="row no-margin">
-			<div class="container">
-				<div class="row no-margin">
-					<p class="region_name pull-left"><a href="#"><?php $state_name=$this->input->post('coreSearch'); echo $state_name;?></a></p>
-					<p class="subregion_name pull-left">&nbsp; >> &nbsp;Sub Region</p>
-				</div>
+			<div class="container">	
+
+
+				<h1>Your privacy is important to us.</h1>
 			
-		
-		
-		<div class="col-xs-12 col-sm-12 hidden-xs hidden-sm">
-							<div class="well well-sm">
-								<h4>Surrounding Communities</h4>
-									<ul class="list-inline community">
-                                    
-                                    <?php 
-									$state_id=$this->input->post('coreSearchID');
-									$this->common_model->order_column = 'area_id';
-									$this->common_model->table_name = 'tbl_area';
-									$this->common_model->where = array('state_id'=>$state_id);
-									$query=$this->common_model->select_all();
-							
-								foreach ($query->result() as $row)
-								{
-								?>
-									<li class="town">	
-										<a href="#"><?php echo $row->area_name;?></a>
-									</li>
+
+				<div class="col-xs-12 col-sm-8">
+				<!-- Left Side Inside this-->
+
+					
+					<!-- start Content -->
+									<span id="start"><br><br><br></span>
+									<h3>Privacy Policy</h3>
+
+										<p class="squeeze">This privacy policy was last updated on <strong>June 2, 2010</strong>.</p>
+										<p class="squeeze"><strong>NOTE</strong>: Throughout this page, the terms "we," "us," and "our" are meant to include <strong>Vistamaison.com</strong> staff, franchisees and their team members.</p>
+										<p class="squeeze">We have the utmost respect for your privacy.  We've prepared this document to make it easy to understand what we do, and do not do, with the information that we collect from you when you visit this site. Accurately informing our visitors of how we collect, protect, use and share information is incredibly important to us.</p>
+
+											<div class="well well-sm">
+												<ul class="list-inline">								
+													<li class="padding-top-10"><a href="/site/privacy/#collect"><span class="glyphicon glyphicon-ok"></span> Information We Collect About You</a></li>
+													<li class="padding-top-10"><a href="/site/privacy/#use"><span class="glyphicon glyphicon-ok"></span> How We Use Your Information</a></li>	
+													<li class="padding-top-10"><a href="/site/privacy/#protect"><span class="glyphicon glyphicon-ok"></span> How We Protect Your Information</a></li>
+													<li class="padding-top-10"><a href="/site/privacy/#share"><span class="glyphicon glyphicon-ok"></span> Who May Access Your Information</a></li>	
+													<li class="padding-top-10"><a href="/site/privacy/#transitions"><span class="glyphicon glyphicon-ok"></span> Business Transitions</a></li>	
+													<li class="padding-top-10"><a href="/site/privacy/#manage"><span class="glyphicon glyphicon-ok"></span> Managing Your Information</a></li>
+													<li class="padding-top-10"><a href="/site/privacy/#miscellaneous"><span class="glyphicon glyphicon-ok"></span> Miscellaneous</a></li>
+												</ul>
+											</div>
 									
-                                        
-								   
-									<?php 
-									}
-									?>	
-                                     <li class="town">
-										<a >St. Clements</a>
-										<input id="cityProfileProvince_185" value="ON" type="hidden">
-									</li>
-								</ul>
-							</div>	
-		</div>
-		
-		
-		<div id="sort" style="margin-left: 95px; margin-right:0px;" class="row  hidden-xs">
-			<div class="margin-top-10">
-					<ul class="list-inline">
-						<li>Sort by: </li>
-						<li><a class="current" id="sortByPrice" href="#">Price</a></li>
-						<li><a id="sortByViews" href="#">Popularity</a></li>
-						<li>Include Sold: </li>
-						<li> <a class="current" id="showSold" href="#">Yes</a></li>
-						<li><a id="dontShowSold" href="#">No</a></li>
-						  	
-						<li>Results <span>1 - 12</span> of
-						<span>30</span> 
-						  	
-					    </li>
+									<span id="collect"><br><br><br></span>
+										<h3>Information We Collect About You</h3>
+
+										<h4 class="squeeze">Registration</h4>
+										<p class="squeeze">When you register with our site you will be asked to provide an email address, your first and last name, and your postal or zip code. Optionally you may also provide a home and mobile phone number and choose to opt into our newsletter.</p>
+										<p class="squeeze">This information is used to create a unique profile for you on our site.</p>
+										<p class="squeeze">You will be sent a randomly generated password which you may change after logging into the site.</p>
+										<p class="squeeze">To minimize the information we collect about you, we do <em>not</em> collect your home address.  A postal or zip code allows us to calculate your general location and still provide you with reasonably accurate location features.</p>
+
+										<h4 class="squeeze">Browsing the Site</h4>
+										<p class="squeeze">When you visit our web site, we collect information about your visit (e.g. session length, pages visited, network location) based on the <a href="http://en.wikipedia.org/wiki/IP_address">IP address</a> of your computer, or your unique user identifier (if you are a registered user). Our web site uses <a href="http://en.wikipedia.org/wiki/HTTP_cookie">cookies</a> and access logs to facilitate this tracking. </p>
+										<p class="squeeze">This information is stored in log files. Log data is used in aggregate to analyze how people use our web site and is not used to identify the behaviour of individual visitors. </p>
+
+										<h4 class="squeeze">Sending a Message or Offer</h4>
+										<p class="squeeze">In order to send a message to a seller, or submit an offer on this site we require that a person provide a home phone number. This is to help verify users of our messaging and offer systems in order to help our sellers identify, and avoid receiving messages from users with bad intentions. We also log the unique IP address of your computer.</p>
+										<p class="squeeze">Your message or offer is stored in an <a href="http://en.wikipedia.org/wiki/Encryption">encrypted</a> format on our server.  Our staff may not review a message unless the recipient reports that it has violated our <a href="/site/legal">Terms of Use</a>.</p>
+
+										<h4 class="squeeze">Sharing a News Item, Search Results or a Property Listing</h4>
+										<p class="squeeze">In order to use our share features we collect your email address and the unique IP address of your computer - we also temporarily collect the email address of the people you are sending the information to.  All email addresses are erased from the system shortly after we have successfully delivered the email.</p>
+										<p class="squeeze">We use the information we collect through our share feature exclusively to monitor for abuse of the system.</p>
+										<p class="squeeze">In the case of third party web sites like Facebook, Twitter and del.icio.us - we do not collect any information and simply forward you to their web sites.  Please review their privacy policies.</p>
+
+										<h4 class="squeeze">Commenting</h4>
+										<p class="squeeze">When you leave a comment on a news or blog article on our web site we log the unique IP address of your computer.  Your comment will be stored in our database.</p>
+
+										<h4 class="squeeze">Using our Online Store</h4>
+										<p class="squeeze">If you make a purchase using our online store we will log the history of the transaction, including authentication, order and transaction numbers and billing and shipping addresses.  Our online store does <strong>NOT</strong> store your credit card number or expiry dates. Our store does not request your 3-digit security or CVV2 code from the back of your card. </p>
+										<p class="squeeze">When you make a purchase online using your credit card we will send you to our credit card processing partner, <a href="http://www.moneris.com/">Moneris Solutions</a>.</p>
+
+										<h4 class="squeeze">Listing a Property</h4>
+										<p class="squeeze">When you list a property on our web site we collect information about its location, condition, features and your asking price.  This information is used to help you attract potential buyers to your listing. During the listing process you will also be asked to provide contact information which will be publicly disclosed so that buyers may contact you.</p>
+										<p class="squeeze">Your property features are also used for compiling aggregate data reports, which can't be used to identify your individual property.</p>
+
+										<h4 class="squeeze">Selling a Property</h4>
+										<p class="squeeze">When you sell a property listed on our web site we request that you provide us with the sale price.  This information, by law, is public information and your lawyer will file the price with your provincial government office as part of the registration process.  We appreciate you saving us the time of having to send a request to the government for it!</p>
+										<p class="squeeze">We use the sale price of your property as part of our non-identifiable aggregate data sets.  We do not publicly post how much your house was sold for.</p>
+
+										<h4 class="squeeze">Participating in a Survey, Contest, or Special Offer</h4>
+										<p class="squeeze">Occasionally we may offer a survey, contest or special offer on this site.  When this happens we will clearly define what information is collected and who your information will be shared with if it is an exception to any part of this privacy policy.</p>
+										<div class="toplink"><a href="#start">Back to Top</a></div>
+										
+								
+									<span id="use"><br><br><br></span>
+										<h3>How We Use Your Information</h3>
+
+										<h4 class="squeeze">Aggregate Information</h4>
+										<p class="squeeze">We love aggregate information because it gives us great data on how visitors to our site are using it.  Aggregate information can not be used to identify an individual.  We use aggregate information in every way we possibly can, including selling it to other companies or organizations.</p>
+
+										<h4 class="squeeze">Banning</h4>
+										<p class="squeeze">If you violate our <a href="/site/legal">Terms of Use</a> we will use your information in order to put in place appropriate measures to limit or disabled your access to our site.</p>
+
+										<h4 class="squeeze">Email Addresses and Phone Numbers</h4>
+										<p class="squeeze">If you are a registered user of our site, your email address is your unique identifier, or user name, for this site.  As a registered user you have access to many features on the web site unavailable to those using the site anonymously (eg. saving searches, bookmarking properties, sending messages).</p>
+										<p class="squeeze">If you have subscribed to a newsletter or for property updates we will use your email address to send you the information you have requested.</p>
+										<p class="squeeze">If you have subscribed to receive messages via SMS message we will use the mobile phone number you have provided to send you the information you have requested.</p>
+										<p class="squeeze">We do not disclose your address, email address, phone number or other contact details publicly or privately to any third parties without your explicit consent.</p>
+										<p class="squeeze">Disclosure of your phone number is required in order to use our online offer assistant applications and you must disclose your email address in order to use our Share by Email tools.</p>    
+
+
+										<h4 class="squeeze">Personally Identifiable Information</h4>
+										<p class="squeeze">When you are logged into the site your first name will appear on the top left of every page. </p>
+										<p class="squeeze">When you participate in any discussion on <strong>PropertyGuys.com</strong>, information you submit may be made publicly available and attributed to you. For example, when you provide a public comment on an article, both your comment and your name will be shown on the page for other visitors to see. This information may be copied or shared by other people, and unfortunately we have no control over who obtains the information or what they do with it.</p>
+										<p class="squeeze">If your participation in a contest, survey, or special offer entitles you to a prize or other gift of thanks, we will use information you provided to us to fulfill your prize. Some survey information may be maintained with your profile so we can tailor the presentation of our work to you.</p>							
+										<div class="toplink"><a href="#start">Back to Top</a></div>
 							
-		
-				</ul>
+									
+						
+								
+							
+									<span id="protect"><br><br><br></span>
+										<h3>How We Protect Your Information</h3>
+
+										<h4 class="squeeze">Financial Information</h4>
+										<p class="squeeze">All financial information is managed by our secure third party transaction processor, <a href="http://www.moneris.com/">Moneris Solutions</a>.  Our site does not store credit card numbers or security codes.  Anytime sensitive information is entered on this site it is encrypted using <a href="http://en.wikipedia.org/wiki/HTTP_Secure">Hypertext Transfer Protocol Secure</a>. </p>
+
+										<h4 class="squeeze">Aggregate Data</h4>
+										<p class="squeeze">If a data sample is so small that disclosure thereof might potentially allow for the identification of individual data points we do not make the data available for external use.</p>
+
+										<h4 class="squeeze">Personally Identifiable Information</h4>
+										<p class="squeeze">To prevent unauthorized access, maintain data accuracy and ensure the appropriate use of information, we have put in place physical, electronic, and managerial procedures to protect the information we collect online. </p>
+										<div class="toplink"><a href="#start">Back to Top</a></div>
+										
+								
+													
+								
+								
+								
+									<span id="share"><br><br><br></span>
+										<h3>Who May Access Your Information</h3>
+
+										<h4 class="squeeze">Advertisers</h4>
+										<p class="squeeze">We do not provide personally identifiable information to advertisers and we do not share your contact information with them without your permission.  We do share aggregate information and anonymous demographic information and behaviour patterns which illustrate how our visitors use this site.</p>
+
+										<h4 class="squeeze">Third Party Providers</h4>
+										<p class="squeeze">We will not share individual-identifying personal information about you with third parties without your permission, with the exception of service providers or other organizations we contract with to fulfill services on our behalf (e.g. delivering email or mail, executing credit card transactions), or under the circumstances described in Law Enforcement and Legal Compliance below.</p>
+
+										<h4 class="squeeze">Law Enforcement and Legal Compliance</h4>
+										<p class="squeeze">We may disclose personally identifiable information if we are required to by law, or we believe that such action is necessary to (<em>a</em>) comply with the law or with legal process, (<em>b</em>) protect and defend our rights and property, (<em>c</em>) protect against misuse or unauthorized use of the <strong>PropertyGuys.com</strong> web site, or (<em>d</em>) protect the personal safety or property of our users or the public. </p>
+										<p class="squeeze">If you attempt to pose as someone else, we may disclose information about you or your actions as part of an investigation into any harm done by your actions.</p>
+										<div class="toplink"><a href="#start">Back to Top</a></div>
+										
+								
+
+								
+										<span id="transitions"><br><br><br></span>
+										<h3>Business Transitions</h3>
+
+										<p class="squeeze">If <strong>Vistamaison.com</strong> were to merge with or acquire another entity, or sell a portion of its assets, some information regarding registered web site users, and/or web site visitors may be transferred.</p>
+										<div class="toplink"><a href="#start">Back to Top</a></div>
+										
+
+									<span id="manage"><br><br><br></span>
+										<h3>Managing Your Information</h3>
+
+
+										<h4 class="squeeze">Editing Your Profile</h4>
+										<p class="squeeze">You may, at anytime, modify the information that we have on file for you by logging into our site and editing your user and/or property profile. </p>
+
+
+										<h4 class="squeeze">Sending a Letter</h4>
+										<p class="squeeze">If you would prefer you may alternatively send a letter outlining your requested changes to the address below:</p>
+
+										<div class="squeeze"><strong>Vistamaison.com Privacy Ombudsman</strong></div>
+										<div class="squeeze">1133 St. George Blvd.</div>
+										<div class="squeeze">Moncton, New Brunswick  E1E 4E1</div>
+										<div class="squeeze">Canada</div>
+										<div class="toplink"><a href="#start">Back to Top</a></div>
+										
+			<span id="miscellaneous"><br><br><br></span>
+										<h3>Miscellaneous</h3>
+
+										<p class="squeeze"><strong>Vistamaison.com</strong> is not responsible for the content or the privacy policies of web sites to which it links.</p>
+										<p class="squeeze">From time to time, we may use web site visitor information for new, unanticipated uses not previously disclosed in our privacy notice. If our information practices change at some time in the future we will post the policy changes to our web site to notify you of these changes. If you are concerned about how your information is used, you should check this page periodically.</p>
+										<div class="toplink"><a href="#start">Back to Top</a></div>
+										
+
+						<!-- End Left Pane -->
+				</div>
+			<div class="col-sm-4">
+				<!-- Start Right -->
+						<div class="text-center hidden-xs hidden-sm">
+							<br>
+					<div class="ad_title">Advertisement</div>
+					<div class="ad_box">				
+						<!-- 300x250_ROS_Bottom -->
+						<div id="div-gpt-ad-1400156886399-0" style="width: 300px; height: 250px;">
+							
+						<div style="border: 0pt none;" id="google_ads_iframe_/117828906/300x250_ROS_Bottom_0__container__"><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/117828906/300x250_ROS_Bottom_0" id="google_ads_iframe_/117828906/300x250_ROS_Bottom_0" frameborder="0" height="250" width="300"></iframe></div><iframe src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px none; vertical-align: bottom; visibility: hidden; display: none;" marginheight="0" marginwidth="0" scrolling="no" name="google_ads_iframe_/117828906/300x250_ROS_Bottom_0__hidden__" id="google_ads_iframe_/117828906/300x250_ROS_Bottom_0__hidden__" frameborder="0" height="0" width="0"></iframe></div>
+					</div>
+		<br>			  		
+						</div>
+						
+							<div class="col-sm-12  hidden-xs hidden-sm">
+								<div class="panel panel-primary margin-top-10">
+								  <div class="panel-heading">
+									<h3 class="panel-title">Franchise Opportunities</h3>
+								  </div>
+								  <div class="panel-body">
+									<address>
+										<p>Interested in learning how you can become part of
+										PropertyGuys.com as a franchise owner? Our franchise
+										opportunity site has been lovingly designed to answer
+										your questions.</p>
+										
+									<p class="lead"><a href="/franchise/">1133 St. George Blvd Moncton, NB</a><br>
+									  Phone: (506) 860-3433<br>
+									  Toll: (866) 666-9744</p>
+									</address>
+									<h3 class="panel-title">Franchise Opportunities</h3>
+								  </div>
+								</div>
+							</div>
+						
+						<div class="text-center hidden-xs hidden-sm">
+							<br>
+					<div class="ad_title">Advertisement</div>
+					<div class="ad_box">				
+						<!-- 300x250_ROS_Bottom -->
+						<div id="div-gpt-ad-1400156886399-0" style="width:300px; height:250px;">
+							
+						</div>
+					</div>
+		<br>			  		
+						</div>
+					<!-- End Right -->
+
+			</div>
+
 			</div>
 		</div>
-		</div><!-- container-->
-		</div>
-		
-		<div class="row no-margin">
-			<div class="container no-padding">
-				<div class="row no-margin">
-					<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-							<div class="row no-margin">
-                            <?php 
-								$state_id=$this->input->post('coreSearchID');
-								$this->common_model->order_column = 'property_id';
-								$this->common_model->table_name = 'tbl_property';
-								$this->common_model->where = array('states_id'=>$state_id);
-								$query=$this->common_model->select_all();
-							
-								foreach ($query->result() as $row)
-								{
-							?>
-                            
-								<div class="col-sm-12 col-md-4">
-                                    <div class="item">
-                                            <span class="label label-primary most_popular">Most Popular</span>
-                                                <a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>"><img class="prop-img" src="<?php echo base_url(); ?>/images/property/<?php echo $row->image_name;?>"></a>
-                                                <div class="info"> 
-                                                    <h2><a href="">$<?php echo $row->price;?></a></h2>
-                                                    <div class="price"><?php echo $row->property_address;?></div> 
-                                                    <div class="bedsbaths"><strong><?php echo $row->bedroom_no;?></strong> beds <strong><?php echo $row->bathroom_no;?></strong> baths</div>
 
-                                                    <div class="info-listing">
-
-                                                        <span class="badge-row">		                             
-                                                            <ul class="list-inline badges pull-left">				                             	
-
-                                                                <li><img src="<?php echo base_url(); ?>/images/icon_16_commuter_on.png"></li>
-                                                                <li><img src="<?php echo base_url(); ?>/images/icon_16_new_on.png"></li>
-                                                            </ul>		                            
-                                                        </span>
-
-                                                        <span class="full-details pull-right"><a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>">Full Details</a></span>
-                                                    </div>
-
-                                                        <div class="clearfix"></div>
-
-                                                    </d	iv>
-                                                </div>
-                                            </div>	
-                                        </div>	
-                                        <?php
-                                       }
-                                      ?>
-		
-									  
-									</div> <!-- row end-->
-					        </div>
-					
-					</div> <!-- col-8 end-->
-					
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					
-					</div>
-
-                    <nav>
-                      <ul class="pagination">
-                            <li>
-                              <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                              </a>
-                            </li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                              <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                              </a>
-                            </li>
-                      </ul>
-                    </nav>
-
-				    </div>
-			    </div>
-
-		    </div>
-		</div>
-		
 		
 		
 		

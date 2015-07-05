@@ -132,26 +132,30 @@ $(document).ready(function(){
 						
 						//$query=$this->select_model->Select_Area_With_State_With_Country();
 						
-						$sl=1;
+					
 						foreach ($results as $row)
 						{
 					?>
                     <tr>
-                        <td><?php echo $sl; ?></td>
+                        <td><?php echo $row->area_id; ?></td>
                         <td class="center"><?php echo $row->area_name;?></td>
-                        <td class="center"><?php echo $row->area_id;?></td>
-                        <td class="center"><?php echo $row->state_id;?></td>
+                        <td class="center"><?php echo $row->state_name;?></td>
+                        <td class="center"><?php echo $row->country_name;?></td>
                         <td class="center"><i class="glyphicon glyphicon-edit"></td>
                         <td class="center"><a href="?id=<?php echo $row->area_id;?>" onclick="return confirm(\'Are you really want to delete this item\')"><i class="glyphicon glyphicon-remove red"></a></td>
                         
                     </tr>
-                    <?php
-						 $sl++;
+                    <?php 
+						
 						}
 					?>
                     </tbody>
                 </table>
-                <ul class="pagination pagination-centered">
+                
+               
+                 <?php echo $pagination; ?>
+               <!-- <ul class="pagination pagination-centered">
+            
                     <li><a href="#">Prev</a></li>
                     <li class="active">
                         <a href="#">1</a>
@@ -160,7 +164,7 @@ $(document).ready(function(){
                     <li><a href="#">3</a></li>
                     <li><a href="#">4</a></li>
                     <li><a href="#">Next</a></li>
-                </ul>
+                </ul>-->
             </div>
         </div>
     </div>

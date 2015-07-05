@@ -1,34 +1,4 @@
-<body>
-    <div class="conatainer-fluid">
-        
-        <div class="row no-margin">
-            <div class="header_top">
-            
-            	<ul class="nav navbar-nav navbar-right">
-					<li><a href="<?php echo base_url(); ?>en/seller/">Sellers</a></li>
-					<li><a href="<?php echo base_url(); ?>en/buyer/">Buyers</a></li>
-					<li><a href="<?php echo base_url(); ?>en/mortgage">Mortgages</a></li>
-                    <?php
-                    if($this->session->userdata('email_address')){
-						?>
-                        <li><a href="<?php echo base_url(); ?>en/dashboard/">Dashboard</a></li>
-					<li><a href="<?php echo base_url(); ?>en/mortgage">Welcome <?php echo $this->session->userdata('first_name'); ?></a></li>
-                    <li><a href="<?php echo base_url(); ?>login/log_out">Log Out</a></li>
-                   <?php 
-				   }else{ 
-				   ?>
-					<li class="hidden-xs hidden-sm" style="padding-top: 18px;">|</li>
-					<li class="login_menu" data-toggle="modal" data-target="#myModal"><a href="#">Join or Login <span></span></a></li>
-                    <?php
-                    }
-					?>
-					
-              </ul>
-                
-            </div>
-        </div>
-        
-        
+
         <div class="row no-margin">
             <div class="header_top_02">
 			
@@ -41,10 +11,10 @@
     <div class="container">
         <div class="row db_menu no-margin">
             <ul class="nav nav-pills custom_nav">
-              <li role="presentation"><a href="#">Dashboard</a></li>
-              <li role="presentation"><a href="#">Messages</a></li>
+              <li role="presentation"><a href="<?php echo base_url(); ?>en/dashboard/">Dashboard</a></li>
+              <li role="presentation"><a href="<?php echo base_url(); ?>en/dashboard_mess/">Messages</a></li>
               
-              <li role="presentation" class="active"><a href="#">Profile</a></li>
+              <li role="presentation" class="active"><a href="<?php echo base_url(); ?>en/profile/">Profile</a></li>
               
             </ul>
         </div>
@@ -65,8 +35,16 @@
                         <h4>General</h4>
                     </div>
                     
+                    <?php
+                    	$email=$this->session->userdata('email_address');
+						 $this->common_model->order_column = 'customer_id';
+                                $this->common_model->table_name = 'customer_profile';
+								$this->common_model->where=array('email_address'=>$email);
+                                $query=$this->common_model->select_all();
+								$row=$query->row();
+					?>
                     <div class="pull-right">
-                        <button class="btn btn-success btn-sm custom_btn">Edit</button>
+                        <a href="<?php echo base_url();?>en/dashboard_general_setting/?customer_id=<?php echo $this->session->userdata('customer_id'); ?> " class="btn btn-success btn-sm custom_btn">Edit</a>
                     </div>
                 </div>
                 
@@ -83,15 +61,15 @@
                                         </tr>
                                         <tr class="odd">
                                             <td class="category">First Name:</td>
-                                            <td class="value">marco</td>
+                                            <td class="value"><?php echo $row->first_name;?></td>
                                         </tr>
                                         <tr class="even">
                                             <td class="category">Last Name:</td>
-                                            <td class="value">lomy</td>
+                                            <td class="value"><?php echo $row->last_name;?></td>
                                         </tr>
                                         <tr class="odd">
                                             <td class="category">Postal Code/Zip:</td>
-                                            <td class="value">J4Y 1G5</td>
+                                            <td class="value"><?php echo $row->zip_code;?></td>
                                         </tr>
                                         <tr class="even">
                                             <td class="category">Experience:</td>
@@ -108,7 +86,7 @@
                     </div>
                     
                     <div class="pull-right">
-                        <button class="btn btn-success btn-sm custom_btn">Edit</button>
+                       <a href="<?php echo base_url();?>en/dashboard_Contact_Information_Settings/?customer_id=<?php echo $this->session->userdata('customer_id'); ?> " class="btn btn-success btn-sm custom_btn">Edit</a>
                     </div>
                 </div>
                 
@@ -117,15 +95,15 @@
                         <tbody>
 									<tr class="odd">
 										<td class="category">Email Address:</td>
-										<td class="value">powernaw@hotmail.com</td>
+										<td class="value"><?php echo $row->email_address;?></td>
 									</tr>
 									<tr class="even">
 										<td class="category">Home Phone:</td>
-										<td class="value">416-121-1231</td>
+										<td class="value"><?php echo $row->area_code;?>-<?php echo $row->phone_start;?>-<?php echo $row->phone_end;?></td>
 									</tr>
 									<tr class="odd">
 										<td class="category">Mobile Phone:</td>
-										<td class="value"></td>
+										<td class="value"><?php echo $row->mobile_no;?></td>
 									</tr>
 				        </tbody>
                     </table>
@@ -138,7 +116,7 @@
                     </div>
                     
                     <div class="pull-right">
-                        <button class="btn btn-success btn-sm custom_btn">Edit</button>
+                        <a href="<?php echo base_url();?>en/dashboard_password_setting/?customer_id=<?php echo $this->session->userdata('customer_id'); ?> " class="btn btn-success btn-sm custom_btn">Edit</a>
                     </div>
                 </div>
                 <p class="squeeze">Change the password for this account by clicking <strong>'Edit'</strong> in the top right hand corner of this box.</p>
@@ -152,7 +130,7 @@
                     </div>
                     
                     <div class="pull-right">
-                        <button class="btn btn-success btn-sm custom_btn">Edit</button>
+                        <a href="<?php echo base_url();?>en/dashboard_demographic_survey/" class="btn btn-success btn-sm custom_btn">Edit</a>
                     </div>
                 </div>
                 <p class="squeeze">Do you have an extra ten seconds? We have a five question survey that it would be helpful if you filled out. We'd really appreciate it. Click 'Edit' to do us a solid.</p>
@@ -168,10 +146,9 @@
                 <div class="box-rounded">
                     <div class="box-shadow-inner">
                         <div class="personpic">
-								<div class="inside">
-									<div class="information">
-										<div>Member</div>
-									</div>
+                        		<img class="profile_image" src="<?php echo base_url(); ?>images/member/<?php echo $row->image_name;?>">
+								<div class="information">
+									<p class="member_name">Member</p>
 								</div>
 				        </div>
                     </div>
@@ -181,12 +158,12 @@
                     <div class="box-shadow-inner_02">
                         <h3 class="drop">Person Menu</h3>
                         <ul id="submenu" class="nav nav-pills nav-stacked">
-                            <li class="current"><a href="/launch-people/person/id/261200">Profile</a></li>
-				            <li off=""><a href="/launch-people/people-photo/id/261200">Photo</a></li>	
-				            <li off=""><a href="/launch-people/people-alerts/id/261200">Alert Settings</a></li>								
-				            <li off=""><a href="/launch-people/people-bookmarks/id/261200">Bookmarks</a></li>
-                            <li off=""><a href="/launch-people/people-searches/id/261200">Saved Searches</a></li>
-                            <li off=""><a href="/launch-people/people-watchlist/id/261200">Price Watch</a></li>
+                            <li class="current"><a href="<?php echo base_url();?>en/profile/">Profile</a></li>
+				            <li off=""><a href="<?php echo base_url();?>en/upload_image/">Photo</a></li>	
+				            <li off=""><a href="">Alert Settings</a></li>								
+				            <li off=""><a href="">Bookmarks</a></li>
+                            <li off=""><a href="">Saved Searches</a></li>
+                            <li off=""><a href="">Price Watch</a></li>
                         </ul>
                     </div>
                 </div>
@@ -194,11 +171,13 @@
                 <div class="box-rounded_02">
                     <div class="box-shadow-inner_02">
                         <h3 class="drop">Help</h3>
-                        <ul id="submenu_help" class="nav nav-pills nav-stacked">
-                            <li><a href="#">How do I delete my PropertyGuys.com account?</a></li>
-				            <li><a href="#">How do I bookmark a listing?</a></li>	
-				            <li><a href="#">What is experience level used for?</a></li>					
-                        </ul>
+                        <ul class="help">
+								<li><a href="<?php echo base_url();?>en/help_change_email/">How do I change my email address?</a></li>
+								<li><a href="<?php echo base_url();?>en/help_change_profile_picture/">How do I change my profile picture?</a></li>
+								<li><a href="<?php echo base_url();?>en/help_delete_account/">To how do I delete my Vista Maisonaccount?</a></li>
+							</ul>
+								
+							<div><a href="<?php echo base_url();?>en/help/" class="link">More Help »</a></div>
                     </div>
                 </div>
             

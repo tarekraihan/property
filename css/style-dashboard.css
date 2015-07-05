@@ -27,9 +27,11 @@ h2.title {
 .db_menu{padding: 10px 15px;}
 
 .below {
-    width: auto;
-    height: 14px;
-    background: transparent url("../images/wide-shadow.png") no-repeat scroll center center;
+     width: auto;
+  margin-top: 10px;
+  height: 14px;
+  background: transparent url("../images/wide-shadow.png") no-repeat scroll center center;
+  border-top: 1px solid lightgray;
 }
 .preview {
     font-size: 12px;
@@ -67,18 +69,26 @@ td.value {
     border: 2px solid #d9d9d9;
     margin: 3px;
 }
-.personpic{background: transparent url('../images/members.png') no-repeat;
-           height: 200px;
-           width: 300px;}
-.personpic div.inside {
-    padding: 159px 0px 0px;
+
+.member_name {
+  position: absolute;
+  margin-top: 3px;
+  font-size: 24px;
+  margin-left: 10px;
+  color: #fff;
 }
 
+.profile_image
+{
+	width:300px;
+	height:200px;
+	}
 .information {
     width: 250px;
-    color: #FFF;
-    height: 40px;
+	height: 40px;
     background: transparent url("../images/bg_shade.png") no-repeat scroll 0% 0%;
+	position:absolute; 
+	margin-top: -38px; 
 }
 .information div {
     padding: 0px 15px;
@@ -147,4 +157,302 @@ ul#submenu {
 .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
     color: #FFF;
     background-color: #76B8F2;
+}
+
+.empty{color: #bbb;
+  font-size: 20px;}
+  
+  
+  /* dashboard Edit */
+
+.squeeze {
+    padding: 0px 10px;
+}
+
+.mount {
+    margin: 0px;
+    float: left;
+    padding: 0px;
+    width: 440px;
+}
+
+label {
+    width: 125px;
+    color: #004B8D;
+    text-align: right;
+    padding: 0px 10px 0px 0px;
+    font-size: 14px;
+    line-height: 34px;
+    font-weight: bold !important;
+    float: left;
+}
+
+ .caption {
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 16px;
+    color: #AAA;
+}
+
+.note {
+    width: 400px;
+    padding: 5px;
+    background: #FFFFE0 none repeat scroll 0% 0%;
+    border: 1px dotted #F68932;
+}
+
+.content {
+    font-size: 12px;
+    text-align: left;
+}
+
+.break {
+    margin-top: 20px !important;
+}
+
+.virgin {
+    background: transparent url("../images/icon_big_type_virgins.png") no-repeat scroll left top;
+    width: 335px;
+    height: 70px;
+    padding: 5px 0px 5px 65px;
+}
+
+.option {
+    float: left;
+	text-align: left;
+	height: 20px;
+	margin-left: 20px;
+}
+
+.mount label {
+    float: left;
+    width: 190px;
+    color: #000;
+    text-align: left;
+    padding: 0px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    height: 20px;
+}
+
+.veteran {
+    background: transparent url("../images/icon_big_type_veterans.png") no-repeat scroll left top;
+    width: 335px;
+    height: 80px;
+    padding: 5px 0px 5px 65px;
+}
+
+.pro {
+    background: transparent url("../images/icon_big_type_pros.png") no-repeat scroll left top;
+    width: 335px;
+    height: 80px;
+    padding: 5px 0px 5px 65px;
+}
+
+ .submit {
+    margin: 10px 0px 0px;
+    border-top: 1px dotted #888;
+    padding: 10px 0px 0px 135px;
+}
+
+.title {
+    font-size: 20px !important;
+    color: #000 !important;
+}
+
+.secpos {
+    margin-bottom: 5px;
+}
+
+input#hm_area,#hm_start,#hm_end {
+    width: 46px;
+    margin: 0px 5px 0px 0px;
+	padding: 7px;
+}
+
+.select select {
+    margin: 5px 0px 0px;
+    padding: 3px 7px;
+	background: #FCFCFC none repeat scroll 0% 0%;
+	font-family: Helvetica,Arial,sans-serif;
+	width: 200px;
+	outline: 0px none;
+	color: #000;
+	font-size: 16px;
+	border: 1px solid #CCC;
+	cursor: default;
+}
+.apply {
+  margin: 0 auto;
+  width: 94px;
+  background: #a2d267;
+  font-size: 16px;
+  line-height: 34px;
+  text-align: center;
+
+}
+.apply a {
+	color:#fff;
+	}
+
+
+/* dashboard Edit */
+
+.squeeze {
+    padding: 0px 10px;
+}
+
+.mount {
+    margin: 0px;
+    float: left;
+    padding: 0px;
+    width: 440px;
+}
+
+label {
+    width: 125px;
+    color: #004B8D;
+    text-align: right;
+    padding: 0px 10px 0px 0px;
+    font-size: 14px;
+    line-height: 34px;
+    font-weight: bold !important;
+    float: left;
+}
+
+ .caption {
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 16px;
+    color: #AAA;
+}
+
+.note {
+    width: 400px;
+    padding: 5px;
+    background: #FFFFE0 none repeat scroll 0% 0%;
+    border: 1px dotted #F68932;
+}
+
+.content {
+    font-size: 12px;
+    text-align: left;
+}
+
+.break {
+    margin-top: 20px !important;
+}
+
+.virgin {
+    background: transparent url("../images/icon_big_type_virgins.png") no-repeat scroll left top;
+    width: 335px;
+    height: 70px;
+    padding: 5px 0px 5px 65px;
+}
+
+.option {
+    float: left;
+	text-align: left;
+	height: 20px;
+	margin-left: 20px;
+}
+
+.mount label {
+    float: left;
+    width: 190px;
+    color: #000;
+    text-align: left;
+    padding: 0px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    height: 20px;
+}
+
+.veteran {
+    background: transparent url("../images/icon_big_type_veterans.png") no-repeat scroll left top;
+    width: 335px;
+    height: 80px;
+    padding: 5px 0px 5px 65px;
+}
+
+.pro {
+    background: transparent url("../images/icon_big_type_pros.png") no-repeat scroll left top;
+    width: 335px;
+    height: 80px;
+    padding: 5px 0px 5px 65px;
+}
+
+ .submit {
+    margin: 10px 0px 0px;
+    border-top: 1px dotted #888;
+    padding: 10px 0px 0px 135px;
+}
+
+.title {
+    font-size: 20px !important;
+    color: #000 !important;
+}
+
+.secpos {
+    margin-bottom: 5px;
+}
+
+input#hm_area,#hm_start,#hm_end {
+    width: 46px;
+    margin: 0px 5px 0px 0px;
+	padding: 7px;
+}
+
+.select select {
+    margin: 5px 0px 0px;
+    padding: 3px 7px;
+	background: #FCFCFC none repeat scroll 0% 0%;
+	font-family: Helvetica,Arial,sans-serif;
+	width: 200px;
+	outline: 0px none;
+	color: #000;
+	font-size: 16px;
+	border: 1px solid #CCC;
+	cursor: default;
+}
+
+/*--End deshboard Edit/ update option--*/
+
+
+/*terms page css starts*/
+
+#content #left {
+    width: 652px;
+    float: left;
+}
+
+
+.toplink {
+    padding: 0px 10px;
+    text-align: right;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.toplink a {
+    padding: 5px 7px;
+    background: #7FC8E7 none repeat scroll 0% 0%;
+    color: #FFF;
+    text-decoration: none;
+}
+
+#content .buffer {
+    padding: 10px 12px 10px 10px;
+}
+
+#content #right {
+    float: right;
+    width: 324px;
+}
+
+/*image upload starts*/
+.photo {
+    margin: 0px 0px 10px 125px;
 }

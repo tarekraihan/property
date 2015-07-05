@@ -172,7 +172,7 @@
 
                             <div class="thumbnail cusrom_thumbnail">
 
-                                 <img src="<?php echo base_url(); ?>/images/icon1.png" alt="Icon">
+                                 <img src="<?php echo base_url(); ?>/images/icon01.png" alt="Icon">
                                   <div class="caption">
 
                                     <p>re-engineered almost everything you thought you knew about real estate - not only making it different but                                        also making it better.</p>
@@ -188,7 +188,7 @@
                             <span class="featured_iten_icon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
 
                             <div class="thumbnail cusrom_thumbnail">
-                                  <img src="http://lorempixel.com/300/200/city/" alt="...">
+                                  <img src="<?php echo base_url(); ?>/images/icon02.png" alt="...">
                                   <div class="caption">
 
                                     <p>We provide sellers with everything they need to connect directly with buyers - making them more money than                                        if they use an agent.</p>
@@ -202,7 +202,7 @@
 
                             <span class="featured_iten_icon glyphicon glyphicon-ok" aria-hidden="true"></span>
                             <div class="thumbnail cusrom_thumbnail">
-                                  <img src="http://lorempixel.com/300/200/city/" alt="...">
+                                  <img src="<?php echo base_url(); ?>/images/icon03.png" alt="...">
                                   <div class="caption">
 
                                     <p>Our system leverages an entire team of specialists. This makes selling your property more efficient and                                          effective than using an agent could ever be.</p>

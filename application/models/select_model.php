@@ -37,6 +37,45 @@ class Select_Model extends CI_Model
 		$sql="SELECT * From";
 		
 	}
+	
+	
+	// Count all record of table "contact_info" in database.
+      public function record_count() {
+        return $this->db->count_all("tbl_area");
+    }
+    
+    // Fetch data according to per_page limit.
+    public function fetch_data($limit, $offset) {
+		$sql="SELECT a.area_id,a.area_name,b.state_name,c.country_name FROM tbl_area as a inner join tbl_states as b on a.state_id=b.states_id inner join tbl_country as c on b.country_id=c.country_id  ORDER BY a.area_id ASC LIMIT $offset, $limit";
+		$query=$this->db->query($sql);
+		
+        //$this->db->limit($limit);
+        //$this->db->where('area_id', $id);
+        //$query = $this->db->get("tbl_area");
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $data[] = $row;
+            }
+         
+            return $data;
+        }
+        return false;
+   }
+   
+  /* public function Select_Single_Row($id,$table,$id_field){
+	   $sql="SELECT * FROM customer_profile WHERE $id_field='$id'";
+		$query=$this->db->query($sql);
+		$row=$query->result_array();
+		return $row;
+	   
+	   }*/
+	 public function  Select_Single_Row($id,$table,$id_field)
+    {
+        $result=mysql_query("SELECT * FROM `$table` WHERE `$id_field`='$id'");
+        $data=mysql_fetch_array($result);
+        return $data;
+    }
+   
 
 	
 }

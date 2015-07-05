@@ -23,13 +23,13 @@ class Register extends CI_Controller {
 		
 		//-----Form Validation-------
       
-        $this->form_validation->set_rules('register_email','Email Address', 'trim|required|min_length[7]|max_length[30]|xss_clean|valid_email|is_unique[customer_profile.email_address]');
+        $this->form_validation->set_rules('register_email','Email Address', 'trim|required|min_length[7]|max_length[30]|xss_clean|valid_email');
         $this->form_validation->set_rules('register_first','First Name', 'trim|required|min_length[4]|max_length[80]|xss_clean|callback_alpha_dash_space');
         $this->form_validation->set_rules('register_last','Last Name', 'trim|required|min_length[4]|max_length[80]|xss_clean|callback_alpha_dash_space');
 		 $this->form_validation->set_rules('register_postalzip','Postal Code', 'trim|required|min_length[4]|max_length[10]|xss_clean');
-        $this->form_validation->set_rules('hm_area','Area Code', 'trim|required|exact_length[3]|xss_clean|is_natural');
-		$this->form_validation->set_rules('hm_start','Phone Number', 'trim|required|exact_length[3]|xss_clean|is_natural');
-		$this->form_validation->set_rules('hm_end','Phone Number', 'trim|required|exact_length[4]|xss_clean|is_natural');
+        $this->form_validation->set_rules('hm_area','Area Code', 'trim|required|exact_length[3]|xss_clean');
+		$this->form_validation->set_rules('hm_start','Phone Number', 'trim|required|exact_length[3]|xss_clean');
+		$this->form_validation->set_rules('hm_end','Phone Number', 'trim|required|exact_length[4]|xss_clean');
         
         $this->form_validation->set_rules('password','Password', 'trim|required|min_length[6]|max_length[12]');
         $this->form_validation->set_rules('re_password','Retype Password', 'trim|required|min_length[6]|max_length[12]|matches[password]');
@@ -38,7 +38,7 @@ class Register extends CI_Controller {
         {
 			$data['title']="Member Registration";
 
-            $this->load->view('header',$data);
+            $this->load->view('header_post',$data);
 			$this->load->view('register');
 			$this->load->view('footer1');
 			$this->load->view('footer2');
@@ -55,6 +55,7 @@ class Register extends CI_Controller {
                 'phone_start'=>$this->input->post('hm_start'),
                 'phone_end'=>$this->input->post('hm_end'),
                 'password'=>md5($this->input->post('password')),
+				 'status'=>'1',
                 
             );
 

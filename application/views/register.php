@@ -19,8 +19,8 @@
 					
 						<div class="col-xs-12 col-md-6 column">		
 						
-							<h3 class="better-tag">Join PropertyGuys.com</h3>	
-							<p class="caption-text">Get advanced PropertyGuys.com features today! It's FREE and you'll get loads of ways to make your home search easier.</p>
+							<h3 class="better-tag">Join Vistamaison.com </h3>	
+							<p class="caption-text">Get advanced Vista Maison features today! It's FREE and you'll get loads of ways to make your home search easier.</p>
 
 							
 					

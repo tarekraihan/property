@@ -15,7 +15,7 @@ class Admin_Panel extends CI_Controller {
 	 public function __construct() {
         parent:: __construct();
         $this->load->helper("url");
-        $this->load->model("cities");
+
         $this->load->library("pagination");
     }
 	
@@ -276,31 +276,41 @@ class Admin_Panel extends CI_Controller {
 			if ($this->form_validation->run() == FALSE)
 			{
 				
-				$config["base_url"] = base_url() . "admin_panel/area/";
-				$total_row = $this->cities->record_count();
-				$config["total_rows"] = $total_row;
-				$config["per_page"] = 10;
-				$config['use_page_numbers'] = TRUE;
-				$config['num_links'] = 3;
-				$config['cur_tag_open'] = '&nbsp;<a class="current">';
-				$config['cur_tag_close'] = '</a>';
-				$config['next_link'] = 'Next';
-				$config['prev_link'] = 'Prev';
 				
-				$this->pagination->initialize($config);
-				if($this->uri->segment(3)){
-				$page = ($this->uri->segment(3)) ;
-				  }
-				else{
-					   $page = 1;
-				}
-				$data["results"] = $this->cities->fetch_data($config["per_page"], $page);
-				$str_links = $this->pagination->create_links();
-				$data["links"] = explode('&nbsp;',$str_links );
-        
-		
-		
-			 
+				$config['base_url'] = base_url() . "admin_panel/area/";
+				$config['total_rows'] = $this->select_model->record_count();;
+				$config['per_page'] = "10";
+				$config["uri_segment"] = 3;
+				$choice = $config["total_rows"] / $config["per_page"];
+				$config["num_links"] = floor($choice);
+				$config['use_page_numbers'] = TRUE;
+
+
+				//Link customization
+				$config['full_tag_open'] = '<ul class="pagination pagination-centered">';
+				$config['full_tag_close'] = '</ul>';
+				$config['first_link'] = false;
+				$config['last_link'] = false;
+				$config['first_tag_open'] = '<li>';
+				$config['first_tag_close'] = '</li>';
+				$config['prev_link'] = 'Prev';
+				$config['prev_tag_open'] = '<li class="prev">';
+				$config['prev_tag_close'] = '</li>';
+				$config['next_link'] = 'Next';
+				$config['next_tag_open'] = '<li>';
+				$config['next_tag_close'] = '</li>';
+				$config['last_tag_open'] = '<li>';
+				$config['last_tag_close'] = '</li>';
+				$config['cur_tag_open'] = '<li class="active"><a href="#">';
+				$config['cur_tag_close'] = '</a></li>';
+				$config['num_tag_open'] = '<li>';
+				$config['num_tag_close'] = '</li>';
+				$this->pagination->initialize($config);		
+				$page = ($this->uri->segment(3)) ? ($this->uri->segment(3)-1)*$config['per_page'] : 0;
+        		$data["results"] = $this->select_model->fetch_data($config["per_page"], $page);
+        		$data['pagination'] = $this->pagination->create_links();
+				
+
 				$data['title']="City Post";
 				$this->load->view('admin/header',$data);
 				$this->load->view('admin/area');
@@ -340,6 +350,7 @@ class Admin_Panel extends CI_Controller {
 			$this->form_validation->set_rules('txtProperty_Type','Property Type Name', 'trim|required|min_length[2]|max_length[40]|xss_clean');
 			if ($this->form_validation->run() == FALSE)
 			{
+				
 			 
 				$data['title']="Property Type Post";
 				$this->load->view('admin/header',$data);

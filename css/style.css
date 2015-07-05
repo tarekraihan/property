@@ -1125,3 +1125,91 @@ ul{
 								  }
 								  
 		.padding_bottom_50{padding-bottom: 50px;}
+		
+		
+.black{color:#000;}
+
+/*help page starts */
+
+.disc{list-style-type:disc;
+	  padding-left: 35px;		}
+	  
+.faq {
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+    color: #FFF;
+    font-style: italic;
+}
+
+.greybg {
+    background-color: #EFEFEF;
+}
+
+/*contact an office page starts*/
+
+
+.title h2 {
+    font-weight: 100;
+    color: #292929;
+    font-size: 60px;
+    line-height: 72px;
+    margin: 0px 0px 0.4em;
+}
+
+
+
+.packages-bg {
+    background-color: #0188C9;
+}
+
+
+
+.activePackage {
+    background-color: #0188C9;
+    border: 2px solid #FFF;
+    cursor: default;
+    opacity: 1;
+}
+
+
+
+.packages-title {
+    color: #5CDEFE;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+
+
+.packages-text {
+    line-height: 1.9;
+    font-weight: 100;
+    color: #FFF;
+}
+
+
+
+.cartFont {
+    font-weight: 100;
+    color: #898989;
+}
+
+
+
+.points {
+    font-size: 18px;
+}
+
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+
+
+.postalcode-text {
+    font-size: 30px;
+    text-align: center;
+    width: 200px;
+}

@@ -20,8 +20,8 @@
                         <div class="col-xs-12 col-sm-2 small-centered">
                             <h4>Help</h4>
                             <ul class="list-unstyled">
-                              <li><a href="#" data-toggle="modal" data-target="#modalContact" id="openContactForm">Contact Us</a></li>
-                              <li><a href="/help">Help Knowledge Base</a></li>
+                              <li><a href="<?php echo base_url();?>en/contact_office_page/" data-toggle="modal" data-target="#modalContact" id="openContactForm">Contact Us</a></li>
+                              <li><a href="<?php echo base_url();?>en/help/">Help Knowledge Base</a></li>
                               <li><a href="/help/support">Website Support</a></li>
                             </ul>
                         </div>
@@ -29,8 +29,8 @@
                         <div class="col-xs-12 col-sm-2 small-centered">
                             <h4>About</h4>
                             <ul class="list-unstyled">
-                              <li><a href="/site/about">About PropertyGuys.com</a></li>
-                              <li><a href="/site/privacy">Privacy Policy</a></li>
+                              <li><a href="/site/about">About Vistamaison.com </a></li>
+                              <li><a href="<?php echo base_url();?>en/privacypolicy/">Privacy Policy</a></li>
                               <li><a href="/franchise">Franchise Opportunities</a></li>
                               <li><a href="/ads/">Advertising Information</a></li>
                               <li><a href="/join-us/">Jobs</a></li>

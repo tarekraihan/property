@@ -15,7 +15,7 @@
                                         <h4>Enjoy a service that is specially designed to do most everything an agent does - but for ten times less money.</h4>								  
                                         <li class="list-group-item list-group-height">This is a perfect option for those who would have used an agent in the past or are now contemplating using an agent. Our full service program provides expert advice and guidance on everything from listing to pricing to SOLD. This option even includes extra exposure on Realtor.ca®* (Through our partnership with real estate brokers who are members of the Canadian Real Estate Association).</li>
                                         <li class="list-group-item text-center opensans_thin"><a id="pakage_01"  data-toggle="popover" data-placement="right" data-trigger="hover click" class="link-textsize" data-content="The cost of our services varies. We offer both full and self service options. Requesting a quote is the best way to know how much it will actually cost you.">Is this package right for me?</a></li>
-                                        <li class="list-group-item"><div class="text-center"><button id="full_1" type="button" class="btn  btn-fix btn-green">Full Serve</button></div></li>
+                                        <li class="list-group-item"><div class="text-center"><a href="<?php echo base_url();?>en/contact_office_page/"class="btn  btn-fix btn-green">Full Serve</a></div></li>
                                     </ul>
 
                                </div>
@@ -27,7 +27,7 @@
                                         <li class="list-group-item list-group-height">You love the idea of becoming an independent seller. This is the perfect option for a true do-it yourself seller who wants an award winning platform that make it easier to get exposed to a huge pool of buyers. If you get started this way and want to upgrade to Full Service later you can do it anytime.</li>								  
                                         <li class="list-group-item text-center opensans_thin"><a id="pakage_02"  data-toggle="popover" data-placement="right" data-trigger="hover click" class="link-textsize" data-content="The cost of our services varies. We offer both full and self service options. Requesting a quote is the best way to know how much it will actually cost you.">Is this package right for me?</a></li>
                                         
-                                        <li class="list-group-item"><div class="text-center"><button id="self_1" type="button" class="btn  btn-fix btn-green">Self Serve</button></div></li>
+                                        <li class="list-group-item"><div class="text-center"><a href="<?php echo base_url();?>en/contact_office_page/"class="btn  btn-fix btn-green">Self Serve</a></div></li>
                                     </ul>
 
                                </div>

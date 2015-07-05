@@ -26,13 +26,15 @@ class Login extends CI_Controller {
 
             if($result)
             {
-                $data['customer_id']=$result->customer_id;
+                $sdata['customer_id']=$result->customer_id;
 
                 
                     $sdata['email_address']=$result->email_address;
                     $sdata['first_name']=$result->first_name;
                     $sdata['last_name']=$result->last_name;
                     $sdata['password']=$result->password;
+					$sdata['access_level']=$result->access_level;
+					$sdata['status']=$result->status;
                     
                     $this->session->set_userdata($sdata);
 
