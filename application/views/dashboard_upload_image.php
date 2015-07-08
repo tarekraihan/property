@@ -54,7 +54,7 @@
 								<input name="userId" id="userId" value="<?php echo $this->session->userdata('customer_id')?>" type="hidden">
 								
 																
-								<div class="photo"><img src="<?php echo base_url(); ?>/images/missing_180.png"></div>
+								<div class="photo_upload"><img src="<?php echo base_url(); ?>/images/missing_180.png"></div>
 
 								<div class="input forpos">
 									<label for="photo">Photo:</label>
@@ -96,7 +96,7 @@
                         <ul id="submenu" class="nav nav-pills nav-stacked">
                             <li ><a href="<?php echo base_url();?>en/profile/">Profile</a></li>
 				            <li class="current"><a href="<?php echo base_url();?>en/upload_image/">Photo</a></li>	
-				            <li ><a href="">Alert Settings</a></li>								
+				            <li ><a href="<?php echo base_url(); ?>en/alertpage">Alert Settings</a></li>								
 				            <li ><a href="">Bookmarks</a></li>
                             <li ><a href="">Saved Searches</a></li>
                             <li ><a href="">Price Watch</a></li>

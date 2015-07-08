@@ -487,5 +487,140 @@ public function help()
 		}
 	}
 	
+	public function massage()
+    {
+		$data['title']="Member Dashboard";
+		$this->load->view('header_dashboard',$data);
+		$this->load->view('massage');
+		$this->load->view('footer2');
+    }
+	
+	public function massage_details()
+    {
+		$data['title']="Member Dashboard";
+		$this->load->view('header_dashboard',$data);
+		$this->load->view('massage_details');
+		$this->load->view('footer2');
+    }
+	
+	public function alertpage()
+    {
+		$data['title']="Member Dashboard";
+		$this->load->view('header_dashboard',$data);
+		$this->load->view('alertpage');
+		$this->load->view('footer2');
+    }
+	
+	public function massage_send($msg='')
+    {
+		if(!$this->session->userdata('email_address')){
+			redirect('en/index');
+		}else{
+			
+			if($msg == 'success'){
+			$data['feedback'] = '<h4 style="text-align:center; " class="animated green flipInX">Successfully send !!</h4>';
+			}else if($msg == 'error')
+			{
+				$data['feedback'] = '<h4 style="text-align:center; " class="animated red flipInX">Problem to send !!</h4>';
+			}
+				
+			$this->form_validation->set_rules('txtSubject','Subject', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('message_text','Message', 'trim|required|xss_clean');
+        	
+			if ($this->form_validation->run() == FALSE)
+			{
+				
+				$data['title']="Member Dashboard";
+				$this->load->view('header_dashboard',$data);
+				$this->load->view('massage_send');
+				$this->load->view('footer2');
+			}
+			else
+			{
+				$this->common_model->data=array(
+				'property_id'=>$this->input->post('property_id'),
+                'property_sign'=>$this->input->post('property_sign'),
+                'receiver_id'=>$this->input->post('seller_id'),
+				'sender_id'=>$this->input->post('purchaser_id'),
+                'send_date'=>$this->input->post('txtDate'),
+                'subject'=>$this->input->post('txtSubject'),
+				'message'=>$this->input->post('message_text'),
+				);
+				$this->common_model->table_name='ask_question';
+				$result=$this->common_model->insert();
+												
+				if($result)
+				{
+					redirect('en/massage_send/success');
+				}
+				else
+				{
+					redirect('en/massage_send/error');
+				}
+			}
+		}
+
+    }
+	
+	public function offerpage($msg='')
+    {
+		if(!$this->session->userdata('email_address')){
+			redirect('en/index');
+		}else{
+			
+			if($msg == 'success'){
+			$data['feedback'] = '<h4 style="text-align:center; " class="animated green flipInX">Successfully send !!</h4>';
+			}else if($msg == 'error')
+			{
+				$data['feedback'] = '<h4 style="text-align:center; " class="animated red flipInX">Problem to send !!</h4>';
+			}
+				
+			$this->form_validation->set_rules('txtSubject','Subject', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('message_text','Message', 'trim|required|xss_clean');
+        	
+			if ($this->form_validation->run() == FALSE)
+			{
+				
+				$data['title']="Make an offer";
+				$this->load->view('header_dashboard_offerpage',$data);
+				$this->load->view('offerpage');
+				$this->load->view('footer2');
+			}
+			else
+			{
+				$this->common_model->data=array(
+				'property_id'=>$this->input->post('property_id'),
+                'property_sign'=>$this->input->post('property_sign'),
+                'receiver_id'=>$this->input->post('seller_id'),
+				'sender_id'=>$this->input->post('purchaser_id'),
+                'send_date'=>$this->input->post('txtDate'),
+                'subject'=>$this->input->post('txtSubject'),
+				'message'=>$this->input->post('message_text'),
+				);
+				$this->common_model->table_name='ask_question';
+				$result=$this->common_model->insert();
+												
+				if($result)
+				{
+					redirect('en/massage_send/success');
+				}
+				else
+				{
+					redirect('en/massage_send/error');
+				}
+			}
+		}
+		
+		
+    }
+	
+	
+	public function bookmark()
+    {
+		$data['title']="bookmark";
+		$this->load->view('header_dashboard',$data);
+		$this->load->view('bookmark');
+		$this->load->view('footer2');
+    }
 
 }

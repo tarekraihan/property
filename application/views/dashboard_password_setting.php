@@ -127,7 +127,7 @@ if(isset($_GET['customer_id']))
                         <ul id="submenu" class="nav nav-pills nav-stacked">
                             <li class="current"><a href="<?php echo base_url();?>en/profile/">Profile</a></li>
 				            <li off=""><a href="<?php echo base_url();?>en/upload_image/">Photo</a></li>	
-				            <li off=""><a href="">Alert Settings</a></li>								
+				            <li off=""><a href="<?php echo base_url(); ?>en/alertpage">Alert Settings</a></li>								
 				            <li off=""><a href="">Bookmarks</a></li>
                             <li off=""><a href="">Saved Searches</a></li>
                             <li off=""><a href="">Price Watch</a></li>

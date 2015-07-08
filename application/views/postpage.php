@@ -316,9 +316,9 @@
                                                                             <h5><i class="fa fa-building-o fa-phone text-muted"></i> 1 (855) 742-4539</h5>
                                                                         <h5><i class="fa fa-envelope-o fa-envelope-o  text-muted"></i> <a href="/launch-messages/compose/p/86605">Send a Message</a></h5>
 
-                                        <a type="button" class="btn btn-question btn-lgx" href="/launch-messages/compose/p/86605"><i class="fa fa-question-circle"></i> Ask a Question</a>
+                                        <a type="button" class="btn btn-question btn-lgx" href="<?php echo base_url();?>en/massage_send/?property=<?php echo $row->property_id; ?>"></i> Ask a Question</a>
 
-                                        <a type="button" class="btn btn-question btn-lgx" href="/launch-messages/offer/p/86605"><i class="fa fa-file-text"></i> Make an Offer</a>
+                                        <a type="button" class="btn btn-question btn-lgx" href="<?php echo base_url();?>en/offerpage/?property=<?php echo $row->property_id; ?>"><i class="fa fa-file-text"></i> Make an Offer</a>
 
                                         <div class="tools">
                                             <div class="row clearfix">
@@ -399,7 +399,7 @@
                 <p>Servicing Guelph and Wellington County. Dave and Mike are your local PG Pros and their years of experience, along with the local partners will be able to provide you everything from Pricing to Legal to SOLD. Contact us directly for a free information session where we can answer all your questions. </p>
 				<h4>1 (519) 824-7253</h4>
 
-				<a href="/location/site/f/2209">Homepage</a>
+				<a href="<?php echo base_url();?>">Homepage</a>
             </div>
         </div>
     </div>

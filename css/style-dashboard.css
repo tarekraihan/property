@@ -453,6 +453,361 @@ input#hm_area,#hm_start,#hm_end {
 }
 
 /*image upload starts*/
-.photo {
+.photo_upload {
     margin: 0px 0px 10px 125px;
 }
+
+
+
+/*massage */
+.empty {
+    padding: 25px 15px;
+    color: #BBB;
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+
+.continue_read {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.massage_details{}
+
+/*alert starts*/
+
+table.alerts {
+    margin: 0px auto;
+    width: 630px;
+}
+
+table.alerts tbody tr.header td.title_tab {
+    font-size: 24px;
+    color: #A2D267;
+    letter-spacing: -1px;
+    padding: 10px;
+    border-left: 0px none;
+    border-right: 0px none;
+    border-bottom: 1px solid #CCC;
+}
+
+.alerts tbody tr.header td.option {
+    font-weight: bold;
+    border-right: 0px none;
+}
+
+.alerts tbody td.option {
+    width: 95px;
+    text-align: center;
+    padding: 17px 0px;
+}
+
+.odd {
+    border: 1px solid #ddd;
+    background-color: #E1E1E1;
+}
+
+.title_tab {
+    padding: 0px 7px !important;
+}
+
+.even {
+    border: 2px solid #D7D7D7;
+}
+
+.submit_btn input {
+    width: 64px;
+    height: 30px;
+    background: #A2D267 none repeat scroll 0% 0%;
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+    outline: 0px none;
+    cursor: pointer;
+    border: 1px solid #A2D267;
+}
+
+.submit_btn {
+    margin: 15px 0;
+    float: right;
+}
+
+.alerts tbody tr.odd td.option {
+	padding: 10px 15px 10px 10px;
+}
+
+.focus_error {
+    background-color: #F00;
+    color: #fff;
+    padding: 8px;
+}
+
+.participants {
+    margin: 0px auto;
+    width: 620px;
+}
+
+.recipient {
+    float: left;
+    width: 300px;
+    padding: 10px 0px 15px;
+    background: #F2F9FD none repeat scroll 0% 0%;
+}
+
+.participants h4 {
+    margin: 0px 10px 10px;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #BBB;
+    border-bottom: 1px solid #EEE;
+}
+
+.participants div.image {
+    margin: 0px 0px 0px 10px;
+    width: 125px;
+    float: left;
+}
+
+.sender {
+    float: right;
+    width: 300px;
+    padding: 10px 0px 15px;
+}
+
+.participants div.info_massage {
+    float: left;
+    padding: 0px 10px 0px 5px;
+}
+
+.participants div.info div.first {
+    line-height: 20px;
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+
+.participants div.info div.last {
+    line-height: 16px;
+    font-size: 14px;
+}
+
+.participants div.info div.userid {
+    margin: 10px 0px 0px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.msginfo div.subject {
+    width: 440px;
+    float: left;
+}
+
+.msginfo div.date {
+    width: 160px;
+    float: right;
+}
+
+.msginfo div.subject input {
+    margin: 0px 0px 0px 10px;
+    padding: 7px;
+    width: 380px;
+    background: #FCFCFC none repeat scroll 0% 0%;
+    font-family: Helvetica,Arial,sans-serif;
+    outline: 0px none;
+    color: #000;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    cursor: text;
+}
+
+.msginfo div.subject {
+    width: 440px;
+    float: left;
+}
+
+.msginfo h4 {
+    margin: 0px 10px 5px;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #BBB;
+    border-bottom: 1px solid #EEE;
+}
+
+.bold{font-weight:bold;}
+
+.msginfo {
+    padding: 5px;
+}
+
+.msgbody {
+    padding: 0px 10px 10px;
+}
+
+.msgbody div.note {
+    margin: 20px 0px 15px;
+    padding: 5px;
+    background: #FFFFE0 none repeat scroll 0% 0%;
+    border: 1px dotted #F68932;
+    text-align: left;
+	width: 690px;
+}
+
+#message_text {
+    width: 690px;
+	height: 140px;
+}
+
+.msgtools {
+    margin: 0px 10px;
+}
+
+.msgtools div.delete {
+    float: right;
+    margin: 10px 0px 10px 10px;
+}
+
+.msgtools div.submit {
+    margin: 10px 0px 0px;
+    padding: 10px 0px 0px 135px;
+    float: right;
+	border-top:0 !important;
+}
+
+.msgtools div.submit input {
+    background: #BEDF94 none repeat scroll 0% 0%;
+    padding: 6px 17px;
+    font-weight: 700;
+    border: 1px solid #BEDF94;
+}
+
+/*offer page*/
+
+.buffer {
+    padding: 10px 12px 10px 10px;
+}
+
+.highlight {
+    display: block;
+    box-shadow: 0px 3px 3px #D2D2D2;
+}
+
+.ofrbody {
+    padding: 15px;
+}
+
+.checkbox{margin-bottom: 5px;}
+
+.mount.toggle {
+    padding: 10px 0px 0px;
+}
+
+.toggle .box {
+    float: left;
+    text-align: left;
+    height: 20px;
+}
+#prequalified {
+    margin-left: 0px !important;
+    margin-top: 1px !important;
+}
+
+.Pre_Qualified_text {
+    width: 100% !important;
+    margin-bottom: 10px !important;
+}
+
+.datepos .field {
+    float: left;
+    line-height: 34px;
+}
+
+.offerpage_lable{text-align: left;
+                 margin-left: 20px;
+				 }
+.offerpage_checkbox{margin:0 !important;}
+
+form.default .datepos .mount input#closing_month, form.default .datepos .mount input#closing_day, form.default .datepos .mount input#expire_month, form.default .datepos .mount input#expire_day, form.default .datepos .mount input#start_month, form.default .datepos .mount input#start_day {
+    width: 20px;
+    margin: 0px 3px 0px 0px;
+}
+
+form.default .datepos .mount input#closing_year, form.default .datepos .mount input#expire_year, form.default .datepos .mount input#start_year {
+    width: 40px;
+}
+
+.datepicker{margin-top:5px;}
+
+.asking_price_image{height: 198px;
+					width: 299px;
+					}
+
+.inside_asking_price {
+    position: absolute;
+    margin-top: -40px;
+}
+
+/* book mark page */
+
+ul#inventorytop li.results {
+    list-style: outside none none;
+    width: 300px;
+    float: right;
+    line-height: 50px;
+    padding: 0px 15px 0px 0px;
+    text-align: right;
+    color: #AAA;
+}
+
+ul#inventory li.item .photo {
+    height: 125px;
+    width: 185px;
+}
+
+.price_db a {
+    color: #000 !important;
+}
+
+ul#inventory li.item .tools .icons {
+    padding: 5px 0px 0px;
+    float: right;
+}
+
+ul#inventory li.item .address a{
+    font-weight: bold;
+	font-size:14px;
+}
+
+ul#inventory li.item .tease {
+    margin: 5px 0px 0px;
+    padding: 5px 0px;
+    border-top: 1px dotted #A0CE67;
+    line-height: 14px;
+	width: 184px;
+}
+
+ul#inventory li.item .tease span.sign {
+    background: #0092CF none repeat scroll 0% 0%;
+}
+
+.tools {
+    height: 25px;
+}
+
+ul#inventory li.item {
+    width: 215px;
+    float: left;
+    margin: 0px;
+    list-style: outside none none;
+    padding: 15px 15px 0px;
+    background-color: #EBF5F8;
+    margin-right: 20px !important;
+	margin-bottom: 20px !important;
+}
+
+.text_yellow{color:rgb(255, 126, 0);}

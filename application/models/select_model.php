@@ -25,7 +25,7 @@ class Select_Model extends CI_Model
 	
 	public function Select_Single_Property_Info($property_id)
 	{
-		$sql="SELECT a.*, b.first_name, b.last_name,b.area_code, b.phone_start,b.phone_end,c.property_type_name,d.property_used_name,e.state_name FROM `tbl_property` as a inner join customer_profile as b on a.property_owner_id=b.customer_id inner join tbl_property_type as c on a.property_type_id=c.property_type_id inner join tbl_property_used as d on a.property_use_id=d.property_used_id inner join tbl_states as e on a.states_id=e.states_id where a.property_id='$property_id'";
+		$sql="SELECT a.*, b.customer_id, b.first_name, b.last_name,b.area_code, b.phone_start,b.phone_end,c.property_type_name,d.property_used_name,e.state_name FROM `tbl_property` as a inner join customer_profile as b on a.property_owner_id=b.customer_id inner join tbl_property_type as c on a.property_type_id=c.property_type_id inner join tbl_property_used as d on a.property_use_id=d.property_used_id inner join tbl_states as e on a.states_id=e.states_id where a.property_id='$property_id'";
 		$query=$this->db->query($sql);
 		return $query;
 		
@@ -75,6 +75,15 @@ class Select_Model extends CI_Model
         $data=mysql_fetch_array($result);
         return $data;
     }
+	public function Select_Single_Property_Info1($property_id)
+	{
+		$sql="SELECT a.*, b.customer_id, b.first_name, b.last_name,b.area_code, b.phone_start,b.phone_end,c.property_type_name,d.property_used_name,e.state_name FROM `tbl_property` as a inner join customer_profile as b on a.property_owner_id=b.customer_id inner join tbl_property_type as c on a.property_type_id=c.property_type_id inner join tbl_property_used as d on a.property_use_id=d.property_used_id inner join tbl_states as e on a.states_id=e.states_id where a.property_id='$property_id'";
+		
+		$result=mysql_query($sql);
+		$data=mysql_fetch_array($result);
+        return $data;
+		
+	}
    
 
 	
