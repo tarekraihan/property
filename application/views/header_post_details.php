@@ -68,6 +68,79 @@
 		});
     </script>
     
+     <!-- search option -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery-ui.css">
+
+  		<script src="<?php echo base_url(); ?>js/jquery-ui.js"></script>  
+		 
+		 <?php
+			$this->common_model->order_column = 'states_id';
+			$this->common_model->table_name = 'tbl_states`';
+			$query=$this->common_model->select_all();
+							
+			?>
+		 
+		 
+		 <script>
+			 $(function() {
+			 var projects = [
+			 <?php
+			  foreach ($query->result() as $row){?>
+				{
+				  value: "<?php echo $row->states_id;?>",
+				  label: "<?php echo $row->state_name;?>",
+			   },
+			  <?php }
+			 ?>
+			  ];
+			 $( "#searchcase" ).autocomplete({
+			 minLength: 0,
+			 source: projects,
+			 focus: function( event, ui ) {
+				$( "#searchcase" ).val( ui.item.label );
+				return false;
+				},
+			 select: function( event, ui ) {
+				$( "#searchcase" ).val( ui.item.label );
+				$( "#searchid" ).val( ui.item.value );
+				return false;
+			 }
+			 })
+			 $( "#searchcase1" ).autocomplete({
+			 minLength: 0,
+			 source: projects,
+			 focus: function( event, ui ) {
+				$( "#searchcase1" ).val( ui.item.label );
+				return false;
+				},
+			 select: function( event, ui ) {
+				$( "#searchcase1" ).val( ui.item.label );
+				$( "#searchid1" ).val( ui.item.value );
+				return false;
+			 }
+			 })
+			 $( "#searchcase2" ).autocomplete({
+			 minLength: 0,
+			 source: projects,
+			 focus: function( event, ui ) {
+				$( "#searchcase2" ).val( ui.item.label );
+				return false;
+				},
+			 select: function( event, ui ) {
+				$( "#searchcase2" ).val( ui.item.label );
+				$( "#searchid2" ).val( ui.item.value );
+				return false;
+			 }
+			 })
+			 .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+			 return $( "<li>" )
+			 .append( "<a>" + item.label + "</a>" )
+			 .appendTo( ul );
+			 };
+			 }); 
+		 
+		</script>
+    
 </head>
 
 <body>

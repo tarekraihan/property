@@ -20,7 +20,7 @@
         <div class="row db_menu no-margin">
             <ul class="nav nav-pills custom_nav">
               <li role="presentation" class="active"><a href="<?php echo base_url(); ?>en/dashboard/">Dashboard</a></li>
-              <li role="presentation"><a href="<?php echo base_url(); ?>en/dashboard_mess/">Messages</a></li>
+              <li role="presentation"><a href="<?php echo base_url(); ?>en/message/">Messages</a></li>
               
               <li role="presentation" ><a href="<?php echo base_url(); ?>en/profile/">Profile</a></li>
               
@@ -114,7 +114,20 @@
 							<h3 class="drop">Profile</h3>
 
 							<div id="profile">
-								<div class="picture pull-left"><a href="#"><img width="124" height="82" src="<?php echo base_url(); ?>images/member/<?php echo $row->image_name;?>"></a></div>
+								<div class="picture pull-left">
+                                <?php
+									if($row->image_name)
+									{
+										?>
+                                <img width="124" src="<?php echo base_url(); ?>images/member/<?php echo $row->image_name;?>">
+                                <?php
+									}else{
+										?>
+                                <img width="124"  src="<?php echo base_url(); ?>images/members.png">
+                                <?php
+									}
+								?>
+                                </div>
 								<div class="name">
 									<div class="first"></div>
 									<div class="last"></div>
@@ -145,7 +158,7 @@
 				
 				<div class="row no-margin">
 						<div class="buffer02">
-							<h3 class="drop">Messages » <a href="<?php echo base_url(); ?>en/dashboard_mess/">Inbox</a></h3>
+							<h3 class="drop">Messages » <a href="<?php echo base_url(); ?>en/message/">Inbox</a></h3>
 							<div class="empty">Your inbox is empty.</div>							
 						</div>
 				</div>

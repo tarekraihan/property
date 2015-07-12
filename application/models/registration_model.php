@@ -1,22 +1,33 @@
 <?php
-date_default_timezone_set('Asia/Dhaka');
+//date_default_timezone_set('Asia/Dhaka');
 
 /**********************************************
  * Developer : Tarek Raihan                   *
- * Project : Property guy                     *
+ * Project : Vistamaison.com                  *
  * Script : All Login & Attendance Query      *
  * Start Date :   13-06-2015                  *
- * End Date : 14-06-2015                      *
+ * Last Update : 10-07-2015                   *
  **********************************************/
 class Registration_Model extends CI_Model {
 
 	public function check_user($data)
 	{
 		
-		$email_address=$data['email_address'];
+		$email_address=strtolower($data['email_address']);
         $password=md5($data['password']);
 		
 		$sql="select * from `customer_profile` where `email_address`='$email_address' and `password`='$password'";
+		$select_result=$this->db->query($sql);
+		$result=$select_result->row();
+		return $result;
+	}
+	
+	public function check_acitve($data)
+	{
+		$email_address=strtolower($data['email_address']);
+        $password=md5($data['password']);
+		
+		$sql="select * from `customer_profile` where `email_address`='$email_address' and `password`='$password' and `status`='1'";
 		$select_result=$this->db->query($sql);
 		$result=$select_result->row();
 		return $result;

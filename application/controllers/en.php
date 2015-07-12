@@ -117,7 +117,7 @@ class EN extends CI_Controller {
 	public function dashboard_general_setting($msg='')
     {
 		if(!$this->session->userdata('email_address')){
-			redirect('en/index');
+			redirect('en/start');
 		}else{
 			
 			if($msg == 'success'){
@@ -171,7 +171,7 @@ class EN extends CI_Controller {
 	public function dashboard_Contact_Information_Settings($msg='')
     {
 		if(!$this->session->userdata('email_address')){
-			redirect('en/index');
+			redirect('en/start');
 		}else{
 			
 			if($msg == 'success'){
@@ -225,7 +225,7 @@ class EN extends CI_Controller {
 	public function dashboard_password_setting($msg='')
     {
 		if(!$this->session->userdata('email_address')){
-			redirect('en/index');
+			redirect('en/start');
 		}else{
 			
 			if($msg == 'success'){
@@ -427,7 +427,7 @@ public function help()
 	public function upload_image($msg='')
     {
 		if(!$this->session->userdata('email_address')){
-			redirect('en/index');
+			redirect('en/start');
 		}else{
 			
 			if($msg == 'success'){
@@ -487,7 +487,7 @@ public function help()
 		}
 	}
 	
-	public function massage()
+	public function message()
     {
 		$data['title']="Member Dashboard";
 		$this->load->view('header_dashboard',$data);
@@ -514,7 +514,7 @@ public function help()
 	public function massage_send($msg='')
     {
 		if(!$this->session->userdata('email_address')){
-			redirect('en/index');
+			redirect('en/start');
 		}else{
 			
 			if($msg == 'success'){
@@ -565,7 +565,7 @@ public function help()
 	public function offerpage($msg='')
     {
 		if(!$this->session->userdata('email_address')){
-			redirect('en/index');
+			redirect('en/start');
 		}else{
 			
 			if($msg == 'success'){
@@ -575,38 +575,54 @@ public function help()
 				$data['feedback'] = '<h4 style="text-align:center; " class="animated red flipInX">Problem to send !!</h4>';
 			}
 				
-			$this->form_validation->set_rules('txtSubject','Subject', 'trim|required|xss_clean');
-			$this->form_validation->set_rules('message_text','Message', 'trim|required|xss_clean');
-        	
+			$this->form_validation->set_rules('price','price', 'trim|required|xss_clean|max_length[12]|is_natural');
+			$this->form_validation->set_rules('deposit','deposit', 'trim|xss_clean|max_length[12]|is_natural');
+        	$this->form_validation->set_rules('additional_message','Message', 'trim|xss_clean|max_length[254]');
 			if ($this->form_validation->run() == FALSE)
 			{
 				
 				$data['title']="Make an offer";
-				$this->load->view('header_dashboard_offerpage',$data);
+				//$this->load->view('header_dashboard_offerpage',$data);
+				$this->load->view('header_dashboard',$data);
 				$this->load->view('offerpage');
 				$this->load->view('footer2');
 			}
 			else
 			{
+				$conditions=$this->input->post('offer_condition');
+				$condi='';
+				foreach ($conditions as $condition){
+					$condi .= $condition.",";
+					
+					}
 				$this->common_model->data=array(
+				'property_sign'=>$this->input->post('property_sign'),
+                'price'=>$this->input->post('price'),
 				'property_id'=>$this->input->post('property_id'),
-                'property_sign'=>$this->input->post('property_sign'),
-                'receiver_id'=>$this->input->post('seller_id'),
-				'sender_id'=>$this->input->post('purchaser_id'),
-                'send_date'=>$this->input->post('txtDate'),
-                'subject'=>$this->input->post('txtSubject'),
-				'message'=>$this->input->post('message_text'),
+                'pre_qualified'=>$this->input->post('prequalified'),
+				'closing_date'=>$this->input->post('txtClosingDate'),
+				
+                'condition'=>$condi,
+				
+                'aditional'=>$this->input->post('additional_message'),
+				'offer_expire'=>$this->input->post('offerExpires'),
+				'owner_id'=>$this->input->post('seller_id'),
+                'message_subject'=>$this->input->post('subject'),
+				'purchaser_id'=>$this->input->post('purchaser_id'),
+				'purchaser_name'=>$this->input->post('purchaser_name'),
+				'email_address'=>$this->input->post('purchaser_email'),
+				'deposit'=>$this->input->post('deposit'),
 				);
-				$this->common_model->table_name='ask_question';
+				$this->common_model->table_name='tbl_make_an_offer';
 				$result=$this->common_model->insert();
 												
 				if($result)
 				{
-					redirect('en/massage_send/success');
+					redirect('en/offerpage/success');
 				}
 				else
 				{
-					redirect('en/massage_send/error');
+					redirect('en/offerpage/error');
 				}
 			}
 		}
@@ -620,6 +636,43 @@ public function help()
 		$data['title']="bookmark";
 		$this->load->view('header_dashboard',$data);
 		$this->load->view('bookmark');
+		$this->load->view('footer2');
+    }
+	public function bookmarking()
+	{
+		if(!$this->session->userdata('email_address')){
+			redirect('en/start');
+		}else{
+			
+			if(isset($_GET['property_id']))
+			{
+				$property_id=$_GET['property_id'];
+				$customer_id=$this->session->userdata('customer_id');
+				$this->common_model->data=array(
+				
+                'customer_id'=>$customer_id,
+				'property_id'=>$property_id,
+				'status'=>1,
+                
+				);
+				$this->common_model->table_name='tbl_bookmark_property';
+				$result=$this->common_model->insert();
+				if($result)
+				{
+					redirect('en/bookmark/');
+				}
+				
+			}
+		
+		}
+	}
+	
+	public function start()
+    {
+		$data['title']="Login";
+        $this->load->view('header_post',$data);
+		$this->load->view('login');
+        $this->load->view('footer1');
 		$this->load->view('footer2');
     }
 

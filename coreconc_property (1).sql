@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2015 at 11:36 AM
+-- Generation Time: Jul 12, 2015 at 11:32 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -35,15 +35,16 @@ CREATE TABLE IF NOT EXISTS `ask_question` (
   `property_id` int(10) NOT NULL,
   `send_date` varchar(25) NOT NULL,
   `property_sign` varchar(12) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `ask_question`
 --
 
 INSERT INTO `ask_question` (`question_id`, `sender_id`, `receiver_id`, `subject`, `message`, `property_id`, `send_date`, `property_sign`) VALUES
-(1, 0, 1, 'RE: Sign Number #559512', 'This is testing', 5, 'July 8, 2015, 1:53 pm', '#559512'),
-(2, 1, 1, 'RE: Sign Number #559512', 'I want to purchase your prooper tkayha', 5, 'July 8, 2015, 2:26 pm', '#559512');
+(1, 1, 1, 'RE: Sign Number #559512', 'This is testing', 5, 'July 8, 2015, 1:53 pm', '#559512'),
+(2, 1, 1, 'RE: Sign Number #559512', 'I want to purchase your prooper tkayha', 5, 'July 8, 2015, 2:26 pm', '#559512'),
+(3, 1, 3, 'RE: Sign Number #836278', 'ggggaaaaaaaaaaaaaaaaaaaaaaaaaaaaf dfsssssssssssssssssssssss gags sd gfdggggggggga', 4, 'July 9, 2015, 3:11 pm', '#836278');
 
 -- --------------------------------------------------------
 
@@ -67,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `customer_profile` (
   `status` int(11) NOT NULL,
   `image_name` varchar(20) NOT NULL,
   `country` varchar(25) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `customer_profile`
@@ -76,9 +77,15 @@ CREATE TABLE IF NOT EXISTS `customer_profile` (
 INSERT INTO `customer_profile` (`customer_id`, `email_address`, `first_name`, `last_name`, `zip_code`, `area_code`, `phone_start`, `phone_end`, `password`, `mobile_no`, `access_level`, `experiance`, `status`, `image_name`, `country`) VALUES
 (1, 'tarekraihan@yahoo.com', 'Tarek', 'Raihan', '12341', 222, 333, 4444, 'e10adc3949ba59abbe56e057f20f883e', '01911222952', '1', 'Private Sale Veteran', 1, '1.png', 'Canada'),
 (3, 'ShahW@yahoo.com', 'Riage', 'Shah', '33983993', 344, 543, 6789, '96e79218965eb72c92a549dd5a330112', '', '0', '0', 0, '', ''),
-(4, 'shah_riaz007@yahoo.com', 'shah', 'riaz', '1212', 123, 123, 1234, 'e10adc3949ba59abbe56e057f20f883e', '', '0', '0', 0, '', ''),
+(4, 'shah_riaz007@yahoo.com', 'Shah', 'Riaz', '1212', 123, 123, 1234, 'e10adc3949ba59abbe56e057f20f883e', '', '0', 'Private Sale Veteran', 1, '', 'Canada'),
 (5, 'rahatbappa@gmail.com', 'rahat', 'bappa', '1212', 123, 123, 1234, 'e10adc3949ba59abbe56e057f20f883e', '01911222952', '0', '0', 0, '', ''),
-(6, 'tarek@yahoo.com', 'Tarek', 'Masud', '1212', 123, 444, 124, '96e79218965eb72c92a549dd5a330112', '', '', '', 1, '', '');
+(6, 'tarek@yahoo.com', 'Tarek', 'Masud', '1212', 123, 444, 124, '96e79218965eb72c92a549dd5a330112', '', '', '', 1, '', ''),
+(7, 'tarek1@yahoo.com', 'Tarek', 'Zia', '12341', 255, 252, 2522, '96e79218965eb72c92a549dd5a330112', '', '', '', 0, '', ''),
+(9, 'tarekraihan@yahoo.com', 'Tarek', 'Masud', '1212', 123, 252, 3333, '96e79218965eb72c92a549dd5a330112', '', '', '', 0, '', ''),
+(10, 'tarekraihan@yahoo.com', 'Tarek', 'Masud', '1212', 123, 252, 3333, 'fcea920f7412b5da7be0cf42b8c93759', '', '', '', 0, '', ''),
+(11, 'tarekraihan@yahoo.com', 'Riage', 'Masud', '12341', 333, 444, 4748, '96e79218965eb72c92a549dd5a330112', '', '', '', 0, '', ''),
+(12, 'tarekraihan@yahoo.com', 'Tarek', 'Masud', '1212', 123, 252, 3333, '96e79218965eb72c92a549dd5a330112', '', '', '', 0, '', ''),
+(13, 'tarekraihan@yahoo.com', 'Tarek', 'Zia', '1212', 222, 444, 2234, 'e3ceb5881a0a1fdaad01296d7554868d', '', '', '', 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -164,6 +171,27 @@ INSERT INTO `tbl_blueprint_request` (`blueprint_id`, `email_address`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_bookmark_property`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_bookmark_property` (
+`bookmark_id` int(10) NOT NULL,
+  `property_id` int(10) NOT NULL,
+  `customer_id` int(10) NOT NULL,
+  `status` int(2) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `tbl_bookmark_property`
+--
+
+INSERT INTO `tbl_bookmark_property` (`bookmark_id`, `property_id`, `customer_id`, `status`) VALUES
+(1, 3, 1, 1),
+(2, 4, 1, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_call_request`
 --
 
@@ -199,6 +227,96 @@ CREATE TABLE IF NOT EXISTS `tbl_country` (
 
 INSERT INTO `tbl_country` (`country_id`, `country_name`) VALUES
 (1, 'Quebec');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_exterior`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_exterior` (
+`exterior_id` int(10) NOT NULL,
+  `exterior_name` varchar(100) NOT NULL
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `tbl_exterior`
+--
+
+INSERT INTO `tbl_exterior` (`exterior_id`, `exterior_name`) VALUES
+(1, 'Deck or Patio'),
+(2, 'Pool'),
+(3, 'Fenced Yard'),
+(4, 'Garden'),
+(5, 'Water Front'),
+(6, 'Hot Tub'),
+(7, 'Water View'),
+(8, 'Wharf or Dock');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_interior`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_interior` (
+`interior_id` int(11) NOT NULL,
+  `interior_name` varchar(100) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+
+--
+-- Dumping data for table `tbl_interior`
+--
+
+INSERT INTO `tbl_interior` (`interior_id`, `interior_name`) VALUES
+(1, 'Alternative Heating'),
+(2, 'Propane Heating'),
+(3, 'Electric Heating'),
+(4, 'Solar Heating'),
+(5, 'Natural Gas Heating'),
+(6, 'Wind Powered'),
+(7, 'Oil Powered'),
+(8, 'Wood Powered'),
+(9, 'Pellets'),
+(10, 'Air Conditioning'),
+(11, 'In-Law Suite'),
+(12, 'Air Exchange'),
+(13, 'Jet Tub'),
+(14, 'Fireplace');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_make_an_offer`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_make_an_offer` (
+`offer_id` int(10) NOT NULL,
+  `property_sign` varchar(12) NOT NULL,
+  `property_id` int(10) NOT NULL,
+  `price` varchar(20) NOT NULL,
+  `deposit` varchar(15) NOT NULL,
+  `pre_qualified` varchar(225) NOT NULL,
+  `closing_date` varchar(30) NOT NULL,
+  `condition` varchar(200) NOT NULL,
+  `aditional` varchar(254) NOT NULL,
+  `offer_expire` varchar(30) NOT NULL,
+  `owner_id` int(10) NOT NULL,
+  `message_subject` varchar(225) NOT NULL,
+  `purchaser_id` int(10) NOT NULL,
+  `purchaser_name` varchar(100) NOT NULL,
+  `email_address` varchar(100) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `tbl_make_an_offer`
+--
+
+INSERT INTO `tbl_make_an_offer` (`offer_id`, `property_sign`, `property_id`, `price`, `deposit`, `pre_qualified`, `closing_date`, `condition`, `aditional`, `offer_expire`, `owner_id`, `message_subject`, `purchaser_id`, `purchaser_name`, `email_address`) VALUES
+(1, '#836278', 4, '829900', '5482', 'pre-qualified for a mortgage amount', '07/31/2015', '', 'Testing', '07/31/2015', 3, 'This is an offer message for #836278', 1, 'Tarek Raihan', 'tarekraihan@yahoo.com'),
+(2, '#987908', 3, '1150000', '5000', 'pre-qualified for a mortgage amount', '07/23/2015', 'condition-1,condition-2,condition-4,', 'Testing this', '07/23/2015', 4, 'This is an offer message for #987908', 1, 'Tarek Raihan', 'tarekraihan@yahoo.com'),
+(3, '#559512', 5, '459000', '50000', 'pre-qualified for a mortgage amount', '07/16/2015', 'condition-1,condition-2,', 'Don''t send anything through this message system that you would feel embarassed sending to your grandmother.', '07/30/2015', 1, 'This is an offer message for #559512', 1, 'Tarek Raihan', 'tarekraihan@yahoo.com'),
+(4, '#123288', 2, '464900', '50000', 'pre-qualified for a mortgage amount', '07/02/2015', 'condition-1,condition-3,condition-4,', 'n order to protect users', '07/09/2015', 5, 'This is an offer message for #123288', 1, 'Tarek Raihan', 'tarekraihan@yahoo.com');
 
 -- --------------------------------------------------------
 
@@ -256,17 +374,17 @@ CREATE TABLE IF NOT EXISTS `tbl_property` (
   `bedroom_no` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `bathroom_no` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `feature_post` int(2) NOT NULL,
-  `image_name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `feature_image` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `tbl_property`
 --
 
-INSERT INTO `tbl_property` (`property_id`, `states_id`, `area_id`, `property_owner_id`, `sign`, `property_address`, `description`, `property_type_id`, `property_use_id`, `annual_tax`, `age`, `exterior`, `floring`, `leavels`, `foundation`, `heatmethod`, `heat_source`, `garage`, `water_source`, `interior`, `price`, `bedroom_no`, `bathroom_no`, `feature_post`, `image_name`) VALUES
+INSERT INTO `tbl_property` (`property_id`, `states_id`, `area_id`, `property_owner_id`, `sign`, `property_address`, `description`, `property_type_id`, `property_use_id`, `annual_tax`, `age`, `exterior`, `floring`, `leavels`, `foundation`, `heatmethod`, `heat_source`, `garage`, `water_source`, `interior`, `price`, `bedroom_no`, `bathroom_no`, `feature_post`, `feature_image`) VALUES
 (2, 1, 45, 5, '#123288', '36 Nightingale Crescent Elmira, ON', 'The maintenance free exterior is a brick / vinyl combination. The driveway accommodates 4 vehicles. The lovely front garden accentuates the home''s curb appeal. The fully fenced, private, pool-sized backyard with mature trees has an expansive deck with lower level patio with adjacent hot tub. The yard backs on a tranquil babbling brook! \r\n\r\nRecent Upgrades:\r\n* Built-in Dishwasher (2014)\r\n* Insulated Garage Door (2014)\r\n* Roof (2013)', 13, 4, '567', '40 years old', 'Wood', 'Hardwood', '1', 'Stone', 'Baseboard', 'Electricity, Wood', 'Multi-Vehicle', 'Well', 'Formal Dining', '464900', '7', '3', 1, '1.jpg'),
 (3, 1, 44, 4, '#987908', '6497 Roszell Rd Puslinch, ON', 'This custom designed home at the edge of Cambridge was built in 2003. A loft bungalow floor plan with 4,529 sq feet of finished space. \r\n\r\nThe main floor has a large entry way the leads into the great room with a ceiling that rises to 17 feet. The great room is flows into the over-sized kitchen with a breakfast bar and eat in dining area. The elevated southern view from the great room and kitchen provide a panoramic view of the back yard, in-ground pool, gardens, surrounding forest and mill pond. \r\n\r\nThe home has living space on 3 levels with 2,100 sq feet on the main level, 980 sq. feet on the second floor and another 1,500 sq. feet on the lower level.', 13, 4, '2200', '10 years old', 'Wood', 'Hardwood', '2', 'Stone', 'Baseboard', 'Electricity, Wood', 'Multi-Vehicle', 'Well', 'Formal Dining', '1150000', '6', '4', 1, '11.jpg'),
-(4, 1, 45, 2, '#836278', '12 Butler Ave Cambridge, ON', 'There are only a few times you can say "Custom One of a Kind Home". This is one of them. From the custom designed bungaloft to the 100 feet of waterfront property to the unique cottage like community with easy access to KW, Cambridge and Guelph as well as minutes from the 401 for the commuters.\r\n\r\nLocated on a private road on the north side of Puslinch Lake this 2600+ square foot bungaloft is the ideal property for someone looking to downsize from their large family home and live life on one level. With the multi-use loft space and a finished basement walkout with 2 additional bedrooms it provides additional opportunity for families or even an in-law suite in the basement.', 12, 4, '3463', '2 years', 'Brick', 'Hardwood', '1', 'Stone', 'Baseboard', 'Electricity, Wood', 'Single-Vehicle', 'Well', 'Formal Dining', '829900', '6', '4', 1, '12.jpg'),
+(4, 1, 45, 3, '#836278', '12 Butler Ave Cambridge, ON', 'There are only a few times you can say "Custom One of a Kind Home". This is one of them. From the custom designed bungaloft to the 100 feet of waterfront property to the unique cottage like community with easy access to KW, Cambridge and Guelph as well as minutes from the 401 for the commuters.\r\n\r\nLocated on a private road on the north side of Puslinch Lake this 2600+ square foot bungaloft is the ideal property for someone looking to downsize from their large family home and live life on one level. With the multi-use loft space and a finished basement walkout with 2 additional bedrooms it provides additional opportunity for families or even an in-law suite in the basement.', 12, 4, '3463', '2 years', 'Brick', 'Hardwood', '1', 'Stone', 'Baseboard', 'Electricity, Wood', 'Single-Vehicle', 'Well', 'Formal Dining', '829900', '6', '4', 1, '12.jpg'),
 (5, 1, 18, 1, '#559512', '12 Butler Ave Cambridge', '<p>Not only does this modern move-in ready house offer beautiful country views, it offers a multitude of storage options and home business ideas. The property provides indoor parking for at least 5 vehicles in the detached garage and barn. The parking areas have been reinforced for heavy equipment and vehicle/truck use. <br />\n<br />\nThe detached bungalow has a large master suite with 2 walk through closets and true 4-piece bathroom. <br />\nAlso there is an extra bedroom that is currently used as an office. (+ 3 bedrooms down stairs) The kitchen has a large island with tons of storage, walk-in pantry and a large formal dining room. The main floor laundry room can accommodate an extra fridge and freezer and has space for a sewing or craft area. <br />\n<br />\nThe downstairs has another kitchen, full bathroom, separate entrance and three bedrooms which could provide an income unit or in-law suite. It also offers a large room perfect for a workshop, hobby room or gym (or possibly a fourth bedroom). <br />\n<br />\nFor more information or to make a viewing appointment, please contact the homeowner.</p>', 13, 3, '3463', '4 years', 'Brick, Vinyl', 'Ceramic Tile, Hardwood, Laminate, Vinyl', '1', 'Poured Concrete', 'Well', 'Good', 'Mult-Drive', 'well', 'brick', '459000', '7', '5', 1, '13.jpg');
 
 -- --------------------------------------------------------
@@ -401,6 +519,12 @@ ALTER TABLE `tbl_blueprint_request`
  ADD PRIMARY KEY (`blueprint_id`);
 
 --
+-- Indexes for table `tbl_bookmark_property`
+--
+ALTER TABLE `tbl_bookmark_property`
+ ADD PRIMARY KEY (`bookmark_id`);
+
+--
 -- Indexes for table `tbl_call_request`
 --
 ALTER TABLE `tbl_call_request`
@@ -411,6 +535,24 @@ ALTER TABLE `tbl_call_request`
 --
 ALTER TABLE `tbl_country`
  ADD PRIMARY KEY (`country_id`);
+
+--
+-- Indexes for table `tbl_exterior`
+--
+ALTER TABLE `tbl_exterior`
+ ADD PRIMARY KEY (`exterior_id`);
+
+--
+-- Indexes for table `tbl_interior`
+--
+ALTER TABLE `tbl_interior`
+ ADD PRIMARY KEY (`interior_id`);
+
+--
+-- Indexes for table `tbl_make_an_offer`
+--
+ALTER TABLE `tbl_make_an_offer`
+ ADD PRIMARY KEY (`offer_id`);
 
 --
 -- Indexes for table `tbl_message`
@@ -462,12 +604,12 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `ask_question`
 --
 ALTER TABLE `ask_question`
-MODIFY `question_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `question_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `customer_profile`
 --
 ALTER TABLE `customer_profile`
-MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `tbl_area`
 --
@@ -479,6 +621,11 @@ MODIFY `area_id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=46;
 ALTER TABLE `tbl_blueprint_request`
 MODIFY `blueprint_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `tbl_bookmark_property`
+--
+ALTER TABLE `tbl_bookmark_property`
+MODIFY `bookmark_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `tbl_call_request`
 --
 ALTER TABLE `tbl_call_request`
@@ -488,6 +635,21 @@ MODIFY `call_request_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 ALTER TABLE `tbl_country`
 MODIFY `country_id` int(3) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `tbl_exterior`
+--
+ALTER TABLE `tbl_exterior`
+MODIFY `exterior_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `tbl_interior`
+--
+ALTER TABLE `tbl_interior`
+MODIFY `interior_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT for table `tbl_make_an_offer`
+--
+ALTER TABLE `tbl_make_an_offer`
+MODIFY `offer_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_message`
 --

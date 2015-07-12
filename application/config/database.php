@@ -52,11 +52,11 @@ $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
 $db['default']['database'] = 'coreconc_property';
-
-/*$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'semita_tarek';
+/*
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'coreconc_tarek';
 $db['default']['password'] = 'Tarek222952';
-$db['default']['database'] = 'semita_property';
+$db['default']['database'] = 'coreconc_property';
 */
 
 $db['default']['dbdriver'] = 'mysql';

@@ -12,7 +12,7 @@
         <div class="row db_menu no-margin">
             <ul class="nav nav-pills custom_nav">
               <li role="presentation"><a href="<?php echo base_url();?>en/dashboard/">Dashboard</a></li>
-              <li role="presentation" class="active"><a href="<?php echo base_url();?>en/massage/">Messages</a></li>
+              <li role="presentation" class="active"><a href="<?php echo base_url();?>en/message/">Messages</a></li>
               
               <li role="presentation"><a href="<?php echo base_url();?>en/profile/">Profile</a></li>
             </ul>
@@ -115,7 +115,7 @@
                                         <input type="hidden" value="<?php echo $this->session->userdata('customer_id'); ?>" name="purchaser_id"/>
                                         <input type="hidden" value="<?php echo date('F j, Y, g:i a');?>" name="txtDate"/>
                                         
-										<input  name="txtSubject" id="txtSubject" value="RE: Sign Number <?php echo $row['sign'];?>" type="text" required="required">
+										<input  name="txtSubject" id="txtSubject" value="RE: Sign Number <?php echo $row['sign'];?>" type="text" required>
 									</div>
 									<div class="date">
 										<h4 class="bold">Date:</h4>
@@ -135,7 +135,7 @@
 									
 									<h4 class="bold">Message:</h4>
 									<div class="note"><strong>Formatted text copied from Microsoft Word ® may cause issues in sending your message. Type your message directly in the following box.</strong></div>
-									<div><textarea required="required" name="message_text" id="message_text"></textarea></div>
+									<div><textarea required name="message_text" id="message_text"></textarea></div>
 									<div class="note"><strong>Note</strong>: In order to protect users against inappropriate messages we keep an encrypted log of all messages and the IP address of all users who communicate using this site. We respond to abuse according to our <a href="<?php echo base_url();?>en/terms_of_use/">Terms of Use</a>. <em>Don't send anything through this message system that you would feel embarassed sending to your grandmother.</em></div>
 									
 								</div>
@@ -172,7 +172,7 @@
                     <div class="box-shadow-inner_02">
                         <h3 class="drop">Person Menu</h3>
                         <ul id="submenu" class="nav nav-pills nav-stacked">
-                            <li class="current"><a href="#">Inbox</a></li>
+                            <li class="current"><a href="<?php echo base_url();?>en/message/">Inbox</a></li>
 				            <li off=""><a href="#">Draft</a></li>	
 				            <li off=""><a href="#">Sent</a></li>								
                         </ul>

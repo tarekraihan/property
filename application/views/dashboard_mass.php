@@ -12,7 +12,7 @@
         <div class="row db_menu no-margin">
             <ul class="nav nav-pills custom_nav">
               <li role="presentation"><a href="<?php echo base_url(); ?>en/dashboard/">Dashboard</a></li>
-              <li role="presentation" class="active"><a href="<?php echo base_url(); ?>en/dashboard_mess/">Messages</a></li>
+              <li role="presentation" class="active"><a href="<?php echo base_url(); ?>en/message/">Messages</a></li>
               
               <li role="presentation" ><a href="<?php echo base_url(); ?>en/profile/">Profile</a></li>
               
@@ -46,7 +46,7 @@
                 <div class="box-rounded_02">
                     <div class="box-shadow-inner_02">
                         <ul id="submenu" class="nav nav-pills nav-stacked">
-                            <li class="current"><a href="#">Inbox</a></li>
+                            <li class="current"><a href="<?php echo base_url();?>en/message/">Inbox</a></li>
 				            <li off=""><a href="#">Sent</a></li>	
 				            <li off=""><a href="#">Trash</a></li>								
                         </ul>

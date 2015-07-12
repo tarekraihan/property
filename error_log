@@ -1,1 +1,2 @@
-[15-Jun-2015 18:11:53 America/New_York] PHP Parse error:  syntax error, unexpected '[' in /home/semita/public_html/property/application/controllers/login.php on line 76
+[15-Jun-2015 10:07:13 America/New_York] PHP Parse error:  syntax error, unexpected '\' (T_NS_SEPARATOR) in /home/coreconceptinc/public_html/landing/application/controllers/register.php on line 70
+[15-Jun-2015 10:07:27 America/New_York] PHP Parse error:  syntax error, unexpected '\' (T_NS_SEPARATOR) in /home/coreconceptinc/public_html/landing/application/controllers/register.php on line 70

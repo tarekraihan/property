@@ -13,7 +13,7 @@
         <div class="row db_menu no-margin">
             <ul class="nav nav-pills custom_nav">
               <li role="presentation"><a href="<?php echo base_url();?>en/dashboard/">Dashboard</a></li>
-              <li role="presentation" class="active"><a href="<?php echo base_url();?>en/massage/">Messages</a></li>
+              <li role="presentation" class="active"><a href="<?php echo base_url();?>en/message/">Messages</a></li>
               
               <li role="presentation"><a href="<?php echo base_url();?>en/profile/">Profile</a></li>
             </ul>
@@ -62,11 +62,17 @@
 							<div class="clear"></div>
 														
 							<ul id="inventory">
-																								
-								<li class="item" id="">
-									<div class="photo"><a href="#"><img src="http://round.s3.amazonaws.com/images/properties/9/84527/991786_106.jpg"></a></div>
+									<?php 
+										$customer_id=$this->session->userdata('customer_id');
+										$query=$this->select_model->select_bookmark_property($customer_id);
+										
+										foreach ($query->result() as $row)
+											{
+										?>
+										<li class="item" id="">
+									<div class="photo"><a href="#"><img style="width:185px; height:125px;" src="<?php echo base_url();?>/images/property/<?php echo $row->feature_image; ?>"></a></div>
 									<div class="tools">
-										<h4 class="price_db"><a href="#">$559,000</a></h4>
+										<h4 class="price_db"><a href="#">$<?php echo $row->price; ?></a></h4>
 										<div class="icons">
 									
 											<div class="zoom"><a href="#"><span title="View this listing" class="glyphicon glyphicon-search" aria-hidden="true"></span></a></div>
@@ -77,84 +83,18 @@
 										<div class="clear"></div>
 									</div>
 								
-									<div class="address"><a href="#">614 Beechwood Dr</a></div>
-									<div class="city"><a id="" href="#">Waterloo, ON</a></div>
+									<div class="address"><a href="#"><?php echo $row->property_address;?></a></div>
+									
 									
 									<div class="tease">
 										<div>
-										<span class="sign"><a href="#">Sign # <strong>146614</strong></a></span> Desirable Upper Beechwood Estate Home <a href="#" class="more">More »</a></div>
+										<span class="sign"><a href="#">Sign  <strong><?php echo $row->sign; ?></strong></a></span> Desirable Upper Beechwood Estate Home <a href="<?php echo base_url();?>en/postpage?id=<?php echo $row->property_id;?>" class="more">More »</a></div>
 									</div>
 								</li>
-								
-								<li class="item" id="">
-									<div class="photo"><a href="#"><img src="http://round.s3.amazonaws.com/images/properties/9/84527/991786_106.jpg"></a></div>
-									<div class="tools">
-										<h4 class="price_db"><a href="#">$559,000</a></h4>
-										<div class="icons">
-									
-											<div class="zoom"><a href="#"><span title="View this listing" class="glyphicon glyphicon-search" aria-hidden="true"></span></a></div>
-											
-											<div class="bookmarked"><a id="removebookmark_84527" href="#"><span title="remove Bookmark" class="glyphicon glyphicon-star text_yellow" aria-hidden="true"></span></a></div>
-										
-										</div>
-										<div class="clear"></div>
-									</div>
-								
-									<div class="address"><a href="#">614 Beechwood Dr</a></div>
-									<div class="city"><a id="city_search_84527" href="#">Waterloo, ON</a></div>
-									
-									<div class="tease">
-										<div>
-										<span class="sign"><a href="#">Sign # <strong>146614</strong></a></span> Desirable Upper Beechwood Estate Home <a href="#" class="more">More »</a></div>
-									</div>
-								</li>
-								
-								
-								<li class="item" id="">
-									<div class="photo"><a href="#"><img src="http://round.s3.amazonaws.com/images/properties/9/84527/991786_106.jpg"></a></div>
-									<div class="tools">
-										<h4 class="price_db"><a href="#">$559,000</a></h4>
-										<div class="icons">
-									
-											<div class="zoom"><a href="#"><span title="View this listing" class="glyphicon glyphicon-search" aria-hidden="true"></span></a></div>
-											
-											<div class="bookmarked"><a id="removebookmark_84527" href="#"><span title="remove Bookmark" class="glyphicon glyphicon-star text_yellow" aria-hidden="true"></span></a></div>
-										
-										</div>
-										<div class="clear"></div>
-									</div>
-								
-									<div class="address"><a href="#">614 Beechwood Dr</a></div>
-									<div class="city"><a id="city_search_84527" href="#">Waterloo, ON</a></div>
-									
-									<div class="tease">
-										<div>
-										<span class="sign"><a href="#">Sign # <strong>146614</strong></a></span> Desirable Upper Beechwood Estate Home <a href="#" class="more">More »</a></div>
-									</div>
-								</li>
-								
-								<li class="item" id="">
-									<div class="photo"><a href="#"><img src="http://round.s3.amazonaws.com/images/properties/9/84527/991786_106.jpg"></a></div>
-									<div class="tools">
-										<h4 class="price_db"><a href="#">$559,000</a></h4>
-										<div class="icons">
-									
-											<div class="zoom"><a href="#"><span title="View this listing" class="glyphicon glyphicon-search" aria-hidden="true"></span></a></div>
-											
-											<div class="bookmarked"><a id="removebookmark_84527" href="#"><span title="remove Bookmark" class="glyphicon glyphicon-star text_yellow" aria-hidden="true"></span></a></div>
-										
-										</div>
-										<div class="clear"></div>
-									</div>
-								
-									<div class="address"><a href="#">614 Beechwood Dr</a></div>
-									<div class="city"><a id="" href="#">Waterloo, ON</a></div>
-									
-									<div class="tease">
-										<div>
-										<span class="sign"><a href="#">Sign # <strong>146614</strong></a></span> Desirable Upper Beechwood Estate Home <a href="#" class="more">More »</a></div>
-									</div>
-								</li>
+										<?php
+											}
+										?>
+
 							</ul>
 							<div class="clear"></div>
 						
@@ -176,12 +116,12 @@
                     <div class="box-shadow-inner_02">
                         <h3 class="drop">Person Menu</h3>
                         <ul id="submenu" class="nav nav-pills nav-stacked">
-                            <li ><a href="/launch-people/person/id/261200">Profile</a></li>
-				            <li off=""><a href="/launch-people/people-photo/id/261200">Photo</a></li>	
-				            <li off=""><a href="/launch-people/people-alerts/id/261200">Alert Settings</a></li>								
-				            <li class="current"><a href="/launch-people/people-bookmarks/id/261200">Bookmarks</a></li>
-                            <li off=""><a href="/launch-people/people-searches/id/261200">Saved Searches</a></li>
-                            <li off=""><a href="/launch-people/people-watchlist/id/261200">Price Watch</a></li>
+                            <li><a href="<?php echo base_url(); ?>en/dashboard">Profile</a></li>
+				            <li off=""><a href="<?php echo base_url(); ?>en/upload_image">Photo</a></li>	
+				            <li class="current"><a href="<?php echo base_url(); ?>en/alertpage">Alert Settings</a></li>								
+				            <li off=""><a href="<?php echo base_url();?>en/bookmark/">Bookmarks</a></li>
+                            <li off=""><a href="<?php echo base_url();?>en/bookmark/">Saved Searches</a></li>
+                            <li off=""><a href="#">Price Watch</a></li>
                         </ul>
                     </div>
                 </div>

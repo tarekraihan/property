@@ -14,7 +14,7 @@
         <div class="row db_menu no-margin">
             <ul class="nav nav-pills custom_nav">
               <li role="presentation" ><a href="<?php echo base_url(); ?>en/dashboard/">Dashboard</a></li>
-              <li role="presentation" class="active"><a href="<?php echo base_url(); ?>en/dashboard_mess/">Messages</a></li>
+              <li role="presentation" class="active"><a href="<?php echo base_url(); ?>en/message/">Messages</a></li>
               
               <li role="presentation"><a href="<?php echo base_url(); ?>en/profile/">Profile</a></li>
               
@@ -116,8 +116,8 @@
                             <li><a href="<?php echo base_url(); ?>en/dashboard">Profile</a></li>
 				            <li off=""><a href="<?php echo base_url(); ?>en/upload_image">Photo</a></li>	
 				            <li class="current"><a href="<?php echo base_url(); ?>en/alertpage">Alert Settings</a></li>								
-				            <li off=""><a href="#">Bookmarks</a></li>
-                            <li off=""><a href="#">Saved Searches</a></li>
+				            <li off=""><a href="<?php echo base_url();?>en/bookmark/">Bookmarks</a></li>
+                            <li off=""><a href="<?php echo base_url();?>en/bookmark/">Saved Searches</a></li>
                             <li off=""><a href="#">Price Watch</a></li>
                         </ul>
                     </div>

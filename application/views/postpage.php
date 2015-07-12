@@ -84,15 +84,15 @@
 										<div class="clearfix" style="max-width:595px;">
 											<ul id="image-gallery" class="gallery list-unstyled cS-hidden">
 												
-                                                <li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>" > 
-													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>"  />
+                                                <li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->feature_image; ?>" > 
+													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->feature_image; ?>"  />
 													 </li>
                                                      
-                                                  <li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>" > 
-													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>"  />
+                                                  <li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->feature_image; ?>" > 
+													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->feature_image; ?>"  />
 													 </li>
-												<li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>" > 
-													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->image_name; ?>"  />
+												<li data-thumb="<?php echo base_url(); ?>images/property/<?php echo $row->feature_image; ?>" > 
+													<img src="<?php echo base_url(); ?>images/property/<?php echo $row->feature_image; ?>"  />
 													 </li>
 												
 											</ul>
@@ -322,7 +322,7 @@
 
                                         <div class="tools">
                                             <div class="row clearfix">
-                                                <div class="col-xs-6 col-sm-6 text-center"><a href="#" id="bookmark"><img src="<?php echo base_url(); ?>/images/icon-green-100-bookmark.png"><br>login to Bookmark</a></div>
+                                                <div class="col-xs-6 col-sm-6 text-center"><a href="<?php echo base_url();?>en/bookmarking/?property_id=<?php echo $row->property_id; ?>" id="bookmark"><img src="<?php echo base_url(); ?>/images/icon-green-100-bookmark.png"><br>login to Bookmark</a></div>
                                                 <div class="col-xs-6 col-sm-6 text-center"><a href="#" data-toggle="modal" data-target="#priceChangeAlert"><img src="<?php echo base_url(); ?>/images/icon-green-100-pricechange.png"><br>Set Price<br>Change Alert</a></div>
                                                 <div class="col-xs-12 text-center padding-top-25"><button type="button" class="btn btn-offer btn-lgx" id="printFeatureSheet"><i class="fa fa-download"></i> View Feature Sheet</button></div>
                                             </div>

@@ -23,6 +23,7 @@
 							
 								<div id="searchbox" class="searchcontrols">			  			
 									<div class="btn-group pull-left">
+                                    <form action="<?php echo base_url();?>en/listingpage/" method="post">
 									  <button type="button" class="btn dropdown-toggle pg-btn" data-toggle="dropdown"><span id="searchToggle">Find a Home</span> <span class="caret"></span></button>
 									  <ul class="dropdown-menu" role="menu">
 										<li><a href="#" id="menuBuyHouse">Find a Home</a></li>
@@ -31,8 +32,10 @@
 										<li><a href="/vacation-rentals" id="">Vacation Rentals</a></li>				    
 									  </ul>
 									</div>	
-									<input autocomplete="off" class="search-textbox ui-autocomplete-input" name="coreSearch" value="" placeholder="Search by Location or Sign Number" id="coreSearch" type="text"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span>
-									<div class="btn-holder"><button type="button" class="btn pg-button btn-search pgbutton-30" id="coreSearchButton"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></div>						 
+                                     <input type="hidden" name="coreSearchID" id="searchid2" />
+									<input class="search-textbox ui-autocomplete-input" name="coreSearch" value="" placeholder="Search by Location or Sign Number" id="searchcase2" type="text"><span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span>
+									<div class="btn-holder"><button type="submit" class="btn pg-button btn-search pgbutton-30" id="coreSearchButton"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></div>
+                                    </form>						 
 								</div>
 								
 								
@@ -66,7 +69,7 @@
 		</div>
 		
 		<div class="row no-margin">
-			<div class="home_page_listing_carousel">
+			<!--<div class="home_page_listing_carousel">
 			     <div class="item">
                     <ul id="content-slider" class="content-slider">
                     <?php 
@@ -82,7 +85,7 @@
                     
                     
                         <li>
-							<img width="180" height="140" class="pull-left slider_img" src="<?php echo base_url();?>images/property/<?php echo $row->image_name;?>"/>
+							<img width="180" height="140" class="pull-left slider_img" src="<?php echo base_url();?>images/property/<?php echo $row->feature_image;?>"/>
                             <h3>$ <?php echo $row->price;?></h3>
 							<p><?php echo $row->property_address;?></p>
                         </li>
@@ -95,7 +98,7 @@
                     </ul>
                 </div>
 			</div>
-		</div>
+		</div>-->
         
         
         <!-- Buyer page Buyer Tools section starts-->

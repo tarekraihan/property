@@ -12,7 +12,7 @@
         <div class="row db_menu no-margin">
             <ul class="nav nav-pills custom_nav">
               <li role="presentation"><a href="<?php echo base_url(); ?>en/dashboard/">Dashboard</a></li>
-              <li role="presentation"><a href="<?php echo base_url(); ?>en/dashboard_mess/">Messages</a></li>
+              <li role="presentation"><a href="<?php echo base_url(); ?>en/message/">Messages</a></li>
               
               <li role="presentation" class="active"><a href="<?php echo base_url(); ?>en/profile/">Profile</a></li>
               
@@ -73,7 +73,7 @@
                                         </tr>
                                         <tr class="even">
                                             <td class="category">Experience:</td>
-                                            <td class="value">Private Sale Virgin</td>
+                                            <td class="value"><?php echo $row->experiance;?></td>
                                         </tr>
                         </tbody>
                     </table>
@@ -146,7 +146,14 @@
                 <div class="box-rounded">
                     <div class="box-shadow-inner">
                         <div class="personpic">
-                        		<img class="profile_image" src="<?php echo base_url(); ?>images/member/<?php echo $row->image_name;?>">
+                        		<?php
+                        	if($row->image_name){
+								?>
+                        		<img class="profile_image" src="<?php echo base_url(); ?>images/member/<?php echo $row->image_name;?>">							<?php
+							}else{
+								?>
+                                <img class="profile_image" src="<?php echo base_url(); ?>images/members.png">
+                                <?php } ?>
 								<div class="information">
 									<p class="member_name">Member</p>
 								</div>
@@ -158,12 +165,12 @@
                     <div class="box-shadow-inner_02">
                         <h3 class="drop">Person Menu</h3>
                         <ul id="submenu" class="nav nav-pills nav-stacked">
-                            <li class="current"><a href="<?php echo base_url();?>en/profile/">Profile</a></li>
-				            <li off=""><a href="<?php echo base_url();?>en/upload_image/">Photo</a></li>	
-				            <li off=""><a href="<?php echo base_url(); ?>en/alertpage">Alert Settings</a></li>								
-				            <li off=""><a href="">Bookmarks</a></li>
-                            <li off=""><a href="">Saved Searches</a></li>
-                            <li off=""><a href="">Price Watch</a></li>
+                            <li class="current"><a href="<?php echo base_url(); ?>en/dashboard">Profile</a></li>
+				            <li off=""><a href="<?php echo base_url(); ?>en/upload_image">Photo</a></li>	
+				            <li ><a href="<?php echo base_url(); ?>en/alertpage">Alert Settings</a></li>								
+				            <li off=""><a href="<?php echo base_url();?>en/bookmark/">Bookmarks</a></li>
+                            <li off=""><a href="<?php echo base_url();?>en/bookmark/">Saved Searches</a></li>
+                            <li off=""><a href="#">Price Watch</a></li>
                         </ul>
                     </div>
                 </div>

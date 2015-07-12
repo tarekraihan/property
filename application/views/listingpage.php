@@ -113,8 +113,8 @@
 
                                         <div class="form-group">
                                             <label for="">What's your Price Range?</label><br>
-                                            <select>
-                                                <option value="0" selected="selected">No Minimum</option>										
+                                            <select name="minimum_range">
+                                                <option value="1000" selected="selected">No Minimum</option>										
                                                 <option value="10000">$10,000</option>
                                                 <option value="20000">$20,000</option>
                                                 <option value="30000">$30,000</option>
@@ -148,7 +148,7 @@
                                                 <option value="20000000">$20M</option>
                                             </select>
                                             
-                                            <select>
+                                            <select name="maximum_range">
                                                 <option value="100000000000000">No Maximum</option>														
                                                 <option value="10000">$10,000</option>
                                                 <option value="20000">$20,000</option>
@@ -188,8 +188,8 @@
 
                                         <div class="form-group">
                                             <label for="">How Many Bedrooms &amp; Bathrooms?</label><br>
-                                            <select data-width="150px">								    	
-                                                <option value="0" selected="selected">Bedrooms</option>
+                                            <select data-width="150px" name="bedrooms">								    	
+                                                <option value="" selected="selected">Bedrooms</option>
                                                 <option value="1">1+ beds</option>
                                                 <option value="2">2+ beds</option>
                                                 <option value="3">3+ beds</option>
@@ -198,8 +198,8 @@
                                             </select>
                                             
 
-                                            <select data-width="150px">
-                                                <option value="0" selected="selected">Bathrooms</option>
+                                            <select data-width="150px" name="bathrooms">
+                                                <option value="" selected="selected">Bathrooms</option>
                                                 <option value="1">1+ baths</option>
                                                 <option value="2">2+ baths</option>
                                                 <option value="3">3+ baths</option>
@@ -213,7 +213,7 @@
 
                                         <div class="form-group">
                                             <label for="">Increase Search Area <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="Expand your search beyond the city limit"></span></label><br>
-                                            <select data-width="155px">
+                                            <select data-width="155px" name="area">
                                               <option value="10">Commute Distance</option>
                                               <option value="0">Nothing</option>
                                               <option value="5">5km</option>
@@ -232,88 +232,98 @@
 
                                         <div class="form-group">
                                             <label for="">Property Age</label><br>
-                                            <select data-width="175px">
-                                                <option value="0" selected="selected">Show All</option>
+                                            <select data-width="175px" name="property_age">
+                                                <option value="" selected="selected">Show All</option>
                                                 <option value="1">0-1 (New Build)</option>
                                                 <option value="2">1-2</option>
-                                                <option value="3">2-5</option>
-                                                <option value="4">5-10</option>
-                                                <option value="5">10-20</option>
-                                                <option value="6">20-50</option>
-                                                <option value="7">50+</option>
+                                                <option value="5">2-5</option>
+                                                <option value="10">5-10</option>
+                                                <option value="20">10-20</option>
+                                                <option value="50">20-50</option>
+                                                <option value="60">50+</option>
                                             </select>
                                         </div>
 													</br>
                                         <div class="form-group">
                                             <label for="">Property Use</label><br>
-                                                <select data-width="175px">	
-	
-                                                    <option value="3">Residential</option>
-                                                    <option value="1">Recreational</option>
-                                                    <option value="2">Commercial</option>
-                                                    <option value="4">Agricultural</option>
+                                                <select data-width="175px" name="property_use">	
+												 <option value="" selected="selected">Show All</option>
+                                                   <?php 
+													$this->common_model->order_column = 'property_type_id';
+													$this->common_model->table_name = 'tbl_property_type';
+													$query=$this->common_model->select_all();
+													
+													foreach ($query->result() as $row)
+													{
+												?>
+													<option value="<?php echo $row->property_type_id;?>"><?php echo $row->property_type_name;?></option>     
+												<?php
+													
+													}
+												?>
                                                 </select>
                                         </div>
 
 
                                         <div class="form-group">
                                             <label for="">Interior Options</label><br>
-                                                <select data-width="200px">
-
-                                                    <option value="120">Alternative Heating</option>
-                                                    <option value="756">Propane Heating</option>
-                                                    <option value="121">Electric Heating</option>
-                                                    <option value="125">Solar Heating</option>
-                                                    <option value="122">Natural Gas Heating</option>
-                                                    <option value="126">Wind Powered</option>
-                                                    <option value="123">Oil Powered</option>
-                                                    <option value="127">Wood Powered</option>
-                                                    <option value="124">Pellets</option>
-                                                    <option value="390">Air Conditioning</option>
-                                                    <option value="397">In-Law Suite</option>
-                                                    <option value="391">Air Exchange</option>
-                                                    <option value="398">Jet Tub</option>
-                                                    <option value="395">Fireplace</option>
+                                                <select data-width="200px" name="interior">
+                                                 <option value="" selected="selected">Show All</option>
+												<?php 
+                                                    $this->common_model->order_column = 'interior_id';
+                                                    $this->common_model->table_name = 'tbl_interior';
+                                                    $query=$this->common_model->select_all();
+                                                    
+                                                    foreach ($query->result() as $row)
+                                                    {
+                                                ?>
+                                                    <option value="<?php echo $row->interior_id;?>"><?php echo $row->interior_name;?></option>     
+                                                <?php
+                                                    
+                                                    }
+                                                ?> 
                                                 </select>
 
                                         </div>
 
                                         <div class="form-group">
                                             <label for="">Exterior Options</label><br>
-                                            <select data-width="200px">
+                                            <select data-width="200px" name="exterior">
+                                             <option value="" selected="selected">Show All</option>
+                                            
+												<?php 
+                                                    $this->common_model->order_column = 'exterior_id';
+                                                    $this->common_model->table_name = 'tbl_exterior';
+                                                    $query=$this->common_model->select_all();
+                                                    
+                                                    foreach ($query->result() as $row)
+                                                    {
+                                                ?>
+                                                    <option value="<?php echo $row->exterior_id;?>"><?php echo $row->exterior_name;?></option>     
+                                                <?php
+                                                    
+                                                    }
+                                                ?>  
 
-                                                            <option value="361">Deck or Patio</option>
-                                                            <option value="370">Pool</option>
-                                                            <option value="364">Fenced Yard</option>
-                                                            <option value="365">Garden</option>
-                                                            <option value="373">Water Front</option>
-                                                            <option value="366">Hot Tub</option>
-                                                            <option value="374">Water View</option>																	
-                                                            <option value="375">Wharf or Dock</option>
-
-                                                    </select>
+                                            </select>
 
                                         </div>
                                         <div class="form-group">
                                                 <label for="">&nbsp;</label><br>
-                                                <a class="btn btn-green btn-xs" href="#" id="reSubmitYourSearch"><i class="fa fa-search"></i> Refine Your Search</a>
+                                                <button type="submit" class="btn btn-green btn-xs" href="#" id="reSubmitYourSearch"><i class="fa fa-search"></i> Refine Your Search</button>
                                             </div>
 
 
+                                            
                                             <div class="form-group">
                                                 <label for="">&nbsp;</label><br>
-                                                                                        <a href="/start?c=%2Fsearch%3Fk%3Dtoronto" type="button" class="btn btn-clear-filters btn-xs"><span class="fa fa-lock" aria-hidden="true"></span> Login to save search</a>
-                                                                                </div>
-
-                                            <div class="form-group">
-                                                <label for="">&nbsp;</label><br>
-                                                <a class="btn btn-clear-filters btn-xs" href="/search?k=toronto"><i class="fa fa-times"></i>Clear Filters</a>
+                                                <a class="btn btn-clear-filters btn-xs" href=""><i class="fa fa-times"></i>Clear Filters</a>
                                             </div>
                                         </form>	
                                     </div>
                                 </div>
         </div>
-        <!--List page selection part end here -->
+        <!-- List page selection part end here -->
 		
 		<div class="row no-margin">
 			<div class="container">
@@ -340,7 +350,7 @@
 								{
 								?>
 									<li class="town">	
-										<a href="#"><?php echo $row->area_name;?></a>
+										<a href="<?php echo $row->area_id;?>"><?php echo $row->area_name;?></a>
 									</li>
 									
                                         
@@ -398,9 +408,9 @@
 								<div class="col-sm-12 col-md-4">
                                     <div class="item">
                                             <span class="label label-primary most_popular">Most Popular</span>
-                                                <a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>"><img class="prop-img" src="<?php echo base_url(); ?>/images/property/<?php echo $row->image_name;?>"></a>
+                                                <a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>"><img class="prop-img" src="<?php echo base_url(); ?>/images/property/<?php echo $row->feature_image;?>"></a>
                                                 <div class="info"> 
-                                                    <h2><a href="">$<?php echo $row->price;?></a></h2>
+                                                    <h2><a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>">$<?php echo $row->price;?></a></h2>
                                                     <div class="price"><?php echo $row->property_address;?></div> 
                                                     <div class="bedsbaths"><strong><?php echo $row->bedroom_no;?></strong> beds <strong><?php echo $row->bathroom_no;?></strong> baths</div>
 

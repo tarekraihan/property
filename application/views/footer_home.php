@@ -46,7 +46,7 @@
 													  <strong>Error.</strong> Something went wrong. Please ckeck you information and try again.
 													</div>
 
-													<form action="<?php echo base_url();?>request_call/call_request/" method="post" novalidate="novalidate" class="form-horizontal fv-form fv-form-bootstrap" role="form" id="sevenMinuteForm"><button style="display: none; width: 0px; height: 0px;" class="fv-hidden-submit" type="submit"></button>
+													<form action="<?php echo base_url();?>request_call/call_request/" method="post" novalidate class="form-horizontal fv-form fv-form-bootstrap" role="form" id="sevenMinuteForm"><button style="display: none; width: 0px; height: 0px;" class="fv-hidden-submit" type="submit"></button>
 
 															 <div class="form-group">
 																		
@@ -54,7 +54,7 @@
 																			<div class="form-group row has-feedback">
 																				<label for="inputKey" class="col-md-2 control-label">First:</label>
 																				<div class="col-md-6">
-																					 <input data-fv-field="first_name" class="form-control" id="sevenMinuteFirstName" placeholder="Your First Name" value="" name="txtfirst_name" required="required" data-bv-notempty="true" type="text"></div>
+																					 <input data-fv-field="first_name" class="form-control" id="sevenMinuteFirstName" placeholder="Your First Name" value="" name="txtfirst_name" required data-bv-notempty="true" type="text"></div>
 																		
 																				
 																			</div>
@@ -65,7 +65,7 @@
 																				
 																				<label for="inputValue" class="col-md-2 control-label">Last :</label>
 																				<div class="col-md-6">
-																				   <input data-fv-field="last_name" class="form-control" id="sevenMinuteLastName" placeholder="Your Last Name" value="" name="txtlast_name" required="required"  data-bv-notempty="true" type="text"></div>
+																				   <input data-fv-field="last_name" class="form-control" id="sevenMinuteLastName" placeholder="Your Last Name" value="" name="txtlast_name" required  data-bv-notempty="true" type="text"></div>
 																			</div>
 																		</div>
 																	</div><!-- End FForm Group -->
@@ -79,7 +79,7 @@
 																				
 																				<label for="inputValue" class="col-md-2 control-label">Email:</label>
 																				<div class="col-md-6">
-																				   <input data-fv-field="last_name" class="form-control" id="sevenMinuteLastName" placeholder="Your Email" value="" name="txtEmail" required="required"  data-bv-notempty="true" type="email"></div>
+																				   <input data-fv-field="last_name" class="form-control" id="sevenMinuteLastName" placeholder="Your Email" value="" name="txtEmail" required  data-bv-notempty="true" type="email"></div>
 																			</div>
 																		</div>
 																</div>
@@ -89,7 +89,7 @@
 																			<div class="form-group row has-feedback">
 																				<label for="inputKey" class="col-md-2 control-label">Phone:</label>
 																				<div class="col-md-4">
-																					 <input data-fv-field="phone" class="form-control" id="sevenMinutePhone" placeholder="Phone Number" value="" name="txtphone" required="required"  data-bv-notempty="true" type="text"></div>
+																					 <input data-fv-field="phone" class="form-control" id="sevenMinutePhone" placeholder="Phone Number" value="" name="txtphone" required  data-bv-notempty="true" type="text"></div>
 																				
 																			</div>
 																		</div>
@@ -99,7 +99,7 @@
 																				
 																				<label for="inputValue" class="col-md-2 control-label">Postal:</label>
 																				<div class="col-md-4">
-																				  <input class="form-control" id="sevenMinutePostal" placeholder="Postal Code" value="" data-bv-zipcode="true" name="txtpostalCode" type="text" required="required" >
+																				  <input class="form-control" id="sevenMinutePostal" placeholder="Postal Code" value="" data-bv-zipcode="true" name="txtpostalCode" type="text" required >
 																				</div>
 																			</div>
 																		</div>
@@ -291,7 +291,7 @@
 						{
 					?>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>"><img class="titlebox_image img-responsive" src="<?php echo base_url(); ?>/images/property/<?php echo $row->image_name;?>"/></a>
+					<a href="<?php echo base_url(); ?>en/postpage?id=<?php echo $row->property_id;?>"><img class="titlebox_image img-responsive" src="<?php echo base_url(); ?>/images/property/<?php echo $row->feature_image;?>"/></a>
 					<div class="homepage_post_address">
 						<p><?php echo $row->property_address;?></p>
 					</div>
@@ -345,7 +345,7 @@
 									
 									
 									
-									<form action="<?php echo base_url(); ?>message/customer_message/" method="post" novalidate="novalidate" class="form-horizontal fv-form fv-form-bootstrap" role="form" id="contactForm">
+									<form action="<?php echo base_url(); ?>message/customer_message/" method="post" novalidate class="form-horizontal fv-form fv-form-bootstrap" role="form" id="contactForm">
 																
 													<div class="form-group has-feedback">
 														<label for="inputEmail3" class="col-sm-3 control-label">First Name:</label>

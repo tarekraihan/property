@@ -1,4 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/**********************************************
+ * Developer : Tarek Raihan                   *
+ * Project : Vistamaison.com                  *
+ * Script : All Login & Attendance Query      *
+ * Start Date :   13-06-2015                  *
+ * Last Update : 10-07-2015                   *
+ **********************************************/
 
 class Login extends CI_Controller {
 
@@ -10,7 +17,7 @@ class Login extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE)
         {
-            redirect('en/index');
+            redirect('en/start');
            //$this->load->view('login');
 		   
 		  // echo "sorry";
@@ -26,21 +33,29 @@ class Login extends CI_Controller {
 
             if($result)
             {
-                $sdata['customer_id']=$result->customer_id;
-
+				$active=$this->registration_model->check_acitve($data);
+				if($active){
                 
-                    $sdata['email_address']=$result->email_address;
-                    $sdata['first_name']=$result->first_name;
-                    $sdata['last_name']=$result->last_name;
-                    $sdata['password']=$result->password;
-					$sdata['access_level']=$result->access_level;
-					$sdata['status']=$result->status;
-                    
-                    $this->session->set_userdata($sdata);
+				$sdata['customer_id']=$result->customer_id;
+				$sdata['email_address']=$result->email_address;
+				$sdata['first_name']=$result->first_name;
+				$sdata['last_name']=$result->last_name;
+				$sdata['password']=$result->password;
+				$sdata['access_level']=$result->access_level;
+				$sdata['status']=$result->status;
+				$sdata['image_name']=$result->image_name;
+				$this->session->set_userdata($sdata);
 
-                    
-                    redirect('en/dashboard');
-                
+				
+				redirect('en/dashboard');
+				}
+				else
+				{
+					$sdata['error']="Your Account is not Active, Please check your Email !!";
+					$this->session->set_userdata($sdata);
+					redirect('en/start');
+					
+				}
 
             }
             else
@@ -48,7 +63,7 @@ class Login extends CI_Controller {
 
                 $sdata['error']="User Name and Password Not Correct!!";
                 $this->session->set_userdata($sdata);
-                redirect('en/index');
+                redirect('en/start');
             }
 
         }

@@ -13,7 +13,7 @@
         <div class="row db_menu no-margin">
             <ul class="nav nav-pills custom_nav">
               <li role="presentation"><a href="<?php echo base_url();?>en/dashboard/">Dashboard</a></li>
-              <li role="presentation" class="active"><a href="<?php echo base_url();?>en/massage/">Messages</a></li>
+              <li role="presentation" class="active"><a href="<?php echo base_url();?>en/message/">Messages</a></li>
               
               <li role="presentation"><a href="<?php echo base_url();?>en/profile/">Profile</a></li>
               
@@ -26,6 +26,16 @@
                     <div class="focus highlight">
                         <div class="buffer">	
                                 <h2 class="title">Create Offer</h2>
+                                 <?php
+			
+				   //-----Display Success or Error message---
+					if(isset($feedback)){
+						echo $feedback;
+						
+						
+					}
+					
+				   ?> 
                         </div>
                     </div>
                     <div class="below"></div>
@@ -48,11 +58,42 @@
 											 $row['property_id']='';
 											 $row['sign']='';
 											 $row['customer_id']='';
+											 $row['price']='';
 										}
 											
 									?>
-																
+										
+                                        <?php 
+										if(isset($_GET['property']))
+										{
+										?>						
 									<div class="recipient">
+										<h4 class="bold">To:</h4>
+										<div class="image">
+                                       <?php 
+									   	if($row['image_name'])
+										{
+									   ?>
+                                        <img  style="width:120px;height:80px;" src="<?php echo base_url(); ?>images/member/<?php echo $row['image_name'];?>">
+                                        <?php
+										}else{
+										?>
+                                        <img src="<?php echo base_url(); ?>images/missing_120.png">
+                                        <?php
+										}
+										?>
+                                        </div>
+										<div class="info_massage">
+											<div class="first"><?php echo $row['first_name'];?></div>
+										<div class="last"><?php echo $row['last_name'];?></div>
+										<div class="userid">Member ID: <?php echo $row['customer_id'];?></div>
+										</div>
+										<div class="clear"></div>
+									</div>
+                                    <?php 
+										}else{
+									?>
+                                    <div class="recipient">
 										<h4 class="bold">To:</h4>
 										<div class="image"><img src="<?php echo base_url(); ?>images/missing_120.png"></div>
 										<div class="info_massage">
@@ -62,11 +103,29 @@
 										</div>
 										<div class="clear"></div>
 									</div>
+                                    <?php
+										}
+									?>
 										
 																		
 									<div class="sender">
 										<h4 class="bold">From:</h4>
-										<div class="image"><img src="<?php echo base_url(); ?>images/missing_120.png"></div>
+										<div class="image">
+                                        
+                                         <?php 
+									   	if($this->session->userdata('image_name'))
+										{
+									   ?>
+                                        <img  style="width:120px;height:80px;" src="<?php echo base_url(); ?>images/member/<?php echo $this->session->userdata('image_name');?>">
+                                        <?php
+										}else{
+										?>
+                                        <img src="<?php echo base_url(); ?>images/missing_120.png">
+                                        <?php
+										}
+										?>
+                                        
+                                        </div>
 										<div class="info_massage">
 												<div class="first"><?php echo $this->session->userdata('first_name'); ?></div>
 										<div class="last"><?php echo $this->session->userdata('last_name'); ?></div>
@@ -105,17 +164,20 @@
 							<div class="ofrcreate">
 
 								<form action="" method="post" accept-charset="utf-8">									
-									<input name="sender_id" id="sender_id" value="<?php echo $this->session->userdata('customer_id'); ?>" type="hidden">
+									<input name="purchaser_id" id="sender_id" value="<?php echo $this->session->userdata('customer_id'); ?>" type="hidden">
 									<input name="property_id" id="property_id" value="<?php echo $row['property_id'];?>" type="hidden">
-									<input name="recipient_id" id="recipient_id" value="<?php echo $row['customer_id'];?>" type="hidden">
-									<input id="offerConditionIds" name="offerConditionIds" value="" type="hidden">
-								
+                                    <input name="property_sign" id="property_sign" value="<?php echo $row['sign'];?>" type="hidden">
+									<input name="seller_id" id="recipient_id" value="<?php echo $row['customer_id'];?>" type="hidden">
+									<input id="offerConditionIds" name="purchaser_name" value="<?php echo $this->session->userdata('first_name'); ?> <?php echo $this->session->userdata('last_name'); ?>" type="hidden">
+                                    <input id="offerConditionIds" name="purchaser_email" value="<?php echo $this->session->userdata('email_address'); ?>" type="hidden">
+								<input name="subject" id="subject" value="This is an offer message for <?php echo $row['sign'];?>" type="hidden">
 																		
 									<div class="input firpos">
 									
 										<label for="price">Price:</label>
 										<div class="mount">										
 											<div><input name="price" id="price" value="<?php echo $row['price']; ?>" class="required number" type="text"></div>
+                                             <div class="caption"><span class="optional"><?php echo form_error('deposit');?></span></div>
 											<div class="caption"><span class="required">Required</span> ($)</div>
 										</div>
 										<div class="clear"></div>
@@ -124,7 +186,7 @@
 									<div class="checkbox">
 										<label for="prequalified">Pre-Qualified:</label>
 										<div class="mount toggle">
-											<div class="box"><input class="offerpage_checkbox" name="prequalified" id="prequalified" type="checkbox"></div>
+											<div class="box"><input class="offerpage_checkbox" name="prequalified" id="prequalified" value="pre-qualified for a mortgage amount" type="checkbox"></div>
 											<label class="Pre_Qualified_text offerpage_lable" for="qualified">Have you been pre-qualified for a mortgage amount that would cover the sale price you are proposing in this offer?</label>
 											<div class="clear"></div>
 											
@@ -138,6 +200,7 @@
 										<label for="deposit">Deposit Due:</label>
 										<div class="mount">
 											<div><input name="deposit" id="deposit" value="" type="text"></div>
+                                            <div class="caption"><span class="optional"><?php echo form_error('deposit');?></span></div>
 											<div class="caption"><span class="optional">Optional</span> ($) Deposit due at signing</div>
 										</div>
 										<div class="clear"></div>
@@ -176,27 +239,27 @@
 
 										<div class="mount toggle">
 											<div class="box">
-												<input class="offerpage_checkbox" value="offer_1" id="offer_1" name="offer_condition" type="checkbox">
+												<input class="offerpage_checkbox" value="condition-1" id="condition_1" name="offer_condition[]" type="checkbox">
 											</div>
 											
 											<label class="Pre_Qualified_text offerpage_lable" for="offer_1">Buyer needs to sell a property (Conditional Offer).</label>
 											<div class="clear"></div>
 											
 											<div class="box">
-												<input class="offerpage_checkbox" value="offer_2" id="offer_2" name="offer_condition" type="checkbox">
+												<input class="offerpage_checkbox" value="condition-2" id="condition_2" name="offer_condition[]" type="checkbox">
 											</div>
 											
 											<label class="Pre_Qualified_text offerpage_lable" for="offer_2">Buyer to obtain a satisfactory property inspection at Buyer's expense.</label>
 											<div class="clear"></div>
 											
 											<div class="box">
-												<input class="offerpage_checkbox" value="offer_3" id="offer_3" name="offer_condition" type="checkbox">
+												<input class="offerpage_checkbox" value="condition-3" id="condition_3" name="offer_condition[]" type="checkbox">
 											</div>
-											<label class="Pre_Qualified_text offerpage_lable" for="offer_3">Buyer to obtain a satisfactory appraisal at Buyer's expense.</label>
+											<label class="Pre_Qualified_text offerpage_lable" for="offer-3">Buyer to obtain a satisfactory appraisal at Buyer's expense.</label>
 											<div class="clear"></div>
 											
 											<div class="box">
-												<input class="offerpage_checkbox" value="offer_4" id="offer_4" name="offer_condition" type="checkbox">
+												<input class="offerpage_checkbox" value="condition-4" id="condition_1" name="offer_condition[]" type="checkbox">
 											</div>
 											
 											<label class="Pre_Qualified_text offerpage_lable" for="offer_4">Buyer to obtain appropriate financing sufficient to allow for the purchase of the property (Conditional on Financing).</label>
@@ -209,7 +272,8 @@
 									<div class="textarea forpos">
 										<label for="message">Additional:</label>
 										<div class="mount">
-											<div><textarea name="message" id="message"></textarea></div>
+											<div><textarea name="additional_message" id="message"></textarea></div>
+                                            <div class="caption"><span class="optional"><?php echo form_error('message');?></span></div>
 											<div class="caption"><span class="optional">Optional</span></div>
 											<div class="note">
 												<p><strong>Example</strong>: Fridge and stove included in price.</p>
@@ -274,10 +338,31 @@
             
                 <div class="box-rounded">
                     <div class="box-shadow-inner">
-							<img class="asking_price_image" src="<?php echo base_url(); ?>images/1034061_104.jpg"/>
+                     <?php 
+						if(isset($_GET['property']))
+						{
+						?>	
+							<img class="asking_price_image" src="<?php echo base_url(); ?>images/property/<?php echo $row['feature_image'];?>"/>
+                            <?php
+						}else{
+							?>
+						<img class="asking_price_image" src="<?php echo base_url(); ?>images/missing_120.png"/>
+						<?php }
+						?>
 								<div class="inside_asking_price">
 									<div class="information">
-										<div class="asking_price">Asking $44,000</div>
+                                    <?php 
+										if(isset($_GET['property']))
+										{
+										?>	
+										<div class="asking_price">Asking $<?php echo $row['price'];?></div>
+                                        <?php
+										}else{
+										?>
+                                        <div class="asking_price">Asking $000.00</div>
+                                        <?php
+										}
+										?>
 									</div>
 								</div>
                     </div>
@@ -287,7 +372,7 @@
                     <div class="box-shadow-inner_02">
                         <h3 class="drop">Person Menu</h3>
                         <ul id="submenu" class="nav nav-pills nav-stacked">
-                            <li ><a href="#">Inbox</a></li>
+                            <li ><a href="<?php echo base_url();?>en/message/">Inbox</a></li>
 				            <li off=""><a href="#">Draft</a></li>	
 				            <li off=""><a href="#">Sent</a></li>								
                         </ul>

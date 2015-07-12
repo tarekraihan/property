@@ -1,49 +1,5 @@
 		 
-		<link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery-ui.css">
-
-  		<script src="<?php echo base_url(); ?>js/jquery-ui.js"></script>  
-		 
-		 <?php
-			$this->common_model->order_column = 'states_id';
-			$this->common_model->table_name = 'tbl_states`';
-			$query=$this->common_model->select_all();
-							
-			?>
-		 
-		 
-		 <script>
-			 $(function() {
-			 var projects = [
-			 <?php
-			  foreach ($query->result() as $row){?>
-				{
-				  value: "<?php echo $row->states_id;?>",
-				  label: "<?php echo $row->state_name;?>",
-			   },
-			  <?php }
-			 ?>
-			  ];
-			 $( "#searchcase" ).autocomplete({
-			 minLength: 0,
-			 source: projects,
-			 focus: function( event, ui ) {
-				$( "#searchcase" ).val( ui.item.label );
-				return false;
-				},
-			 select: function( event, ui ) {
-				$( "#searchcase" ).val( ui.item.label );
-				$( "#searchid" ).val( ui.item.value );
-				return false;
-			 }
-			 })
-			 .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
-			 return $( "<li>" )
-			 .append( "<a>" + item.label + "</a>" )
-			 .appendTo( ul );
-			 };
-			 }); 
-		 
-		</script>
+		
 				
         
         <div class="row no-margin">
@@ -136,7 +92,7 @@
                     
                     
                         <li>
-							<img width="180" height="140" class="pull-left slider_img" src="<?php echo base_url();?>images/property/<?php echo $row->image_name;?>"/>
+							<img width="180" height="140" class="pull-left slider_img" src="<?php echo base_url();?>images/property/<?php echo $row->feature_image;?>"/>
                             <h3>$ <?php echo $row->price;?></h3>
 							<p><?php echo $row->property_address;?></p>
                         </li>

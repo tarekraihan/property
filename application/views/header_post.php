@@ -35,6 +35,78 @@
             });
 		});
     </script>
+    <!-- search option -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery-ui.css">
+
+  		<script src="<?php echo base_url(); ?>js/jquery-ui.js"></script>  
+		 
+		 <?php
+			$this->common_model->order_column = 'states_id';
+			$this->common_model->table_name = 'tbl_states`';
+			$query=$this->common_model->select_all();
+							
+			?>
+		 
+		 
+		 <script>
+			 $(function() {
+			 var projects = [
+			 <?php
+			  foreach ($query->result() as $row){?>
+				{
+				  value: "<?php echo $row->states_id;?>",
+				  label: "<?php echo $row->state_name;?>",
+			   },
+			  <?php }
+			 ?>
+			  ];
+			 $( "#searchcase" ).autocomplete({
+			 minLength: 0,
+			 source: projects,
+			 focus: function( event, ui ) {
+				$( "#searchcase" ).val( ui.item.label );
+				return false;
+				},
+			 select: function( event, ui ) {
+				$( "#searchcase" ).val( ui.item.label );
+				$( "#searchid" ).val( ui.item.value );
+				return false;
+			 }
+			 })
+			 $( "#searchcase1" ).autocomplete({
+			 minLength: 0,
+			 source: projects,
+			 focus: function( event, ui ) {
+				$( "#searchcase1" ).val( ui.item.label );
+				return false;
+				},
+			 select: function( event, ui ) {
+				$( "#searchcase1" ).val( ui.item.label );
+				$( "#searchid1" ).val( ui.item.value );
+				return false;
+			 }
+			 })
+			 $( "#searchcase2" ).autocomplete({
+			 minLength: 0,
+			 source: projects,
+			 focus: function( event, ui ) {
+				$( "#searchcase2" ).val( ui.item.label );
+				return false;
+				},
+			 select: function( event, ui ) {
+				$( "#searchcase2" ).val( ui.item.label );
+				$( "#searchid2" ).val( ui.item.value );
+				return false;
+			 }
+			 })
+			 .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+			 return $( "<li>" )
+			 .append( "<a>" + item.label + "</a>" )
+			 .appendTo( ul );
+			 };
+			 }); 
+		 
+		</script>
     
 </head>
 
@@ -56,11 +128,12 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <form class="navbar-form navbar-left" role="search">
+              <form class="navbar-form navbar-left" role="search" action="<?php echo base_url();?>en/listingpage/" method="post">
                 <div class="input-group input_custom_group">
-					  <input type="text" class="quicksearchbox form-control" style="z-index: 1;" placeholder="City, Town or Sign#" id="signnumber" value="">
+                <input type="hidden" name="coreSearchID" id="searchid1" />
+					  <input type="text" class="quicksearchbox form-control" style="z-index: 1;" placeholder="City, Town or Sign#" id="searchcase1" value="">
 					  <span class="input-group-btn">
-						<button class="btn btn-primary pg-button btn-default-over" type="button" id="quickSearchGo" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+						<button class="btn btn-primary pg-button btn-default-over" type="submit" id="quickSearchGo" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 					  </span>
 				</div><!-- /input-group -->
               </form>
